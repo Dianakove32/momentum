@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/momentum/static/css/main.9f0f46ff.chunk.css",
+    "main.js": "/momentum/static/js/main.5a124a6f.chunk.js",
+    "main.js.map": "/momentum/static/js/main.5a124a6f.chunk.js.map",
+    "runtime-main.js": "/momentum/static/js/runtime-main.034026fc.js",
+    "runtime-main.js.map": "/momentum/static/js/runtime-main.034026fc.js.map",
+    "static/js/2.44bf4759.chunk.js": "/momentum/static/js/2.44bf4759.chunk.js",
+    "static/js/2.44bf4759.chunk.js.map": "/momentum/static/js/2.44bf4759.chunk.js.map",
+    "index.html": "/momentum/index.html",
+    "static/css/main.9f0f46ff.chunk.css.map": "/momentum/static/css/main.9f0f46ff.chunk.css.map",
+    "static/js/2.44bf4759.chunk.js.LICENSE.txt": "/momentum/static/js/2.44bf4759.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.034026fc.js",
+    "static/js/2.44bf4759.chunk.js",
+    "static/css/main.9f0f46ff.chunk.css",
+    "static/js/main.5a124a6f.chunk.js"
+  ]
+}
