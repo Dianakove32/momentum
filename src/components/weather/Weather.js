@@ -1,24 +1,30 @@
 import React, { Component } from 'react'
+import Modalweather from './Modalweather'
 
 export default class Weather extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
     render() {
-        const {city,country,temp,icon,sunrise,sunset}= this.props
+        const { city, country, temp, icon, sunrise, sunset } = this.props
         return (
             <div>
 
-            <div>
-               <p>City: {city}</p>
-               <p>country: {country}</p>
-<p>Temp: {icon}{temp}</p>
-<p>Sunrise: {sunrise}</p>
-<p>Sunset: {sunset}</p>
+
+
+            <Modalweather
+                  city={city}
+    country ={country}
+    temp = {temp}
+    sunrise={sunrise}
+    sunset = {sunset}
+    icon={icon}   />
+
             </div>
 
 
-            </div>
+
+
         )
     }
 }

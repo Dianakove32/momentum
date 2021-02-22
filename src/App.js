@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import Clock from './components/clock';
 import Form from './components/weather/Form';
+import Modalweather from './components/weather/Modalweather';
 import Weather from './components/weather/Weather';
   const API_KEY= '8768da57bd891fa41359848c1665c9e4';
 
@@ -59,6 +60,7 @@ country:data.sys.country,
     sunrise={sunrise}
     sunset = {sunset}
     icon={icon} />
+<Modalweather/>
     <Clock />
     </div>
   );
