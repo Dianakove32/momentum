@@ -3,6 +3,7 @@ import './App.scss';
 import Clock from './components/clock';
 import Randomizer from './components/randomizer/Randomizer'
 import Form from './components/weather/Form';
+import Modalweather from './components/weather/Modalweather';
 import Weather from './components/weather/Weather';
 const API_KEY= '8768da57bd891fa41359848c1665c9e4';
 
