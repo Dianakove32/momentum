@@ -1,22 +1,40 @@
 import React, { Component } from 'react'
-import Modal from 'react-modal'
+import Modal from 'react-modal';
 
-export default class Modalweather extends Component {
-    constructor (props){
-        super(props)
+export default function Modalweather(props){
+    var subtitle;
+    const [modalIsOpen,setIsOpen] = React.useState(false);
+    function openModal() {
+      setIsOpen(true);
     }
-    render() {
-        const { city, country, temp, icon, sunrise, sunset } = this.props
-        return (
+
+    // function afterOpenModal() {
+
+    //   subtitle.style.color = '#f00';
+    // }
+
+    function closeModal(){
+      setIsOpen(false);
+    }
+    const { city, country, temp,  sunrise, sunset } =  props
+      return (
+        <div>
+          <button onClick={openModal}>Open Modal</button>
+          <Modal
+            isOpen={modalIsOpen}
+
+            onRequestClose={closeModal}  >
+
+            <button onClick={closeModal}>close</button>
             <div>
-<Modal>
-<p>City: {city}</p>
+            <p>City:{city   } Temp:  {temp} </p>
                <p>country: {country}</p>
-<p>Temp: {icon}{temp}</p>
+
 <p>Sunrise: {sunrise}</p>
 <p>Sunset: {sunset}</p>
-</Modal>
             </div>
-        )
-    }
-}
+
+          </Modal>
+        </div>
+      );
+  }
