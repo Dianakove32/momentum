@@ -67,12 +67,8 @@ console.log(  'xbfc', city)
         <div className="App">
           <Clock />
         <Randomizer />
-<<<<<<< HEAD
-        </div>
-
-=======
         <ToDo/>
->>>>>>> 23f8a652b535c569c4e424574851d4c41aaca127
+      </div>
       </div>
     );
   }
