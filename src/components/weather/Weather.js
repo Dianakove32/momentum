@@ -7,16 +7,18 @@ export default class Weather extends Component {
         super(props)
     }
     render() {
-        const { city, country, temp, sunrise, sunset, humidity } = this.props
+        const { city, country, temp, sunrise, description, humidity } = this.props
         return (
             <div>
-                <p> {city} <b> {temp} </b> °C           </p>
+            <p>Today is  {description}</p>
+                <p> {city} <b> {temp} </b>   </p>
 
                 <SimpleSlide city={city}
                     country={country}
                     temp={temp}
                     sunrise={sunrise}
-                    humidity={humidity} />
+                    humidity={humidity}
+                    description={description} />
                 {/* <Modalweather
                 city={city}
     country ={country}

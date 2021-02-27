@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: 500,
+    height: 200,
   },
   wrapper: {
     width: 250 + theme.spacing(1),
@@ -29,8 +29,10 @@ export default function SimpleSlide(props) {
     setChecked((prev) => !prev);
   };
 
-  const { city, country, temp,  sunset, humidity } = props
-
+  const { city, country, temp,  sunset, humidity,description  } = props
+if(description.includes('snow')){
+    <img    src="../../assets/weather/clean.jfif"  />
+}
   return (
      <div className={classes.root}>
       <div className={classes.wrapper} >
@@ -41,11 +43,12 @@ export default function SimpleSlide(props) {
         <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
           <Paper elevation={4} className={classes.paper}>
           <div>
+
            <p> <b>City:  </b>{city}</p>
            <p> <b>Temp:  </b>{temp}</p>
-            <p><b>country: </b>{country}</p>
+            <p><b>Country: </b>{country}</p>
             <p><b>Sunset: </b>{sunset}</p>
-            <p><b>humidity: </b> {humidity}</p>
+            <p><b>Humidity: </b> {humidity}</p>
           </div>
 
           </Paper>

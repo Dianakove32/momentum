@@ -14,12 +14,14 @@ const API_KEY= '8768da57bd891fa41359848c1665c9e4';
 class App extends React.Component {
 
   state={
+
     icon:undefined,
     temp: undefined,
     city: undefined,
     country:undefined ,
     humidity: undefined,
     sunset: undefined,
+    description: '...',
   }
 
   gettingWeather= async (e) =>{
@@ -40,18 +42,19 @@ console.log(  'xbfc', city)
 
       this.setState({
         city: data.name,
-        temp: data.main.temp,
+        temp: Math.ceil(data.main.temp)+ '°C',
       // icon:data.weather[0].icon,
         country:data.sys.country,
         humidity: data.main.humidity,
         sunset:  sunset_date,
+        description: data.weather[0].description
       })
     }
   }
 
   render(){
       const  gettingWeather =this.gettingWeather
-      const {city, country,temp,icon,sunset,humidity}=this.state
+      const {city, country,temp,icon,sunset,humidity,description}=this.state
     return (
       <div>
       <div className='weatherBlock'>
@@ -61,7 +64,8 @@ console.log(  'xbfc', city)
         temp = {temp}
         sunset = {sunset}
         icon={icon}
-        humidity={humidity} />
+        humidity={humidity}
+        description={description} />
       </div>
 
         <div className="App">
