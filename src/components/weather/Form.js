@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import TextField from '@material-ui/core/TextField';
 
 
 export default class Form extends Component {
@@ -9,8 +9,9 @@ export default class Form extends Component {
             <div>
                 <h2>The weather</h2>
                 <form onSubmit={gettingWeather}>
-                    <input type = "text" name= "city" placeholder="City"/>
-                    <button>Enter</button>
+                <TextField id="outlined-basic" name= "city" label="Choose city" variant="outlined" />
+                    {/* <input type = "text" name= "city" placeholder="City"/> */}
+
                 </form>
             </div>
         )
