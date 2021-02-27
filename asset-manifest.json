@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/momentum/static/css/main.9f0f46ff.chunk.css",
-    "main.js": "/momentum/static/js/main.46acbdb1.chunk.js",
-    "main.js.map": "/momentum/static/js/main.46acbdb1.chunk.js.map",
+    "main.css": "/momentum/static/css/main.e090a7d3.chunk.css",
+    "main.js": "/momentum/static/js/main.fef75fad.chunk.js",
+    "main.js.map": "/momentum/static/js/main.fef75fad.chunk.js.map",
     "runtime-main.js": "/momentum/static/js/runtime-main.034026fc.js",
     "runtime-main.js.map": "/momentum/static/js/runtime-main.034026fc.js.map",
-    "static/js/2.d606a84c.chunk.js": "/momentum/static/js/2.d606a84c.chunk.js",
-    "static/js/2.d606a84c.chunk.js.map": "/momentum/static/js/2.d606a84c.chunk.js.map",
+    "static/js/2.bcbdda4c.chunk.js": "/momentum/static/js/2.bcbdda4c.chunk.js",
+    "static/js/2.bcbdda4c.chunk.js.map": "/momentum/static/js/2.bcbdda4c.chunk.js.map",
     "index.html": "/momentum/index.html",
-    "static/css/main.9f0f46ff.chunk.css.map": "/momentum/static/css/main.9f0f46ff.chunk.css.map",
-    "static/js/2.d606a84c.chunk.js.LICENSE.txt": "/momentum/static/js/2.d606a84c.chunk.js.LICENSE.txt"
+    "static/css/main.e090a7d3.chunk.css.map": "/momentum/static/css/main.e090a7d3.chunk.css.map",
+    "static/js/2.bcbdda4c.chunk.js.LICENSE.txt": "/momentum/static/js/2.bcbdda4c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.034026fc.js",
-    "static/js/2.d606a84c.chunk.js",
-    "static/css/main.9f0f46ff.chunk.css",
-    "static/js/main.46acbdb1.chunk.js"
+    "static/js/2.bcbdda4c.chunk.js",
+    "static/css/main.e090a7d3.chunk.css",
+    "static/js/main.fef75fad.chunk.js"
   ]
 }
