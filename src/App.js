@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.scss';
-import Clock from './components/clock';
+import Clock from './components/clock/clock';
 import Randomizer from './components/randomizer/Randomizer'
 import Form from './components/weather/Form';
 
 
 import Weather from './components/weather/Weather';
+import ToDo from './components/toDo/toDo';
+
 const API_KEY= '8768da57bd891fa41359848c1665c9e4';
+
 
 class App extends React.Component {
 
@@ -64,8 +67,12 @@ console.log(  'xbfc', city)
         <div className="App">
           <Clock />
         <Randomizer />
+<<<<<<< HEAD
         </div>
 
+=======
+        <ToDo/>
+>>>>>>> 23f8a652b535c569c4e424574851d4c41aaca127
       </div>
     );
   }
