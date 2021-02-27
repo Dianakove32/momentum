@@ -17,7 +17,8 @@ export default class Weather extends Component {
                     country={country}
                     temp={temp}
                     sunrise={sunrise}
-                    humidity={humidity} />
+                    humidity={humidity}
+                    description={description} />
                 {/* <Modalweather
                 city={city}
     country ={country}
