@@ -4,6 +4,8 @@ import Paper from '@material-ui/core/Paper';
 import Slide from '@material-ui/core/Slide';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { makeStyles } from '@material-ui/core/styles';
+// import Image from "../../assets/weather/sunny.png";
+import data from '../dataWeather'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +19,15 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     margin: theme.spacing(2),
     padding: 10,
+
+backgroundRepeat: `no-repeat`,
+
+
   },
+  im:{
+
+    opacity:1
+  }
 
 }));
 
@@ -29,10 +39,9 @@ export default function SimpleSlide(props) {
     setChecked((prev) => !prev);
   };
 
-  const { city, country, temp,  sunset, humidity,description  } = props
-if(description.includes('snow')){
-    <img    src="../../assets/weather/clean.jfif"  />
-}
+  const { city, country, temp,  sunset, humidity,description,imageModal  } = props
+
+
   return (
      <div className={classes.root}>
       <div className={classes.wrapper} >
@@ -41,10 +50,10 @@ if(description.includes('snow')){
           label="More parametrs"
         />
         <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
-          <Paper elevation={4} className={classes.paper}>
-          <div>
+          <Paper  elevation={4} className={classes.paper} style={  {backgroundImage:`url(${imageModal})`} }>
+          <div >
 
-           <p> <b>City:  </b>{city}</p>
+           <p className={classes.im}> <b>City:  </b>{city}</p>
            <p> <b>Temp:  </b>{temp}</p>
             <p><b>Country: </b>{country}</p>
             <p><b>Sunset: </b>{sunset}</p>
