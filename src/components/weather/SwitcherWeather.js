@@ -39,21 +39,8 @@ export default function SimpleSlide(props) {
     setChecked((prev) => !prev);
   };
 
-  const { city, country, temp,  sunset, humidity,description  } = props
-  let imageModal=null
-data.forEach(el=>{
-  console.log('desc',el.descriptionData)
-  console.log('description',description)
-  if(description.includes(el.descriptionData)){
-  imageModal= el.image
-     console.log('uraaaaa', imageModal)
-    return imageModal
+  const { city, country, temp,  sunset, humidity,description,imageModal  } = props
 
-  }
-
-// } else return Image= "https://thumbs.dreamstime.com/z/woman-riding-bicycle-plenty-park-krakow-poland-rainy-day-vector-cartoon-illustrat//ion-happy-woman-109593103.jpg"
-
- })
 
   return (
      <div className={classes.root}>
