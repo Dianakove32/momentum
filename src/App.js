@@ -59,9 +59,10 @@ console.log(  'xbfc', city)
       const  gettingWeather =this.gettingWeather
       const {city, country,temp,icon,sunset,humidity,description, }=this.state
     return (
-      <div>
-      <div className='weatherBlock'>
-          <Form   data={data} gettingWeather={gettingWeather}/>
+      <div className='App'>
+      <div className='wrapper'>
+           <div className='weatherBlock'>
+         <Form   data={data} gettingWeather={gettingWeather}/>
         <Weather  city={city}
         country ={country}
         temp = {temp}
@@ -71,9 +72,11 @@ console.log(  'xbfc', city)
         description={description}
          data={data} />
       </div>
+<Clock />
+      </div>
 
-        <div className="App">
-          <Clock />
+        <div  >
+
         <Randomizer />
         <ToDo/>
       </div>
