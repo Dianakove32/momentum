@@ -9,7 +9,7 @@ import data from '../dataWeather'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: 200,
+    height: 50,
   },
   wrapper: {
     width: 250 + theme.spacing(1),
