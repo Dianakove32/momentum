@@ -3,11 +3,9 @@ import './App.scss';
 import Clock from './components/clock/clock';
 import Randomizer from './components/randomizer/Randomizer'
 import Form from './components/weather/Form';
-
-
 import Weather from './components/weather/Weather';
 import ToDo from './components/toDo/toDo';
-
+import data from './components/dataWeather'
 const API_KEY= '8768da57bd891fa41359848c1665c9e4';
 
 
@@ -23,6 +21,8 @@ class App extends React.Component {
     sunset: undefined,
     description: '...',
   }
+
+
 
   gettingWeather= async (e) =>{
     e.preventDefault();
@@ -40,7 +40,10 @@ console.log(  'xbfc', city)
       date.setTime(sunset);
       var sunset_date = date.getHours()+ ":" + date.getMinutes()+ ":" + date.getSeconds()
 
+
+
       this.setState({
+
         city: data.name,
         temp: Math.ceil(data.main.temp)+ '°C',
       // icon:data.weather[0].icon,
@@ -54,18 +57,19 @@ console.log(  'xbfc', city)
 
   render(){
       const  gettingWeather =this.gettingWeather
-      const {city, country,temp,icon,sunset,humidity,description}=this.state
+      const {city, country,temp,icon,sunset,humidity,description, }=this.state
     return (
       <div>
       <div className='weatherBlock'>
-          <Form gettingWeather={gettingWeather}/>
+          <Form   data={data} gettingWeather={gettingWeather}/>
         <Weather  city={city}
         country ={country}
         temp = {temp}
         sunset = {sunset}
         icon={icon}
         humidity={humidity}
-        description={description} />
+        description={description}
+         data={data} />
       </div>
 
         <div className="App">

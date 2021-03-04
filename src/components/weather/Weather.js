@@ -7,7 +7,7 @@ export default class Weather extends Component {
         super(props)
     }
     render() {
-        const { city, country, temp, sunrise, description, humidity } = this.props
+        const { city, country, temp, sunrise, description, humidity,image,  data } = this.props
         return (
             <div>
             <p>Today is  {description}</p>
@@ -18,7 +18,9 @@ export default class Weather extends Component {
                     temp={temp}
                     sunrise={sunrise}
                     humidity={humidity}
-                    description={description} />
+                    description={description}
+                    image={image}
+                    data={data} />
                 {/* <Modalweather
                 city={city}
     country ={country}
