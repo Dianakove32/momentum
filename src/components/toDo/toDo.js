@@ -51,7 +51,7 @@ export default class ToDo extends React.Component {
     render() {
         return (
             <div className="Todo">
-                
+                <div className="inputToDo">
                 <input
                     value={this.state.todo.text}
                     onChange={this.putOneTodo}
@@ -69,8 +69,9 @@ export default class ToDo extends React.Component {
                 <button className="add-btn" onClick={this.addTodo}>
                     Add it
                 </button>
-                <div className="common-container">
-                    <div className="todos-container">
+                </div>
+              
+                   
                         {this.state.todoList.length !== 0 ? (
                             this.state.todoList
                                 .filter(
@@ -89,11 +90,11 @@ export default class ToDo extends React.Component {
                                                 {' '}
                                                 {todo.category}{' '}
                                             </span>
-                                            <button
+                                            <button className="delete-btn"
                                                 onClick={() => {
                                                     this.deleteTodo(index);
                                                 }}
-                                                className="delete-btn"
+                                                
                                             >
                                                 Delete
                                             </button>
@@ -101,9 +102,9 @@ export default class ToDo extends React.Component {
                                     );
                                 })
                         ) : (
-                            <div>You did not add any todo yet</div>
+                            <div className='todoNothing'>You did not add any todo yet</div>
                         )}
-                    </div>
+               
                     <div className="filter-container">
                         <p>Filter it</p>
                         <hr />
@@ -139,7 +140,7 @@ export default class ToDo extends React.Component {
                         </button>
                     </div>
                 </div>
-            </div>
+           
         );
     }
 }
