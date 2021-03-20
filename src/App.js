@@ -87,15 +87,17 @@ fetch(url1)
       </div>
       <NavLink to="/news">News</NavLink>
       <Switch>
-        <Route path="/news" render={() => <News />}></Route>
+      <Route  path="/news">
+            <News/>
+          </Route>
 </Switch>  
 
-<div>
+
         <Randomizer />
-        <div className='Todo'>
+       
         <ToDo/>
-        </div>
-      </div>
+        
+      
       </div>
     );
   }

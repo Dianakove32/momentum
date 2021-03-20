@@ -1,12 +1,16 @@
 import React from "react"
-import './toDo.scss'
+import './toDo.scss';
+
+import Button from '@material-ui/core/Button';
+
+
 export default class ToDo extends React.Component {
     state = {
         todoList: [],
         todo: { text: '', category: 'Coding' },
         filter: 'All',
     };
-
+    
     addTodo = () => {
         let newTodoList = this.state.todoList;
         newTodoList.push(this.state.todo);
@@ -56,7 +60,7 @@ export default class ToDo extends React.Component {
                     value={this.state.todo.text}
                     onChange={this.putOneTodo}
                     placeholder="Write your todo here..."
-                ></input>
+                />
                 <select
                     onChange={this.putOneCategory}
                     className="categories-container"
@@ -66,9 +70,11 @@ export default class ToDo extends React.Component {
                     <option>Food</option>
                     <option>Extra</option>
                 </select>
-                <button className="add-btn" onClick={this.addTodo}>
+             
+                <button className="addBtn"  onClick={this.addTodo}>
                     Add it
                 </button>
+             
                 </div>
               
                    
@@ -90,14 +96,14 @@ export default class ToDo extends React.Component {
                                                 {' '}
                                                 {todo.category}{' '}
                                             </span>
-                                            <button className="delete-btn"
+                                            <Button variant="outlined" color="secondary"
                                                 onClick={() => {
                                                     this.deleteTodo(index);
                                                 }}
                                                 
                                             >
                                                 Delete
-                                            </button>
+                                            </Button>
                                         </div>
                                     );
                                 })
@@ -112,25 +118,25 @@ export default class ToDo extends React.Component {
                             className="category-button"
                             onClick={this.displayCategory}
                         >
-                            Coding
+                            👨‍💻 Coding
                         </button>
                         <button
                             className="category-button"
                             onClick={this.displayCategory}
                         >
-                            Sports
+                            🏋️‍♀️ Sports
                         </button>
                         <button
                             className="category-button"
                             onClick={this.displayCategory}
                         >
-                            Food
+                            🥗 Food
                         </button>
                         <button
                             className="category-button"
                             onClick={this.displayCategory}
                         >
-                            Extra
+                            😱 Extra
                         </button>
                         <button
                             className="category-button"
