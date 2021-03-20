@@ -5,8 +5,12 @@ import Randomizer from './components/randomizer/Randomizer'
 import Form from './components/weather/Form';
 import Weather from './components/weather/Weather';
 import ToDo from './components/toDo/toDo';
-import data from './components/dataWeather'
+import data from './components/dataWeather';
+import {Route, Switch } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import News from './components/news/news'
 const API_KEY= '8768da57bd891fa41359848c1665c9e4';
+
 
 
 class App extends React.Component {
@@ -21,9 +25,6 @@ class App extends React.Component {
     sunset: undefined,
     description: '...',
   }
-
-
-
   gettingWeather= async (e) =>{
     e.preventDefault();
     const city=e.target.elements.city.value;
@@ -53,6 +54,16 @@ console.log(  'xbfc', city)
         description: data.weather[0].description
       })
     }
+  
+  let url1 = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=0e428c7efd55415aba1f5a8b3fc39521';
+          
+
+
+fetch(url1)
+    .then(function(response) {
+        console.log(response.json());
+    })
+    console.log(url1)
   }
 
   render(){
@@ -74,12 +85,19 @@ console.log(  'xbfc', city)
       </div>
 <Clock />
       </div>
+      <NavLink to="/news">News</NavLink>
+      <Switch>
+      <Route  path="/news">
+            <News/>
+          </Route>
+</Switch>  
 
-        <div  >
 
         <Randomizer />
+       
         <ToDo/>
-      </div>
+        
+      
       </div>
     );
   }
