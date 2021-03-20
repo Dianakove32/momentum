@@ -55,16 +55,11 @@ console.log(  'xbfc', city)
       })
     }
   
-  let url1 = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=0e428c7efd55415aba1f5a8b3fc39521';
+  }
           
 
 
-fetch(url1)
-    .then(function(response) {
-        console.log(response.json());
-    })
-    console.log(url1)
-  }
+
 
   render(){
       const  gettingWeather =this.gettingWeather
