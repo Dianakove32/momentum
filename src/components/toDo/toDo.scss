@@ -1,50 +1,53 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');*/
 
-.ToDo {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+.Todo {
     font-size: 20px;
-    /*font-family: 'Gochi Hand';*/
     letter-spacing: 0.1em;
-    text-align: center;
-    input {
-        border: none;
-        width: 300px;
-        font-size: 20px;
-        /* font-family: 'Gochi Hand';*/
-        letter-spacing: 0.1em;
-        /* background-color: rgb(240, 240, 240);*/
-        /*border-bottom: 3px solid rgba(80, 92, 51, 0.17);*/
+    .inputToDo {
+        margin-bottom: 20px;
     }
 }
 
-.categories-container {
-    font-size: 20px;
-    /*font-family: 'Gochi Hand';*/
-    letter-spacing: 0.1em;
-    /*padding: 1.5px;
-    padding-top: 3.5px;*/
-    border: none;
+button {
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.add-btn {
-    border: none;
-    padding-left: 0px;
-    font-size: 20px;
-    /*font-family: 'Gochi Hand';
-    text-shadow: 1px 1px blue;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-    border-bottom: 3px solid rgba(80, 92, 51, 0.17);
-    border-right: 5px solid rgba(80, 92, 51, 0.17);*/
+.addBtn {
+    color: green;
+    font-weight: 600;
+    border: solid 2px green;
 }
 
-.add-btn:focus {
+input {
+    padding: 10px 11px 11px 11px;
+    border-right: none;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.addBtn:hover {
+    box-shadow: 1px 1px 2px 0;
+}
+
+input:focus {
     outline: none;
 }
 
-.common-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
+select {
+    padding: 10px;
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.addBtn:focus {
+    outline: none;
 }
 
 .todos-container {
@@ -55,34 +58,21 @@
     margin: 10px;
 }
 
-.category-container {
-    color: blue;
-    font-style: italic;
-}
-
-.delete-btn {
-    background-color: white;
-    border: 1px solid blue;
-    border-radius: 15%;
-    font-size: 20px;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-}
-
-.delete-btn:focus {
-    outline: none;
-}
-
 .filter-container {
     width: 20%;
     padding: 10px;
-    border: 1px solid blue;
+    border: 1px solid green;
     border-radius: 15%;
     text-align: left;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .category-button {
     display: block;
     border: none;
-    font-size: 18px;
+}
+
+.todoNothing {
+    margin-bottom: 15px;
+    width: 40%;
 }

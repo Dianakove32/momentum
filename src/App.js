@@ -5,9 +5,13 @@ import Randomizer from './components/randomizer/Randomizer'
 import Form from './components/weather/Form';
 import Weather from './components/weather/Weather';
 import ToDo from './components/toDo/toDo';
-import data from './components/dataWeather'
+
 import dataBG from './components/dataBG'
 import pict from './assets/bg/22.jpg'
+import data from './components/dataWeather';
+import {Route, Switch } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import News from './components/news/news'
 const API_KEY= '8768da57bd891fa41359848c1665c9e4';
 
 let sectionStyle = {
@@ -17,6 +21,7 @@ let sectionStyle = {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat'
 };
+
 class App extends React.Component {
 constructor(){
   super()
@@ -70,23 +75,28 @@ console.log(  'xbfc', city)
         description: data.weather[0].description
       })
     }
+
   }
+
+
+
+
 
 //    giveRandomIndex(arr) {
 //     let randNumber = Math.floor(Math.random() * arr.length);
 //     return randNumber;
 // }
 
-getPict(arr){
-   arr.forEach(el=>{
+  getPict(arr){
+//    arr.forEach(el=>{
 
-    imageBG=el[0]
-    console.log(imageBG )
- return imageBG
+//     imageBG=el[0]
+//     console.log(imageBG )
+//  return imageBG
 
-    })
+//     })
 
-}
+ }
   render(){
     let imageBG =null;
 
@@ -109,12 +119,19 @@ getPict(arr){
       </div>
 <Clock  style={ {backgroundImage:`url(${imageBG})`}}/>
       </div>
+      <NavLink to="/news">News</NavLink>
+      <Switch>
+      <Route  path="/news">
+            <News/>
+          </Route>
+</Switch>
 
-        <div  >
 
         <Randomizer />
+
         <ToDo/>
-      </div>
+
+
       </div>
     );
   }
