@@ -6,13 +6,28 @@ import Form from './components/weather/Form';
 import Weather from './components/weather/Weather';
 import ToDo from './components/toDo/toDo';
 import data from './components/dataWeather'
+import dataBG from './components/dataBG'
+import pict from './assets/bg/22.jpg'
 const API_KEY= '8768da57bd891fa41359848c1665c9e4';
 
+let sectionStyle = {
 
+  backgroundImage: `url(${ pict})`,
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
+};
 class App extends React.Component {
+constructor(){
+  super()
+this.getPict(dataBG)
+}
+
+
+
 
   state={
-
+    imgBG:pict ,
     icon:undefined,
     temp: undefined,
     city: undefined,
@@ -21,7 +36,9 @@ class App extends React.Component {
     sunset: undefined,
     description: '...',
   }
-
+// componentDidMount(){
+//   giveRandomIndex(dataBG)
+// }
 
 
   gettingWeather= async (e) =>{
@@ -32,7 +49,7 @@ console.log(  'xbfc', city)
       const api_url = await
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
       const data = await api_url.json()
-      console.log(data)
+
 
       var sunset=data.sys.sunset;
 
@@ -55,13 +72,31 @@ console.log(  'xbfc', city)
     }
   }
 
+//    giveRandomIndex(arr) {
+//     let randNumber = Math.floor(Math.random() * arr.length);
+//     return randNumber;
+// }
+
+getPict(arr){
+   arr.forEach(el=>{
+
+    imageBG=el[0]
+    console.log(imageBG )
+ return imageBG
+
+    })
+
+}
   render(){
+    let imageBG =null;
+
+
       const  gettingWeather =this.gettingWeather
-      const {city, country,temp,icon,sunset,humidity,description, }=this.state
+      const {city, country,temp,icon,sunset,humidity,description,imgBG }=this.state
     return (
-      <div className='App'>
+      <div className='App' style={ {backgroundImage:`url(${dataBG[0][0]})`, width:'100%'}}>
       <div className='wrapper'>
-           <div className='weatherBlock'>
+           <div className='weatherBlock' >
          <Form   data={data} gettingWeather={gettingWeather}/>
         <Weather  city={city}
         country ={country}
@@ -72,7 +107,7 @@ console.log(  'xbfc', city)
         description={description}
          data={data} />
       </div>
-<Clock />
+<Clock  style={ {backgroundImage:`url(${imageBG})`}}/>
       </div>
 
         <div  >
@@ -86,3 +121,6 @@ console.log(  'xbfc', city)
 }
 
 export default App;
+
+
+// style={{bacgraund:`${imgBG}`}}
