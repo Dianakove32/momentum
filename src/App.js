@@ -12,6 +12,7 @@ import data from './components/dataWeather';
 import {Route, Switch } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import News from './components/news/news'
+import DishList from './components/dish/DishList';
 const API_KEY= '8768da57bd891fa41359848c1665c9e4';
 
 let sectionStyle = {
@@ -130,7 +131,7 @@ console.log(  'xbfc', city)
         <Randomizer />
 
         <ToDo/>
-
+<DishList/>
 
       </div>
     );
