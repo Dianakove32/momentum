@@ -1,25 +1,31 @@
 import React from 'react';
 
 
-class DishRandom extends React.Component {
+
+
+class Dish extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      dish: [],
+      uri:"",
+      label:"",
+      image:""
           }
     
-    this.handleClick = this.handleClick.bind(this);
+          this.getRecipe = this.getRecipe.bind(this);
   }
 
-  componentDidMount() {
-    const API = 'https://foodish-api.herokuapp.com/'
+  getRecipe() {
+    const API = 'https://api.edamam.com/search?q=chicken&app_id=02ff5b94&app_key=38d7e7e23122d500b9bfd3beced06c29&from=0&to=3&calories=591-722&health=alcohol-free'
     fetch(API)
-        .then((response) => response.json())
-       
+        .then((response) =>{ response.json();
+        console.log(response)})
+        
         .then((data) => {
+          console.log(data)
             this.setState({
-             dish: data
+              uri:data.uri, image:data.image, label:data.label 
              
             })
        
@@ -31,8 +37,9 @@ class DishRandom extends React.Component {
     
   render() {
     return (
-      <div id='quote-box'>
-      {this.state.dish}
+      <div>
+     
+      <button onClick={this.getRecipe}>dish</button> 
       </div>
        
      
@@ -44,4 +51,4 @@ class DishRandom extends React.Component {
     
 
 
-export default DishRandom;
+export default Dish;

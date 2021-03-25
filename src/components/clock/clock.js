@@ -46,18 +46,18 @@ class Clock extends React.Component {
           transform: `rotate(${this.state.hourDegrees}deg)`
       };
         return (
-            <div class="clock">
+            <div className="clock">
 
-            <div class="hour"style={hourStyle}>
-                <div class="hr" id="hr"></div>
+            <div className="hour"style={hourStyle}>
+                <div className="hr" id="hr"></div>
             </div>
     
-            <div class="min" style= {minuteStyle} >
-                <div class="mn" id="mn"></div>
+            <div className="min" style= {minuteStyle} >
+                <div className="mn" id="mn"></div>
             </div>
     
-            <div class="sec"style= {secondStyle} >
-                <div class="sc" id="sc"></div>
+            <div className="sec"style= {secondStyle} >
+                <div className="sc" id="sc"></div>
             </div>
     
         </div>
