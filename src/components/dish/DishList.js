@@ -14,12 +14,10 @@ export default function DishList() {
         context.setSearch(e.target.value)
             }
 
-            const onClick=()=>{
 
-            }
     return (
         <div>
-<button onClick = {onClick}>get data</button>
+
 <input type='text' placeholder='find dish' autoComplete='on' onChange={onChange}/>
   {context.state.isLoaded &&
         context.state.data.data.hits.map((el) =><Dish {...el.recipe}/>)}

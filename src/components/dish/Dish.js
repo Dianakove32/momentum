@@ -1,17 +1,23 @@
 import React from 'react'
-
+import { DishWrapper,WrapperContent, } from "./style";
 export default function Dish({
     label,image,calories,ingredientLines
 }) {
 
 
     return (
-        <div>
-<h2>{label}</h2>
-      <img src={image} alt={label} />
-      <p>{calories}</p>
+        <DishWrapper>
+
+            <img  src={image} alt={label} />
+
+
+      <WrapperContent>
+      <h2>{label}</h2>
+      <p>Calories: {Math.ceil(calories)}</p>
       <p>{ingredientLines}</p>
-      <p>{calories}</p>
-        </div>
+
+      </WrapperContent>
+
+        </DishWrapper>
     )
 }
