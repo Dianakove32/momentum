@@ -1,8 +1,6 @@
 import React from 'react';
 
 
-
-
 class Dish extends React.Component {
   constructor(props) {
     super(props);
@@ -38,7 +36,7 @@ class Dish extends React.Component {
   render() {
     return (
       <div>
-     
+     Hello dish from Diana!
       <button onClick={this.getRecipe}>dish</button> 
       </div>
        
