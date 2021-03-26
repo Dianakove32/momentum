@@ -13,8 +13,8 @@ export default function Dish({
 
       <WrapperContent>
       <h2>{label}</h2>
-      <p>Calories: {Math.ceil(calories)}</p>
-      <p>{ingredientLines}</p>
+      <p>Calories: <i>{Math.ceil(calories)} </i> </p>
+      <p>{ingredientLines.map(el=><li>{el}</li>)}</p>
 
       </WrapperContent>
 
