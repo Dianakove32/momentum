@@ -2,17 +2,18 @@ import React from 'react';
 import './App.scss';
 import Home from './home';
 import News from './components/news/news';
-import Dish from './components/dish/dishRandom';
+
 import {Route, Switch } from "react-router-dom";
 import Navbar from './components/navbar/navbar';
+import DishList from './components/dish/DishList';
 
 class App extends React.Component {
 
- 
+
   render(){
-      return(        
+      return(
         <div>
-        <Navbar />  
+        <Navbar />
 
     <Switch>
       <Route exact path="/">
@@ -22,12 +23,12 @@ class App extends React.Component {
         <News />
       </Route>
       <Route path="/dish">
-        <Dish />
+        <DishList />
       </Route>
     </Switch>
     </div>
     )
-   
+
       }
 
 }
