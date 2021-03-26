@@ -7,6 +7,7 @@ import Form from './components/weather/Form';
 import Weather from './components/weather/Weather';
 import ToDo from './components/toDo/toDo';
 import data from './components/dataWeather';
+import Navbar from './components/navbar/navbar';
 
 import { NavLink } from "react-router-dom";
 import News from './components/news/news'
@@ -69,6 +70,7 @@ console.log(  'xbfc', city)
       const {city, country,temp,icon,sunset,humidity,description, }=this.state
     return (
       <div className='App'>
+       
       <div className='wrapper'>
            <div className='weatherBlock'>
          <Form   data={data} gettingWeather={gettingWeather}/>
@@ -81,17 +83,14 @@ console.log(  'xbfc', city)
         description={description}
          data={data} />
       </div>
-<Clock />
-      </div>
-      <NavLink to="/news">News</NavLink>
-       
 
+      <Clock />
 
-        <Randomizer />
-       
+      </div>          
+        <Randomizer />       
         <ToDo/>
        <Currency/> 
-      <Dish/>
+       <Dish/>
       </div>
     );
   }
