@@ -5,7 +5,8 @@ export const ApiContext = React.createContext()
 
 const initialState = {
     data:[],
-    isLoaded:false
+    isLoaded:false,
+    cart:[]
 }
 
 export default function ContextProvider({children}) {
