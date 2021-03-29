@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { ApiContext } from "../../components/context/Context";
 
 import Dish from "./Dish.js";
+import Favorites from "./Favorites";
 import "./style.scss"
 
 
@@ -27,7 +28,7 @@ export default function DishList(props) {
     console.log(context.state.data)
     return (
         <div>
-            <button onClick={props.toggleModal}>Modal</button>
+            <Favorites/>
 
             <input className="input-dish" type='text' placeholder='find dish' autoComplete='on' onChange={onChange} />
             {context.state.isLoaded &&

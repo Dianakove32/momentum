@@ -17,8 +17,10 @@ export default function Favorites() {
     isOpen ={isOpen}
     onRequestClose = {toggleModal}
     contentLabel = "My dialog"
+
 />
-<DishList toggleModal={toggleModal}/>
+<button onClick={ toggleModal}>Modal</button>
+
 
 
         </div>
