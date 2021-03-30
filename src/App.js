@@ -26,7 +26,9 @@ class App extends React.Component {
         <DishList />
       </Route>
     </Switch>
+    
     </div>
+    
     )
 
       }
