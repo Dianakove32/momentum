@@ -5,7 +5,8 @@ export const ApiContext = React.createContext()
 
 const initialState = {
     data:[],
-    isLoaded:false
+    isLoaded:false,
+    cart:[]
 }
 
 export default function ContextProvider({children}) {
@@ -29,7 +30,7 @@ const getData=()=>{
 
     const data = await axios.get(url)
 
-    console.log (data)
+
     setState({
         ...state,
         data,
