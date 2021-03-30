@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { IoIosCloseCircleOutline } from 'react-icons/io';
 
 export const DishWrapper = styled.div `
 display: flex;
@@ -30,3 +31,10 @@ padding-top:10px;
     height:200px;
     border-radius:4px
     `
+export const CloseIcon = styled(IoIosCloseCircleOutline)`
+width: 30px;
+height: 30px;
+position: absolute;
+top: 5px;
+right: 5px;
+`;
