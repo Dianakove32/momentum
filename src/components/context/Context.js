@@ -30,7 +30,7 @@ const getData=()=>{
 
     const data = await axios.get(url)
 
-    console.log (data)
+
     setState({
         ...state,
         data,

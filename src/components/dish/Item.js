@@ -1,7 +1,7 @@
 import React, {useState,useEffect, useContext} from 'react'
 import {CloseIcon, DishWrapper,WrapperContent} from './style'
 
-export default function Item({ label,image,calories,ingredientLines,quantity}) {
+export default function Item({ label,image,calories,ingredientLines,quantity,onClick}) {
     return (
 
  <DishWrapper>
@@ -10,11 +10,14 @@ export default function Item({ label,image,calories,ingredientLines,quantity}) {
 
 
 <WrapperContent>
+<CloseIcon onClick={()=>onClick(label)} />
 <h2>{label}</h2>
+
 <p>Calories: <i>{Math.ceil(calories)} </i> </p>
 <p>{ingredientLines.map(el=><li>{el}</li>)}</p>
-<span>{`${quantity} X`}</span>
- <CloseIcon  />
+
+
+
 </WrapperContent>
 
 </DishWrapper>

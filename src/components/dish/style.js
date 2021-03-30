@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { IoIosCloseCircleOutline } from 'react-icons/io';
 
 export const DishWrapper = styled.div `
+position:relative;
 display: flex;
 padding: 10px;
   width: 90%;
@@ -37,4 +38,7 @@ height: 30px;
 position: absolute;
 top: 5px;
 right: 5px;
+&:hover{
+    cursor:pointer
+}
 `;

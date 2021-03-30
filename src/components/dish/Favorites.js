@@ -12,18 +12,21 @@ export default function Favorites() {
         console.log('click')
         setIsOpen(!isOpen)
     }
-   // const findItem = (arr, label) => arr.find((el) =>el.recipe.label  === label );
-    // const deleteItem = (e) => {
-    //     let element = findItem(context.state.cart, e.target.label);
-    //     const index = context.state.cart.indexOf(element);
+     const findItem = (arr, label) => arr.find((el) =>el.recipe.label  === label );
+     const deleteItem = (label) => {
+         console.log('e',  )
 
-    //     let copyOfItems = [...context.state.cart];
-    //     copyOfItems.splice(index, 1);
-    //     context.setState({
-    //       ...context.state,
-    //       cart: copyOfItems,
-    //     });
-    //   };
+       let element = findItem(context.state.cart, label);
+       console.log('elem', element)
+         const index = context.state.cart.indexOf(element);
+
+       let copyOfItems = [...context.state.cart];
+          copyOfItems.splice(index, 1);
+       context.setState({
+            ...context.state,
+           cart: copyOfItems,
+        });
+        };
 
 const getQuantity = (arr, title) => arr.filter((el)=> el.recipe.label == title)
     const renderItem = (arr)=>{
@@ -40,8 +43,8 @@ const getQuantity = (arr, title) => arr.filter((el)=> el.recipe.label == title)
             image={el.recipe.image}
             calories={el.recipe.calories}
             ingredientLines={el.recipe.ingredientLines}
-           // quantity={getQuantity(context.state.cart,label).length}
-            //    onClick={deleteItem}
+            quantity={getQuantity(context.state.cart).length}
+               onClick={deleteItem}
             />
         )})
     }
@@ -58,7 +61,7 @@ const getQuantity = (arr, title) => arr.filter((el)=> el.recipe.label == title)
         renderItem (context.state.cart)
     )
 }
-    <button onClick={toggleModal}>Close</button>
+<button onClick={toggleModal}>Close</button>
 </Modal>
 <button onClick={ toggleModal}>Modal</button>
 
