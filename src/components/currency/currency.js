@@ -30,7 +30,7 @@ class Currency extends React.Component {
       return (
         <div>
           
- 
+ {this.state.abbr}: {this.state.cur}
          
         </div>
          
