@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-
+import { NavLink } from "react-router-dom";
 import { ApiContext } from "../../components/context/Context";
 
 import Dish from "./Dish.js";
@@ -28,6 +28,9 @@ export default function DishList(props) {
     console.log(context.state.data)
     return (
         <div>
+        <NavLink to="/"> <h3>Home</h3></NavLink>
+        <NavLink to="/news"> <h3>News</h3></NavLink>
+        <NavLink to="/dish"> <h3>Dish</h3></NavLink>
             <Favorites/>
 
             <input className="input-dish" type='text' placeholder='find dish' autoComplete='on' onChange={onChange} />

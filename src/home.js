@@ -90,14 +90,17 @@ constructor(props){
 
         <div className='layout-3-column'>
           <div className="news-container">
-            NEWS
+          <NavLink to="/dish"> <h3>NEWS </h3></NavLink>
+
           </div>
           <div className="clock-container">
             <Clock />
           </div>
           <div className="dish-container">
-          <h3>Dish for today</h3>
-              <DishForToday/>
+          <NavLink to="/dish"> <h3>Dish for today</h3></NavLink>
+
+          <div className='dishForToday'><DishForToday/></div>
+
           </div>
         </div>
         <div className='layout-2-column'>
