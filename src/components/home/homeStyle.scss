@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+  }
+
+  /* HTML5 display definitions
+     ========================================================================== */
+  /**
+   * Correct `block` display not defined for any HTML5 element in IE 8/9.
+   * Correct `block` display not defined for `details` or `summary` in IE 10/11
+   * and Firefox.
+   * Correct `block` display not defined for `main` in IE 11.
+   */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  main,
+  menu,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    color: inherit;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+    margin: 0;
+    /* 3 */
+  }
+  button,
+  html input[type=button],
+  input[type=reset],
+  input[type=submit] {
+    -webkit-appearance: button;
+    /* 2 */
+    cursor: pointer;
+    /* 3 */
+  }
+  input {
+    line-height: normal;
+  }
+
+  /**
+   * 1. Address box sizing set to `content-box` in IE 8/9/10.
+   * 2. Remove excess padding in IE 8/9/10.
+   *  Known issue: excess padding remains in IE 6.
+   */
+  input[type=checkbox],
+  input[type=radio] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+  }
+  textarea {
+    overflow: auto;
+  }
+
+ .layout-2-column{
+    display: flex;
+    flex-wrap: wrap;
+    height: 32vh;
+
+ .todo-container{
+    flex-basis: 70%;
+    background: #504646;
+color:white;
+border:2px solid rgb(255, 253, 253);
+}
+.icon-container {
+    flex-basis: 25%;
+    background-color: #F5F5F5;
+color:black;
+border:2px solid rgb(255, 253, 253);
+}
+.weather-container{
+    flex-basis: 25%;
+    background: #6B5B5B;
+color:white;
+border:2px solid rgb(255, 253, 253);
+}
+.quote-container {
+    flex-basis: 70%;
+    background-color: #F9F9F9;
+color:black;
+border:2px solid rgb(255, 253, 253);
+}
+ }
+.layout-3-column{
+    display: flex;
+    flex-wrap: wrap;
+    height: 32vh;
+    .news-container{
+        flex-basis: 30%;
+    background-color: #F6FAF9;
+color:black;
+border:2px solid rgb(255, 253, 253);
+    }
+    .clock-container{
+        flex-basis: 30%;
+    background-color: #504646;
+    border:2px solid rgb(255, 253, 253);
+    }
+    .dish-container{
+        flex-basis: 30%;
+    background-color: #CBC0CB;
+    color:black;
+    border:2px solid rgb(255, 253, 253);
+    }
+}
+
