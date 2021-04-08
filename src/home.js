@@ -72,14 +72,14 @@ class Home extends React.Component {
     const gettingWeather = this.gettingWeather
     const { city, country, temp, icon, sunset, humidity, description, } = this.state
     return (
-      <div className='App'>
+      <>
 
         <div className='layout-2-column'>
         <div className="todo-container">
            <ToDo />
         </div>
         <div className="icon-container">
-        <Currency />
+         <Currency />
            <Icon/>
         </div>
         </div>
@@ -89,12 +89,12 @@ class Home extends React.Component {
           <Clock />
         </div>
         <div className="dish-container">
-           DISH
+            DISH *
         </div>
         </div>
         <div className='layout-2-column'>
         <div className="weather-container">
-             <div className='weatherBlock'>
+              <div className='weatherBlock'>
             <Form data={data} gettingWeather={gettingWeather} />
             <Weather city={city}
               country={country}
@@ -107,19 +107,10 @@ class Home extends React.Component {
           </div>
         </div>
         <div className="quote-container">
-             <Randomizer />
+              <Randomizer />
         </div>
         </div>
-
-
-
-
-
-
-
-
-
-      </div>
+      </>
     );
   }
 }
