@@ -1,0 +1,70 @@
+// .weatherBlock {
+//     margin: 20px;
+// }
+
+// .wrapper {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+ .App {
+    margin: 30px;
+
+
+ }
+ .layout-2-column{
+    display: flex;
+    flex-wrap: wrap;
+    height: 30wh;
+
+ .todo-container{
+    flex-basis: 70%;
+    background: #504646;
+color:white;
+border:2px solid rgb(255, 253, 253);
+}
+.icon-container {
+    flex-basis: 25%;
+    background-color: #F5F5F5;
+color:black;
+border:2px solid rgb(255, 253, 253);
+}
+.weather-container{
+    flex-basis: 25%;
+    background: #6B5B5B;
+color:white;
+border:2px solid rgb(255, 253, 253);
+}
+.quote-container {
+    flex-basis: 70%;
+    background-color: #F9F9F9;
+color:black;
+border:2px solid rgb(255, 253, 253);
+}
+ }
+.layout-3-column{
+    display: flex;
+    flex-wrap: wrap;
+    height: 30wh;
+    .news-container{
+        flex-basis: 30%;
+    background-color: #F6FAF9;
+color:black;
+border:2px solid rgb(255, 253, 253);
+    }
+    .clock-container{
+        flex-basis: 30%;
+    background-color: #504646;
+    border:2px solid rgb(255, 253, 253);
+    }
+    .dish-container{
+        flex-basis: 30%;
+    background-color: #CBC0CB;
+    color:black;
+    border:2px solid rgb(255, 253, 253);
+    }
+}
+
+// .Todo {
+//     max-width: 60%;
+// }
