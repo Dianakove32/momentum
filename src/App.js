@@ -12,24 +12,24 @@ class App extends React.Component {
 
   render(){
       return(
-        <div>
-        <Navbar />
+         <div>
+         <Navbar />
 
-    <Switch>
+   <Switch>
       <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/news">
-        <News />
+         <Home />
+       </Route>
+     <Route path="/news">
+         <News />
       </Route>
       <Route path="/dish">
         <DishList />
-      </Route>
-    </Switch>
-    
-    </div>
-    
-    )
+     </Route>
+     </Switch>
+
+     </div>
+
+   )
 
       }
 
