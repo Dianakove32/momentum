@@ -2,6 +2,8 @@ import React, {useState,useEffect, useContext} from 'react'
 import {ApiContext} from '../context/Context'
 import Modal from 'react-modal'
 import Item from './Item'
+import DishForToday from './DishForToday'
+import Home from '../../home'
 
 
 export default function Favorites() {
@@ -37,6 +39,7 @@ const getQuantity = (arr, title) => arr.filter((el)=> el.recipe.label == title)
         .filter((value,index,self)=> self.indexOf(value)==index)
         .map((el, i)=>
        { return (
+           <>
             <Item
             key={i}
             label={el.recipe.label}
@@ -44,8 +47,9 @@ const getQuantity = (arr, title) => arr.filter((el)=> el.recipe.label == title)
             calories={el.recipe.calories}
             ingredientLines={el.recipe.ingredientLines}
             quantity={getQuantity(context.state.cart).length}
-               onClick={deleteItem}
-            />
+               onClick={deleteItem}/>
+            <DishForToday key={i}   label={el.recipe.label} />
+            </>
         )})
     }
     return (

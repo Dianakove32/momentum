@@ -14,8 +14,7 @@ export default class Weather extends Component {
         let imageModal=null;
         let phrase = null;
       data.forEach(el=>{
-        console.log('desc',el.descriptionData)
-        console.log('description',description)
+
         if(description.includes(el.descriptionData)){
         imageModal= el.image
         phrase = el.text
