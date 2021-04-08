@@ -55,25 +55,28 @@ export default class ToDo extends React.Component {
     render() {
         return (
             <div className="Todo">
+                <div className="Todo_item1">
                 <div className="inputToDo">
-                <input
-                    value={this.state.todo.text}
-                    onChange={this.putOneTodo}
-                    placeholder="Write your todo here..."
-                />
-                <select
-                    onChange={this.putOneCategory}
-                    className="categories-container"
-                >
-                    <option>👨‍💻 Coding</option>
-                    <option>👨‍💻 Sports</option>
-                    <option>🥗 Food</option>
-                    <option>😱 Extra</option>
-                </select>
-             
-                <button className="addBtn"  onClick={this.addTodo}>
-                    Add it
-                </button>
+                    <input
+                        className="inputToDo2"
+                        value={this.state.todo.text}
+                        onChange={this.putOneTodo}
+                        placeholder="Write your todo here..."
+                    />
+
+                    <select
+                        onChange={this.putOneCategory}
+                        className="categories-container"
+                    >
+                        <option>👨‍💻 Coding</option>
+                        <option>👨‍💻 Sports</option>
+                        <option>🥗 Food</option>
+                        <option>😱 Extra</option>
+                    </select>
+                
+                    <button className="addBtn"  onClick={this.addTodo}>
+                        Add it
+                    </button>
              
                 </div>
               
@@ -110,7 +113,7 @@ export default class ToDo extends React.Component {
                         ) : (
                             <div className='todoNothing'>You did not add any todo yet</div>
                         )}
-               
+                </div>
                     <div className="filter-container">
                         <p>Filter it</p>
                         <hr />

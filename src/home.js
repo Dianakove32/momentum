@@ -75,40 +75,43 @@ class Home extends React.Component {
       <>
 
         <div className='layout-2-column'>
-        <div className="todo-container">
-           <ToDo />
-        </div>
-        <div className="icon-container">
-         <Currency />
-           <Icon/>
-        </div>
-        </div>
-        <div className='layout-3-column'>
-        <div className="news-container">NEWS</div>
-        <div className="clock-container">
-          <Clock />
-        </div>
-        <div className="dish-container">
-            DISH *
-        </div>
-        </div>
-        <div className='layout-2-column'>
-        <div className="weather-container">
-              <div className='weatherBlock'>
-            <Form data={data} gettingWeather={gettingWeather} />
-            <Weather city={city}
-              country={country}
-              temp={temp}
-              sunset={sunset}
-              icon={icon}
-              humidity={humidity}
-              description={description}
-              data={data} />
+          <div className="todo-container">
+            <ToDo />
+          </div>
+          <div className="icon-container">
+            <Currency />
+            <Icon/>
           </div>
         </div>
-        <div className="quote-container">
-              <Randomizer />
+
+        <div className='layout-3-column'>
+          <div className="news-container">
+            NEWS
+          </div>
+          <div className="clock-container">
+            <Clock />
+          </div>
+          <div className="dish-container">
+              DISH *
+          </div>
         </div>
+        <div className='layout-2-column'>
+          <div className="weather-container">
+              <div className='weatherBlock'>
+                <Form data={data} gettingWeather={gettingWeather} />
+                <Weather city={city}
+                  country={country}
+                  temp={temp}
+                  sunset={sunset}
+                  icon={icon}
+                  humidity={humidity}
+                  description={description}
+                  data={data} />
+              </div>
+            </div>
+          <div className="quote-container">
+                <Randomizer />
+          </div>
         </div>
       </>
     );

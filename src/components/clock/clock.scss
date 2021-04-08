@@ -10,6 +10,9 @@
     background-color: #191919;
     border-radius: 50%;
     box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.5), inset -4px -4px 10px rgba(67, 67, 67, 0.3), 4px 4px 10px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    
+    text-align: center;
 }
 
 .clock:before {
@@ -54,6 +57,7 @@
     /*align-items: center;*/
     position: absolute;
     border-radius: 50%;
+    height: 100%;
 }
 
 .hr:before {
