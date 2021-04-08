@@ -1,21 +1,14 @@
-// .weatherBlock {
-//     margin: 20px;
-// }
-
-// .wrapper {
-//     display: flex;
-//     flex-wrap: wrap;
-// }
-
- .App {
-    margin: 30px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
- }
  .layout-2-column{
     display: flex;
     flex-wrap: wrap;
-    height: 30wh;
+    height: 32vh;
 
  .todo-container{
     flex-basis: 70%;
@@ -45,7 +38,7 @@ border:2px solid rgb(255, 253, 253);
 .layout-3-column{
     display: flex;
     flex-wrap: wrap;
-    height: 30wh;
+    height: 32vh;
     .news-container{
         flex-basis: 30%;
     background-color: #F6FAF9;
@@ -65,6 +58,3 @@ border:2px solid rgb(255, 253, 253);
     }
 }
 
-// .Todo {
-//     max-width: 60%;
-// }
