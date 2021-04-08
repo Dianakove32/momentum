@@ -1,0 +1,15 @@
+
+ .input-weather  {
+    background-color:#6B5B5B ;
+    outline: none;
+    border: none;
+     border-bottom: 1px solid #ffff;
+    &::placeholder{
+        color:rgb(233, 215, 215);
+        font-size: 13px;
+
+    }
+    // &:focus{
+    //     background-color:#6B5B5B ;
+    // }
+}
