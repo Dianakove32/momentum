@@ -7,6 +7,12 @@
     .inputToDo {
         margin-bottom: 20px;
     }
+    display: flex;
+    justify-content: space-between;
+}
+
+.Todo_item1 {
+ padding: 1vw;
 }
 
 button {
@@ -15,9 +21,11 @@ button {
 }
 
 .addBtn {
-    color: green;
+    color:#504646;
     font-weight: 600;
-    border: solid 2px green;
+    border: solid 2px #504646;
+    background-color: #DAB9B9;
+    ;
 }
 
 input {
@@ -75,4 +83,15 @@ select {
 .todoNothing {
     margin-bottom: 15px;
     width: 40%;
+}
+
+.categories-container {
+    background-color: #DAB9B9;
+    color:#504646;
+    border: solid 2px #504646;
+}
+
+.inputToDo2 {
+    background-color:#504646;
+    color:#DAB9B9;
 }

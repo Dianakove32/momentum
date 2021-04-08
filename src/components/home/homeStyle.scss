@@ -80,57 +80,60 @@ body {
 
 
   //style
- .layout-2-column{
-    display: flex;
-    flex-wrap: wrap;
-    height: 33vh;
-justify-content: flex-start;
+.layout-2-column{
+  display: flex;
+  flex-wrap: wrap;
+  height: 33vh;
+  justify-content: flex-start;
+
  .todo-container{
     flex-basis: 65vw;
     background: #504646;
-color:rgb(236, 221, 221);
-outline:8px solid rgb(255, 253, 253);
-}
-.icon-container {
+    color:rgb(236, 221, 221);
+    outline:8px solid rgb(255, 253, 253);
+  }    
+  .icon-container {
     flex-basis: 33vw;
     background-color: #eee2e2;
-color:black;
-outline:8px solid rgb(255, 253, 253);
-}
-.weather-container{
+    color:black;
+    outline:8px solid rgb(255, 253, 253);
+  }
+  .weather-container{
     flex-basis: 33vw;
     background: #6B5B5B;
-color:white;
-outline:8px solid rgb(255, 253, 253);
-}
-.quote-container {
+    color:white;
+    outline:8px solid rgb(255, 253, 253);
+  }
+  .quote-container {
     flex-basis: 67vw;
     background-color: #f8ecec;
-color:black;
-outline:8px solid rgb(255, 253, 253);
+    color:black;
+    outline:8px solid rgb(255, 253, 253);
+  }
 }
- }
+
 .layout-3-column{
     display: flex;
     flex-wrap: wrap;
     height: 33vh;
     justify-content: start;
-    .news-container{
-        flex-basis: 33vw;
+ .news-container{
+    flex-basis: 33vw;
     background-color: #eff8f6;
-color:black;
-outline:8px solid rgb(255, 253, 253);
-    }
-    .clock-container{
-        flex-basis: 33vw;
+    color:black;
+    outline:8px solid rgb(255, 253, 253);
+  }
+  .clock-container{
+    flex-basis: 33vw;
     background-color: #504646;
     outline:8px solid rgb(255, 253, 253);
-    }
-    .dish-container{
+    height: 100%;
+   }
+  .dish-container{
         flex-basis: 33vw;
     background-color: #CBC0CB;
     color:black;
     outline:8px solid rgb(255, 253, 253);
-    }
+  }
 }
 
