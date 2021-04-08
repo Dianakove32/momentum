@@ -15,13 +15,16 @@ import News from './components/news/news'
 import Dish from './components/dish/dishRandom'
 import Currency from './components/currency/currency'
 import Icon from './components/icon/Icon';
+import DishForToday from './components/dish/DishForToday';
 
 const API_KEY = '8768da57bd891fa41359848c1665c9e4';
 
 
 
 class Home extends React.Component {
-
+constructor(props){
+  super(props)
+}
   state = {
 
     icon: undefined,
@@ -69,6 +72,7 @@ class Home extends React.Component {
 
 
   render() {
+    console.log('sd',this.props.label)
     const gettingWeather = this.gettingWeather
     const { city, country, temp, icon, sunset, humidity, description, } = this.state
     return (
@@ -86,13 +90,17 @@ class Home extends React.Component {
 
         <div className='layout-3-column'>
           <div className="news-container">
-            NEWS
+          <NavLink to="/dish"> <h3>NEWS </h3></NavLink>
+
           </div>
           <div className="clock-container">
             <Clock />
           </div>
           <div className="dish-container">
-              DISH *
+          <NavLink to="/dish"> <h3>Dish for today</h3></NavLink>
+
+          <div className='dishForToday'><DishForToday/></div>
+
           </div>
         </div>
         <div className='layout-2-column'>

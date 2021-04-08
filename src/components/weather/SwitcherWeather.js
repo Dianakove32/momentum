@@ -17,7 +17,9 @@ const useStyles = makeStyles((theme) => ({
   Controllabel:{
  marginLeft:0,
 //bacgraund:'#8d6e63'
-labelPlacement:'right'
+//labelPlacement:'right'
+//direction="dawn"
+//color={'8d6e63'}
   },
   paper: {
     zIndex: 1,
@@ -54,10 +56,10 @@ export default function SimpleSlide(props) {
       <div className={classes.wrapper} >
 
           <FormControlLabel
-          control={<Switch color={'8d6e63'} className={classes.Controllabel} checked={checked} onChange={handleChange} />}
+          control={<Switch  className={classes.Controllabel} checked={checked} onChange={handleChange} />}
           // label="More parametrs"
         />
-        <Slide direction="dawn" in={checked} mountOnEnter unmountOnExit>
+        <Slide  in={checked} mountOnEnter unmountOnExit>
           <Paper  elevation={4} className={classes.paper} style={  {backgroundImage:`url(${imageModal})`} }>
           <div >
 
