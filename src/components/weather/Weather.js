@@ -6,12 +6,6 @@ export default class Weather extends Component {
     constructor(props) {
         super(props)
     }
-
-
-
-
-
-
   // } else return Image= "https://thumbs.dreamstime.com/z/woman-riding-bicycle-plenty-park-krakow-poland-rainy-day-vector-cartoon-illustrat//ion-happy-woman-109593103.jpg"
 
 
@@ -32,10 +26,9 @@ export default class Weather extends Component {
 
         return (
             <div>
-            <p>Today is  {description}</p>
+             <p><b>{city} {temp} </b>   </p>
+            <p>Today is  {description}.</p>
             <p>  {phrase}</p>
-                <p> {city} <b> {temp} </b>   </p>
-
                 <SimpleSlide city={city}
                     country={country}
                     temp={temp}

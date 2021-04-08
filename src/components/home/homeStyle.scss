@@ -87,24 +87,29 @@ body {
   justify-content: flex-start;
 
  .todo-container{
+    padding: 10px;
     flex-basis: 65vw;
     background: #504646;
     color:rgb(236, 221, 221);
     outline:8px solid rgb(255, 253, 253);
-  }    
+  }
   .icon-container {
+    padding: 10px;
     flex-basis: 33vw;
     background-color: #eee2e2;
     color:black;
     outline:8px solid rgb(255, 253, 253);
   }
   .weather-container{
+      padding: 10px;
     flex-basis: 33vw;
     background: #6B5B5B;
     color:white;
     outline:8px solid rgb(255, 253, 253);
-  }
+  position: relative;
+}
   .quote-container {
+    padding: 10px;
     flex-basis: 67vw;
     background-color: #f8ecec;
     color:black;
@@ -118,18 +123,21 @@ body {
     height: 33vh;
     justify-content: start;
  .news-container{
+    padding: 10px;
     flex-basis: 33vw;
     background-color: #eff8f6;
     color:black;
     outline:8px solid rgb(255, 253, 253);
   }
   .clock-container{
+    padding: 10px;
     flex-basis: 33vw;
     background-color: #504646;
     outline:8px solid rgb(255, 253, 253);
     height: 100%;
    }
   .dish-container{
+    padding: 10px;
         flex-basis: 33vw;
     background-color: #CBC0CB;
     color:black;

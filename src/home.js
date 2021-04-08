@@ -110,7 +110,7 @@ class Home extends React.Component {
               </div>
             </div>
           <div className="quote-container">
-                <Randomizer />
+                 <Randomizer />
           </div>
         </div>
       </>
