@@ -36,9 +36,9 @@ constructor(props){
   // this.successCallback=this.getCoordinates.bind(this)
   // this.errorCallback=this.errorCallback.bind(this)
   this.getCityLocation=this.getCityLocation.bind(this)
-  // this.gettingResult=this.gettingResult.bind(this)
+ this.gettingResult=this.gettingResult.bind(this)
 
-// this.gettingResult()
+
 }
   state = {
 
@@ -51,17 +51,25 @@ constructor(props){
     description: '...',
   }
   componentDidMount(){
-    this.getCityLocation()
+console.log('func', this.getCityLocation())
+
+this.gettingResult()
 
   }
    getCityLocation (){
+
     fetch('https://geolocation-db.com/json/639aa2f0-98c5-11eb-a996-0b3faf254bc0')
     .then(res=>res.json())
     .then(data=>this.setState({
       ...this.state,
       city: data.city}))
+      return
   }
+async gettingResult(city){
 
+  const data = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
+console.log('data', data)
+}
 
 
 //     getlocation() {
