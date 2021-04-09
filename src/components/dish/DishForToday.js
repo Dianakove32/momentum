@@ -2,9 +2,10 @@ import React, { useContext  }from 'react'
 import {ApiContext} from '../context/Context'
 
 
-export default function DishForToday({label}) {
+export default function DishForToday( ) {
     const context=useContext(ApiContext)
-console.log('context',context.state.cart)
+
+
     return (
         <div>
 

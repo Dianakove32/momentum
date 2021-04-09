@@ -9,6 +9,21 @@ import Home from '../../home'
 export default function Favorites() {
     const context=useContext(ApiContext)
     const [isOpen, setIsOpen] = useState(false)
+//     const [state,setState] = useState([])
+//     console.log(context.state.cart)
+//  useEffect(()=>{
+
+//   const raw=localStorage.getItem('recipy') || []
+//    setState(JSON.parse(raw));
+
+//  },[])
+
+
+
+//     useEffect(()=>{
+//         localStorage.setItem('recipy', JSON.stringify(context.state ))
+
+//     },[state])
 
     const toggleModal = ()=>{
         console.log('click')
@@ -48,7 +63,7 @@ const getQuantity = (arr, title) => arr.filter((el)=> el.recipe.label == title)
             ingredientLines={el.recipe.ingredientLines}
             quantity={getQuantity(context.state.cart).length}
                onClick={deleteItem}/>
-            <DishForToday key={i}   label={el.recipe.label} />
+
             </>
         )})
     }
