@@ -18,6 +18,7 @@ export default function ContextProvider({children}) {
     const APP_KEY = "ebebb0b4e7e8e2c9dd2b09a8fceb27ee";
 
     const url = `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+
 useEffect(()=>{
     getData()
 },[search])

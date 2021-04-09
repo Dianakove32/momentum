@@ -10,7 +10,7 @@ export default class ToDo extends React.Component {
         todo: { text: '', category: 'Coding' },
         filter: 'All',
     };
-    
+
     addTodo = () => {
         let newTodoList = this.state.todoList;
         newTodoList.push(this.state.todo);
@@ -56,7 +56,7 @@ export default class ToDo extends React.Component {
         return (
             <div className="Todo">
                 <div className="Todo_item1">
-                <div className="inputToDo">
+                <div className="inputToDo input">
                     <input
                         className="inputToDo2"
                         value={this.state.todo.text}
@@ -73,14 +73,14 @@ export default class ToDo extends React.Component {
                         <option>🥗 Food</option>
                         <option>😱 Extra</option>
                     </select>
-                
+
                     <button className="addBtn"  onClick={this.addTodo}>
                         Add it
                     </button>
-             
+
                 </div>
-              
-                   
+
+
                         {this.state.todoList.length !== 0 ? (
                             this.state.todoList
                                 .filter(
@@ -91,7 +91,7 @@ export default class ToDo extends React.Component {
                                 .map((todo, index) => {
                                     return (
                                         <div
-                                            className="todo-container"
+                                            className="todos-container"
                                             key={index}
                                         >
                                             <span>- {todo.text} | </span>
@@ -99,14 +99,14 @@ export default class ToDo extends React.Component {
                                                 {' '}
                                                 {todo.category}{' '}
                                             </span>
-                                            <Button variant="outlined" color="secondary"
+                                            <button className="btn-delete"
                                                 onClick={() => {
                                                     this.deleteTodo(index);
                                                 }}
-                                                
+
                                             >
-                                                Delete
-                                            </Button>
+                                                X
+                                            </button>
                                         </div>
                                     );
                                 })
@@ -149,7 +149,7 @@ export default class ToDo extends React.Component {
                         </button>
                     </div>
                 </div>
-           
+
         );
     }
 }

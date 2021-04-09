@@ -4,7 +4,6 @@ export default function Dish({
     label,image,calories,ingredientLines,onClick
 }) {
 
-
     return (
         <DishWrapper>
 

@@ -1,40 +1,24 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');*/
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 .Todo {
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 0.1em;
-    .inputToDo {
-        margin-bottom: 20px;
-    }
     display: flex;
     justify-content: space-between;
 }
-
-.Todo_item1 {
- padding: 1vw;
-}
-
-button {
-    padding: 10px;
-    font-family: 'Open Sans', sans-serif;
-}
-
 .addBtn {
-    color:#504646;
-    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    color:#d4cbcb;
+font-size: 10px;
     border: solid 2px #504646;
-    background-color: #DAB9B9;
-    ;
-}
-
-input {
-    padding: 10px 11px 11px 11px;
-    border-right: none;
-    border-bottom: 1px solid;
+    border-radius: 50%;
+    background-color: #948e8e;
 }
 
 .addBtn:hover {
+    cursor: pointer;
     box-shadow: 1px 1px 2px 0;
 }
 
@@ -43,12 +27,16 @@ input:focus {
 }
 
 select {
+
     padding: 10px;
     border-right: none;
     border-left: none;
     border-top: 1px solid;
     border-bottom: 1px solid;
-    font-family: 'Open Sans', sans-serif;
+    >option{
+        font-size: 12px;
+    }
+
 }
 
 .addBtn:focus {
@@ -56,39 +44,54 @@ select {
 }
 
 .todos-container {
-    width: 40%;
+  border: none;
+  color: #ecdfdf;
 }
 
-.todo-container {
-    margin: 10px;
-}
+
 
 .filter-container {
-    width: 20%;
+    width: 100px;
     padding: 10px;
-    border: 1px solid green;
+    border-left: 1px solid #948e8e;
     border-radius: 15%;
     text-align: left;
-    font-family: 'Open Sans', sans-serif;
+
 }
 
 .category-button {
     display: block;
     border: none;
+    background-color: #504646
 }
 
 .todoNothing {
-    margin-bottom: 15px;
-    width: 40%;
+    // margin-bottom: 15px;
+    // width: 40%;
 }
 
 .categories-container {
-    background-color: #DAB9B9;
-    color:#504646;
-    border: solid 2px #504646;
+    background-color: #504646;
+    color:#ecdfdf;
+    border: solid 1px #504646;
+    font-size: 15px;
 }
 
-.inputToDo2 {
-    background-color:#504646;
-    color:#DAB9B9;
-}
+  .inputToDo2 {
+    background-color:#504646 ;
+    outline: none;
+    border: none;
+     border-bottom: 1px solid #ffff;
+    &::placeholder{
+        color:rgb(233, 215, 215);
+        font-size: 13px;}
+  }
+  .btn-delete{
+    color: rgb(233, 215, 215);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #948e8e;
+    font-size: 12px;
+    border:none
+  }
