@@ -68,10 +68,10 @@ export default class ToDo extends React.Component {
                         onChange={this.putOneCategory}
                         className="categories-container"
                     >
-                        <option>👨‍💻 Coding</option>
-                        <option>👨‍💻 Sports</option>
-                        <option>🥗 Food</option>
-                        <option>😱 Extra</option>
+                        <option> Coding</option>
+                        <option> Sports</option>
+                        <option> Food</option>
+                        <option> Extra</option>
                     </select>
 
                     <button className="addBtn"  onClick={this.addTodo}>
@@ -121,25 +121,25 @@ export default class ToDo extends React.Component {
                             className="category-button"
                             onClick={this.displayCategory}
                         >
-                            👨‍💻 Coding
+                             Coding
                         </button>
                         <button
                             className="category-button"
                             onClick={this.displayCategory}
                         >
-                            👨‍💻 Sports
+                             Sports
                         </button>
                         <button
                             className="category-button"
                             onClick={this.displayCategory}
                         >
-                            🥗 Food
+                             Food
                         </button>
                         <button
                             className="category-button"
                             onClick={this.displayCategory}
                         >
-                            😱 Extra
+                             Extra
                         </button>
                         <button
                             className="category-button"
