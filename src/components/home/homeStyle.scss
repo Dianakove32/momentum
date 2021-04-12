@@ -89,7 +89,7 @@ body {
  .todo-container{
     padding: 10px;
     flex-basis: 65vw;
-    background: #504646;
+    background: #b5b5b5;
     color:rgb(236, 221, 221);
     outline:8px solid rgb(255, 253, 253);
   }
@@ -103,15 +103,15 @@ body {
   .weather-container{
       padding: 10px;
     flex-basis: 33vw;
-    background: #6B5B5B;
-    color:white;
+    background: #b8a195;
+    color:#191919;
     outline:8px solid rgb(255, 253, 253);
   position: relative;
 }
   .quote-container {
     padding: 10px;
     flex-basis: 67vw;
-    background-color: #f8ecec;
+    background-color: #fcf9ee;
     color:black;
     outline:8px solid rgb(255, 253, 253);
   }
@@ -125,21 +125,21 @@ body {
  .news-container{
     padding: 10px;
     flex-basis: 33vw;
-    background-color: #eff8f6;
+    background-color: #e5e3dc;
     color:black;
     outline:8px solid rgb(255, 253, 253);
   }
   .clock-container{
     padding: 10px;
     flex-basis: 33vw;
-    background-color: #504646;
+    background-color: #fade01;
     outline:8px solid rgb(255, 253, 253);
     height: 100%;
    }
   .dish-container{
     padding: 10px;
         flex-basis: 33vw;
-    background-color: #CBC0CB;
+    background-color: #fbf0e7;
     color:black;
     outline:8px solid rgb(255, 253, 253);
 font-size: 12px;
