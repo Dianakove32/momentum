@@ -43,11 +43,21 @@ select {
     outline: none;
 }
 
-.todos-container {
+.todos-container1 {
   border: none;
   color: #ffff;
-}
+  overflow-y: auto;
+  width: 500px;
+  height:  100px;
 
+}
+.todos-container-item{
+    display: flex;
+     p{ word-wrap: break-word;
+      width: 400px;
+
+  }
+}
 
 
 .filter-container {

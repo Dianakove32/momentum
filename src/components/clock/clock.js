@@ -22,14 +22,14 @@ class Clock extends React.Component {
       const hr = document.querySelector('#hr');
       const mn = document.querySelector('#mn');
       const sc = document.querySelector('#sc');
-      
+
       setInterval(() =>{
-          
+
            let day = new Date();
       let hh = day.getHours() * 30;
       let mm = day.getMinutes() * deg;
       let ss = day.getSeconds() * deg;
-      
+
       hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
       mn.style.transform = `rotateZ(${mm}deg)`;
       sc.style.transform = `rotateZ(${ss}deg)`;
@@ -46,20 +46,21 @@ class Clock extends React.Component {
           transform: `rotate(${this.state.hourDegrees}deg)`
       };
         return (
+            <div className="clock-container1">
             <div className="clock">
 
             <div className="hour"style={hourStyle}>
                 <div className="hr" id="hr"></div>
             </div>
-    
+
             <div className="min" style= {minuteStyle} >
                 <div className="mn" id="mn"></div>
             </div>
-    
+
             <div className="sec"style= {secondStyle} >
                 <div className="sc" id="sc"></div>
             </div>
-    
+    </div>
         </div>
         )
     }
