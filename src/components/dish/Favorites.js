@@ -9,6 +9,9 @@ import Home from '../../home'
 export default function Favorites() {
     const context=useContext(ApiContext)
     const [isOpen, setIsOpen] = useState(false)
+    localStorage.setItem('dish', context.state.cart)
+    let dataStore=localStorage.getItem('dish')
+    console.log(dataStore)
 //     const [state,setState] = useState([])
 //     console.log(context.state.cart)
 //  useEffect(()=>{

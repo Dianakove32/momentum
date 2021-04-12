@@ -55,6 +55,7 @@ export default class ToDo extends React.Component {
     render() {
         return (
             <div className="Todo">
+            <div>
                 <div className="Todo_item1">
                 <div className="inputToDo input">
                     <input
@@ -78,7 +79,9 @@ export default class ToDo extends React.Component {
                         Add it
                     </button>
 
-                </div>
+                </div></div>
+<div className='todos-container1'>
+
 
 
                         {this.state.todoList.length !== 0 ? (
@@ -91,13 +94,13 @@ export default class ToDo extends React.Component {
                                 .map((todo, index) => {
                                     return (
                                         <div
-                                            className="todos-container"
+                                            className="todos-container-item"
                                             key={index}
                                         >
-                                            <span>- {todo.text} | </span>
-                                            <span className="category-container">
+                                            <p>- {todo.text}  </p>
+                                            <span className="category-containe">
                                                 {' '}
-                                                {todo.category}{' '}
+                                               |{todo.category}{' '}
                                             </span>
                                             <button className="btn-delete"
                                                 onClick={() => {
@@ -113,7 +116,7 @@ export default class ToDo extends React.Component {
                         ) : (
                             <div className='todoNothing'>You did not add any todo yet</div>
                         )}
-                </div>
+                </div></div>
                     <div className="filter-container">
                         <p>Filter it</p>
                         <hr />

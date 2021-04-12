@@ -10,9 +10,9 @@
 .addBtn {
     width: 40px;
     height: 40px;
-    color:#d4cbcb;
+    color:#191919;
 font-size: 10px;
-    border: solid 2px #504646;
+    border: solid 2px #b5b5b5;
     border-radius: 50%;
     background-color: #948e8e;
 }
@@ -43,17 +43,27 @@ select {
     outline: none;
 }
 
-.todos-container {
+.todos-container1 {
   border: none;
-  color: #ffff;
-}
+  color: #191919;
+  overflow-y: auto;
+  width: 500px;
+  height:  100px;
 
+}
+.todos-container-item{
+    display: flex;
+     p{ word-wrap: break-word;
+      width: 400px;
+
+  }
+}
 
 
 .filter-container {
     width: 100px;
     padding: 10px;
-    border-left: 1px solid #948e8e;
+    border-left: 1px solid #b5b5b5;
     border-radius: 15%;
     text-align: left;
 
@@ -62,7 +72,7 @@ select {
 .category-button {
     display: block;
     border: none;
-    background-color: #504646
+    background-color: #b5b5b5
 }
 
 .todoNothing {
@@ -71,14 +81,14 @@ select {
 }
 
 .categories-container {
-    background-color: #504646;
-    color:#ecdfdf;
-    border: solid 1px #504646;
+    background-color: #b5b5b5;
+    color:#191919;
+    border: solid 1px #b5b5b5;
     font-size: 15px;
 }
 
   .inputToDo2 {
-    background-color:#504646 ;
+    background-color:#b5b5b5 ;
     outline: none;
     border: none;
      border-bottom: 1px solid #ffff;

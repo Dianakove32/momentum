@@ -17,15 +17,18 @@ export default function DishList(props) {
     const onClick = (title) => {
 
         const item = context.state.data.data.hits.find(el => el.recipe.label == title)
+        console.log(context.state.cart)
         let copyOfItems = [...context.state.cart]
         copyOfItems.push(item)
         context.setState({
             ...context.state,
             cart: copyOfItems
         })
+
+
     }
 
-    console.log(context.state.data)
+
     return (
         <div>
         <NavLink to="/"> <h3>Home</h3></NavLink>
