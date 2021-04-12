@@ -9,7 +9,7 @@ export default function CardNew({title,description,url,urlToImage}) {
       
         <h1>{title}</h1>
        <p>{description}</p>
-       <a href={url}>bgbfg</a>
+       <a href={url}>read more</a>
        
       
      

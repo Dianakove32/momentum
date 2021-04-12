@@ -10,12 +10,12 @@ const News = () => {
 
     return (
        <div>
-        <NavLink to="/"> <h3>Home</h3></NavLink>
+        {/* <NavLink to="/"> <h3>Home</h3></NavLink>
         <NavLink to="/news"> <h3>News</h3></NavLink>
-        <NavLink to="/dish"> <h3>News</h3></NavLink>
+        <NavLink to="/dish"> <h3>Dishes</h3></NavLink> */}
            {console.log(context.data)}
         {
-            context.data.articles.map((el) => {
+            context.data.articles?.map((el) => {
               return (
                 <CardNew
                   key={el.title}
