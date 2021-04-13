@@ -1,4 +1,5 @@
 import React from 'react';
+import './news.scss';
 
 export default function CardNew({title,description,url,urlToImage}) {
     
@@ -8,9 +9,11 @@ export default function CardNew({title,description,url,urlToImage}) {
     
       
         <h1>{title}</h1>
+        <div>
        <p>{description}</p>
-       <a href={url}>read more</a>
-       
+       <a href={url}>read more &gt;</a>
+       </div>
+       <img src={urlToImage} alt=""/>
       
      
     </div>

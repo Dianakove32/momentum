@@ -7,7 +7,7 @@ export const ApiContext=createContext();
 const ContextProvider=({children})=>{
     const [data, setData] = useState({});
     useEffect(() => {
-        const url = 'https://newsapi.org/v2/everything?q=from=2021-04-11&keyword&apiKey=0e428c7efd55415aba1f5a8b3fc39521';
+        const url = 'https://newsapi.org/v2/everything?q=from=2021-04-13&keyword&apiKey=0e428c7efd55415aba1f5a8b3fc39521';
 
 
         fetch(url)
