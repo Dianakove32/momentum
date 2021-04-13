@@ -16,6 +16,8 @@ import Dish from './components/dish/dishRandom'
 import Currency from './components/currency/currency'
 import Icon from './components/icon/Icon';
 import DishForToday from './components/dish/DishForToday';
+import CardNews from './components/news/cardNew'
+
 
 const API_KEY = '8768da57bd891fa41359848c1665c9e4';
 // function getCityLocation (){
