@@ -36,7 +36,7 @@ constructor(props){
   // this.successCallback=this.getCoordinates.bind(this)
   // this.errorCallback=this.errorCallback.bind(this)
   this.getCityLocation=this.getCityLocation.bind(this)
- this.gettingResult=this.gettingResult.bind(this)
+
 
 
 }
@@ -53,53 +53,33 @@ constructor(props){
   componentDidMount(){
 console.log('func', this.getCityLocation())
 
-this.gettingResult()
+
 
   }
    getCityLocation (){
-
     fetch('https://geolocation-db.com/json/639aa2f0-98c5-11eb-a996-0b3faf254bc0')
     .then(res=>res.json())
-    .then(data=>this.setState({
+    .then(data=>{
+      this.setState({
       ...this.state,
-      city: data.city}))
-      return
+      city: data.city})
+      return data.city
+    } )
+    .then(async(city)=>{
+      const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
+const res= await data.json()
+   return res
+    })
+    .then(data=>this.setState({
+      city: data.name,
+      temp: Math.ceil(data.main.temp) + '°C',
+      // icon:data.weather[0].icon,
+      country: data.sys.country,
+      humidity: data.main.humidity,
+
+      description: data.weather[0].description
+    }))
   }
-async gettingResult(city){
-
-  const data = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
-console.log('data', data)
-}
-
-
-//     getlocation() {
-//     if(navigator.geolocation){
-//       navigator.geolocation.getCurrentPosition(this.getCoordinates, this.errorCallback);
-//     }else {alert('error')}
-//   }
-//   getCoordinates(position) {
-//      let latitude=position.coords.latitude
-//     console.log('a',latitude)
-//     console.log(position.coords.longitude)
-
-// }
-
-//   errorCallback (error) {
-//     switch(error.code) {
-//       case error.PERMISSION_DENIED:
-//         alert("User denied the request for Geolocation.")
-//         break;
-//       case error.POSITION_UNAVAILABLE:
-//         alert("Location information is unavailable.")
-//         break;
-//       case error.TIMEOUT:
-//         alert("The request to get user location timed out.")
-//         break;
-//       case error.UNKNOWN_ERROR:
-//         alert("An unknown error occurred.")
-//         break;
-//     }
-// }
 
 
 
@@ -184,3 +164,49 @@ console.log('data', data)
 }
 
 export default Home;
+
+
+//    .then(data=>
+  //       this.setState({
+  //     city: data.name,
+  //     temp: Math.ceil(data.main.temp) + '°C',
+  //     // icon:data.weather[0].icon,
+  //     country: data.sys.country,
+  //     humidity: data.main.humidity,
+
+  //     description: data.weather[0].description
+  //   })
+  //  )
+
+
+
+
+
+//     getlocation() {
+//     if(navigator.geolocation){
+//       navigator.geolocation.getCurrentPosition(this.getCoordinates, this.errorCallback);
+//     }else {alert('error')}
+//   }
+//   getCoordinates(position) {
+//      let latitude=position.coords.latitude
+//     console.log('a',latitude)
+//     console.log(position.coords.longitude)
+
+// }
+
+//   errorCallback (error) {
+//     switch(error.code) {
+//       case error.PERMISSION_DENIED:
+//         alert("User denied the request for Geolocation.")
+//         break;
+//       case error.POSITION_UNAVAILABLE:
+//         alert("Location information is unavailable.")
+//         break;
+//       case error.TIMEOUT:
+//         alert("The request to get user location timed out.")
+//         break;
+//       case error.UNKNOWN_ERROR:
+//         alert("An unknown error occurred.")
+//         break;
+//     }
+// }
