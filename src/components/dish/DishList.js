@@ -17,7 +17,7 @@ export default function DishList(props) {
     const onClick = (title) => {
 
         const item = context.state.data.data.hits.find(el => el.recipe.label == title)
-        console.log(context.state.cart)
+
         let copyOfItems = [...context.state.cart]
         copyOfItems.push(item)
         context.setState({
@@ -38,7 +38,7 @@ export default function DishList(props) {
 
             <input className="input-dish" type='text' placeholder='find dish' autoComplete='on' onChange={onChange} />
             {context.state.isLoaded &&
-                context.state.data.data.hits.map((el) => <Dish {...el.recipe} onClick={onClick} />)}
+                context.state.data.data.hits.map((el, i) => <Dish key={i} {...el.recipe} onClick={onClick} />)}
 
         </div>
     )
