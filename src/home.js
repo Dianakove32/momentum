@@ -96,7 +96,7 @@ const res= await data.json()
       // date.setTime(sunset);
       // var sunset_date = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
 
-      this.setState({
+    this.setState({
         city: data.name,
         temp: Math.ceil(data.main.temp) + '°C',
         // icon:data.weather[0].icon,
@@ -105,6 +105,8 @@ const res= await data.json()
         // sunset: sunset_date,
         description: data.weather[0].description
       })
+
+
     }
   }
 
@@ -154,7 +156,7 @@ const res= await data.json()
         </div>
         <div className='layout-2-column'>
           <div className="weather-container"
-          style={{backgroundImage:`url(${imageModal})`, backgroundRepeat:'no-repeat', backgroundSize:'cover', width:'100%', height:'30vh' }}>
+          style={{backgroundImage:`url(${imageModal})`, backgroundRepeat:'no-repeat', backgroundSize:'cover', width:'100%', height:'auto' }}>
               <div className='weatherBlock'>
                 <Form data={data} gettingWeather={gettingWeather} />
                 <Weather city={city}
