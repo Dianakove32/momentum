@@ -30,5 +30,10 @@ const data = [
         image: "https://ru.seaicons.com/wp-content/uploads/2015/10/sleet-icon.png",
         text: 'Today will be beautifull'
     },
+    {
+        descriptionData: 'dust',
+        image: "https://lh3.googleusercontent.com/proxy/hUnspsQnxkph3Tg8I-E7OJ0bV6OHN_qE9sWGmBX0cMCT6SBRGcXt1XQumYIaxDlmHCt1J3WrnHyhwhvQEAt8ko9tcEckt7UnaBae2eNTuCdiUDhSNbKrgEpXtQY2nn4",
+        text: 'Be careful. its not clear on the road'
+    },
 ]
 export default data

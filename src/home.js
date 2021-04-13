@@ -91,20 +91,22 @@ const res= await data.json()
       const api_url = await
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
       const data = await api_url.json()
-      var sunset = data.sys.sunset;
-      var date = new Date();
-      date.setTime(sunset);
-      var sunset_date = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+      // var sunset = data.sys.sunset;
+      // var date = new Date();
+      // date.setTime(sunset);
+      // var sunset_date = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
 
-      this.setState({
+    this.setState({
         city: data.name,
         temp: Math.ceil(data.main.temp) + '°C',
         // icon:data.weather[0].icon,
         country: data.sys.country,
         humidity: data.main.humidity,
-        sunset: sunset_date,
+        // sunset: sunset_date,
         description: data.weather[0].description
       })
+
+
     }
   }
 
@@ -112,6 +114,18 @@ const res= await data.json()
      console.log('city',this.state.city);
     const gettingWeather = this.gettingWeather
     const { city, country, temp, icon, sunset, humidity, description, } = this.state
+
+    let imageModal=null;
+    let phrase = null;
+  data.forEach(el=>{
+
+    if(description.includes(el.descriptionData)){
+    imageModal= el.image
+    phrase = el.text
+
+      return (imageModal, phrase)
+
+    } })
     return (
       <>
 
@@ -141,7 +155,8 @@ const res= await data.json()
           </div>
         </div>
         <div className='layout-2-column'>
-          <div className="weather-container">
+          <div className="weather-container"
+          style={{backgroundImage:`url(${imageModal})`, backgroundRepeat:'no-repeat', backgroundSize:'cover', width:'100%', height:'auto' }}>
               <div className='weatherBlock'>
                 <Form data={data} gettingWeather={gettingWeather} />
                 <Weather city={city}

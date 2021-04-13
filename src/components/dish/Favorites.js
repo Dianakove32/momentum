@@ -12,21 +12,21 @@ export default function Favorites() {
 
 
 
-    useEffect(() => {
-let cartFromStor=localStorage.getItem('recipy')
+//     useEffect(() => {
+// let cartFromStor=localStorage.getItem('recipy')
 
 
-        let localRecipy = JSON.parse(cartFromStor)
+//         let localRecipy = JSON.parse(cartFromStor)
 
-        context.setState({
-            ...context.state,
-            cart: localRecipy
-        })
-
-
+//         context.setState({
+//             ...context.state,
+//             cart: localRecipy
+//         })
 
 
-    }, [])
+
+
+//     }, [])
     // let dataStore=JSON.parse(localStorage.getItem('dish'))
     // console.log(dataStore)
     //     const [state,setState] = useState([])
