@@ -18,13 +18,13 @@ export default class Weather extends Component {
         if(description.includes(el.descriptionData)){
         imageModal= el.image
         phrase = el.text
-           console.log('uraaaaa', imageModal)
+
           return (imageModal, phrase)
 
         } })
 
         return (
-            <div>
+            <div >
              <p><b>{city} {temp} </b>   </p>
             <p>Today is  {description}.</p>
             <p>  {phrase}</p>
