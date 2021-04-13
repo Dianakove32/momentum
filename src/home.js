@@ -16,6 +16,9 @@ import Dish from './components/dish/dishRandom'
 import Currency from './components/currency/currency'
 import Icon from './components/icon/Icon';
 import DishForToday from './components/dish/DishForToday';
+import CardNews from './components/news/cardNew'
+
+
 
 const API_KEY = '8768da57bd891fa41359848c1665c9e4';
 // function getCityLocation (){
@@ -128,6 +131,7 @@ class Home extends React.Component {
 
       }
     })
+    
     return (
       <>
         <div className='layout-2-column'>
@@ -142,6 +146,7 @@ class Home extends React.Component {
         <div className='layout-3-column'>
           <div className="news-container">
             <NavLink to="/news"> <h3>NEWS </h3></NavLink>
+
           </div>
           <div className="clock-container">
             <Clock />
