@@ -9,11 +9,30 @@ export default class ToDo extends React.Component {
         todoList: [],
         todo: { text: '', category: 'Coding' },
         filter: 'All',
+
     };
 
+
+// componentDidMount(){
+//    const localTodo = localStorage.getItem('todo')
+//     if(localTodo){
+//         this.setState({
+//               local:JSON.parse(localTodo)
+//         })
+
+
+//     }
+// }
+// componentDidUpdate(){
+//    let todo = JSON.stringify(this.state.todoList)
+//           localStorage.setItem('todo', todo)
+// }
+
     addTodo = () => {
+
         let newTodoList = this.state.todoList;
         newTodoList.push(this.state.todo);
+
         this.setState({
             todo: { text: '', category: this.state.todo.category },
             todoList: newTodoList,
@@ -21,6 +40,7 @@ export default class ToDo extends React.Component {
     };
 
     putOneTodo = (e) => {
+
         this.setState({
             todo: {
                 text: e.target.value,

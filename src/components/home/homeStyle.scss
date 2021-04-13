@@ -103,10 +103,11 @@ body {
   .weather-container{
       padding: 10px;
     flex-basis: 33vw;
-    background: #b8a195;
+    background: #f8f6f5;
     color:#191919;
     outline:8px solid rgb(255, 253, 253);
   position: relative;
+
 }
   .quote-container {
     padding: 10px;
@@ -114,6 +115,8 @@ body {
     background-color: #fcf9ee;
     color:black;
     outline:8px solid rgb(255, 253, 253);
+    position: relative;
+
   }
 }
 

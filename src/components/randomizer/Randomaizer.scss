@@ -41,9 +41,22 @@
 .button {
   width: 40px;
   height: 40px;
-  color:#d4cbcb;
+  color:#a89f9f;
 font-size: 10px;
-  border: solid 2px #504646;
+  border: solid 2px #ccc3c3;
   border-radius: 50%;
-  background-color: #948e8e;
+  background-color: #f3ecec;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+#quote-box{
+
+.text-container{
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+h3{
+text-align: right;
+}
 }

@@ -18,17 +18,19 @@ export default class Weather extends Component {
         if(description.includes(el.descriptionData)){
         imageModal= el.image
         phrase = el.text
-           console.log('uraaaaa', imageModal)
+
           return (imageModal, phrase)
 
         } })
 
         return (
-            <div>
+
+            <div >
+
              <p><b>{city} {temp} </b>   </p>
             <p>Today is  {description}.</p>
             <p>  {phrase}</p>
-                <SimpleSlide city={city}
+                {/* <SimpleSlide city={city}
                     country={country}
                     temp={temp}
                     sunrise={sunrise}
@@ -36,7 +38,7 @@ export default class Weather extends Component {
                     description={description}
                     image={image}
                     data={data}
-                    imageModal={imageModal} />
+                    imageModal={imageModal} /> */}
                 {/* <Modalweather
                 city={city}
     country ={country}

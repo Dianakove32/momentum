@@ -1,11 +1,13 @@
 
  .input-weather  {
-    background-color:#b8a195 ;
+     margin-bottom: 20px;
+    background-color:#fafafa ;
+opacity: 0.3;
     outline: none;
     border: none;
-     border-bottom: 1px solid #ffff;
+     border-bottom: 1px solid rgb(29, 28, 28);
     &::placeholder{
-        color:rgb(233, 215, 215);
+        color:rgb(12, 11, 11);
         font-size: 13px;
 
     }
