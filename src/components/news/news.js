@@ -10,12 +10,13 @@ const News = () => {
     const context=useContext(ApiContext);
 
     return (
-       <div >
+       <div className="dish-wrapper">
        <div className='nav'>
-        <NavLink className='nav-item' to="/"> <h3>Home</h3></NavLink>
-        <NavLink  className='nav-item' to="/news"> <h3>News</h3></NavLink>
-        <NavLink className='nav-item' to="/dish"> <h3>Dishes</h3></NavLink>
+        <NavLink className='nav-item' to="/"> Home</NavLink>
+        <NavLink  className='nav-item innactiv' to="/news"> News</NavLink>
+        <NavLink className='nav-item ' to="/dish"> Dish</NavLink>
        </div>
+       <h2>NEWS</h2>
  <div classname="newsList">
 
         {

@@ -4,7 +4,6 @@ import './news.scss';
 export default function CardNew({ title, description, url, urlToImage }) {
 
   return (
-
     <div className="cardNew">
       <div className="cardNew-img">
         <img src={urlToImage} alt="news-pict" />
