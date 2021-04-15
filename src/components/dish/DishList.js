@@ -28,9 +28,9 @@ export default function DishList(props) {
             <div className="nav-header">
             <Favorites />
             <div className="nav">
-                <NavLink className="nav-item" to="/"> <h3>Home</h3></NavLink>
-                <NavLink className="nav-item" to="/news"> <h3>News</h3></NavLink>
-                <NavLink className="nav-item innactiv" to="/dish"> <h3>Dish</h3></NavLink>
+                <NavLink className="nav-item" to="/"> Home</NavLink>
+                <NavLink className="nav-item" to="/news"> News </NavLink>
+                <NavLink className="nav-item innactiv" to="/dish">  Dish </NavLink>
             </div>
 
             </div>

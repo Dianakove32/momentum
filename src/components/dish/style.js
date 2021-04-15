@@ -27,8 +27,8 @@ export const WrapperContent = styled.div`
 padding-left:10px;
 text-align: justify;
 font-size:12px;
-h2{
-    font-size:16px;
+h3{
+    color: rgb(107, 89, 89);
     margin-top:0px
 }
 `
@@ -56,5 +56,5 @@ export const Btn = styled.button`
     border-radius: 4px;
     font-size: 12px;
 margin-top:10px;
-
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `

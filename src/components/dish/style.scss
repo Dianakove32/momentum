@@ -28,6 +28,7 @@ margin-bottom: 20px;
     padding: 5px;
     border: 1px solid rgb(29, 28, 28);
     border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     &::placeholder {
         color: rgb(12, 11, 11);
         font-size: 13px;
@@ -41,8 +42,9 @@ margin-bottom: 20px;
 .nav-item {
     text-decoration: none;
     margin: 20px;
-    color: rgb(47, 46, 46);
 
+font-weight: bold;
+color: rgb(107, 89, 89);
     &:hover {
         color: rgb(56, 53, 53);
         text-decoration: underline;
@@ -66,4 +68,18 @@ margin-bottom: 20px;
     margin-left: 51px;
     border-radius: 4px;
     font-size: 12px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+
+.modal{
+
+}
+ .btn-modal{
+        background-color:#bfddf8 ;
+        border: 1px solid rgb(167, 182, 230);
+        padding: 3px;
+        border-radius: 4px;
+        font-size: 12px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
