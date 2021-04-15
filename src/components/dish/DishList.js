@@ -34,7 +34,7 @@ export default function DishList(props) {
             </div>
 
             </div>
-
+<h2>Find dish for today</h2>
             <div className="input-wrapper">
                  <input className="input-dish" type='text' placeholder='Find recipy...' autoComplete='on' onChange={onChange} />
             </div>

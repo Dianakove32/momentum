@@ -139,12 +139,13 @@ class Home extends React.Component {
             <ToDo />
           </div>
           <div className="icon-container">
-            <Currency />
+
             <Icon />
           </div>
         </div>
         <div className='layout-3-column'>
           <div className="news-container">
+          <Currency />
             <NavLink to="/news"> <h3>NEWS </h3></NavLink>
 
           </div>
