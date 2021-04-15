@@ -4,6 +4,7 @@ import Modal from 'react-modal'
 import Item from './Item'
 import DishForToday from './DishForToday'
 import Home from '../../home'
+import './style.scss'
 
 
 export default function Favorites() {
@@ -12,21 +13,21 @@ export default function Favorites() {
 
 
 
-//     useEffect(() => {
-// let cartFromStor=localStorage.getItem('recipy')
+    //     useEffect(() => {
+    // let cartFromStor=localStorage.getItem('recipy')
 
 
-//         let localRecipy = JSON.parse(cartFromStor)
+    //         let localRecipy = JSON.parse(cartFromStor)
 
-//         context.setState({
-//             ...context.state,
-//             cart: localRecipy
-//         })
-
-
+    //         context.setState({
+    //             ...context.state,
+    //             cart: localRecipy
+    //         })
 
 
-//     }, [])
+
+
+    //     }, [])
     // let dataStore=JSON.parse(localStorage.getItem('dish'))
     // console.log(dataStore)
     //     const [state,setState] = useState([])
@@ -42,12 +43,8 @@ export default function Favorites() {
     }
     const findItem = (arr, label) => arr.find((el) => el.recipe.label === label);
     const deleteItem = (label) => {
-
-
         let element = findItem(context.state.cart, label);
-
         const index = context.state.cart.indexOf(element);
-
         let copyOfItems = [...context.state.cart];
         copyOfItems.splice(index, 1);
         context.setState({
@@ -96,10 +93,7 @@ export default function Favorites() {
                 }
                 <button onClick={toggleModal}>Close</button>
             </Modal>
-            <button onClick={toggleModal}>Modal</button>
-
-
-
+            <button className='btn-wish' onClick={toggleModal}>Selected recipes</button>
         </div>
     )
 }

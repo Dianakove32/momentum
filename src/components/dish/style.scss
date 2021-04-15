@@ -1,5 +1,69 @@
-.input-dish{
-    width: 100px;
-    border-color : rgb(138, 130, 130);
-    margin-left: 100px;
+body {
+    background: #bfddf8;
+}
+.nav-header{
+    display: flex;
+    margin-top: auto;
+
+}
+.dish-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+
+}
+.dish-output {
+    display: flex;
+    flex-wrap: wrap;
+}
+.input-wrapper{
+
+margin-bottom: 20px;
+}
+.input-dish {
+    width: 300px;
+    opacity: 0.3;
+    margin-left: 35%;
+    outline: none;
+    padding: 5px;
+    border: 1px solid rgb(29, 28, 28);
+    border-radius: 4px;
+    &::placeholder {
+        color: rgb(12, 11, 11);
+        font-size: 13px;
+    }
+}
+.nav {
+    display: flex;
+    width: 300px;
+    margin-left: auto;
+}
+.nav-item {
+    text-decoration: none;
+    margin: 20px;
+    color: rgb(47, 46, 46);
+
+    &:hover {
+        color: rgb(56, 53, 53);
+        text-decoration: underline;
+    }
+
+}
+.innactiv{
+    color: rgb(124, 116, 116);
+    text-decoration: underline;
+    &:hover {
+        color: rgb(124, 116, 116);
+        text-decoration: underline;
+        cursor: default;
+    }
+}
+.btn-wish{
+    background-color:rgb(246, 241, 241) ;
+    border: 1px solid rgb(167, 182, 230);
+     margin-top: 18%;
+    padding: 3px;
+    margin-left: 51px;
+    border-radius: 4px;
+    font-size: 12px;
 }

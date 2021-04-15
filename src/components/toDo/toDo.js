@@ -23,10 +23,11 @@ export default class ToDo extends React.Component {
 
 //     }
 // }
-// componentDidUpdate(){
+componentDidUpdate(){
+
 //    let todo = JSON.stringify(this.state.todoList)
 //           localStorage.setItem('todo', todo)
-// }
+}
 
     addTodo = () => {
 

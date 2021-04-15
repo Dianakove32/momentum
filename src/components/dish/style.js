@@ -1,44 +1,60 @@
 import styled from "styled-components";
 import { IoIosCloseCircleOutline } from 'react-icons/io';
 
-export const DishWrapper = styled.div `
+export const DishWrapper = styled.div`
+width:500px;
 position:relative;
 display: flex;
-padding: 10px;
-  width: 90%;
-  margin: 0 auto;
-  background: unset;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+padding:20px 10px 10px 10px;
+
+margin: 0 auto;
+background: unset;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background:#f6f1f1;
   img {
-padding-top:10px;
+    padding-top:10px;
     width:200px;
     height:200px;
     border-radius:4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 `
-export const WrapperContent = styled.div `
+export const WrapperImage = styled.div`
+width:210px;
+}
+`
+export const WrapperContent = styled.div`
 padding-left:10px;
 text-align: justify;
-font-size:15px;
+font-size:12px;
 h2{
+    font-size:16px;
     margin-top:0px
 }
-
 `
-export const  Imag= styled.img `
-padding-top:10px;
+export const Imag = styled.img`
+    padding-top:10px;
     width:200px;
     height:200px;
     border-radius:4px
     `
 export const CloseIcon = styled(IoIosCloseCircleOutline)`
-width: 30px;
-height: 30px;
+width: 20px;
+height: 20px;
 position: absolute;
 top: 5px;
 right: 5px;
+color:red;
 &:hover{
     cursor:pointer
 }
-`;
+`
+export const Btn = styled.button`
+    background-color:  rgb(191, 221, 248);
+    border: 1px solid rgb(167, 182, 230);
+    padding: 3px;
+    border-radius: 4px;
+    font-size: 12px;
+margin-top:10px;
+
+`

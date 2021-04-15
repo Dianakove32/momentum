@@ -1,155 +1,148 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    margin: 0;
-  }
+  margin: 0;
+}
 
-  /* HTML5 display definitions
+/* HTML5 display definitions
      ========================================================================== */
-  /**
+/**
    * Correct `block` display not defined for any HTML5 element in IE 8/9.
    * Correct `block` display not defined for `details` or `summary` in IE 10/11
    * and Firefox.
    * Correct `block` display not defined for `main` in IE 11.
    */
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  hgroup,
-  main,
-  menu,
-  nav,
-  section,
-  summary {
-    display: block;
-  }
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    color: inherit;
-    /* 1 */
-    font: inherit;
-    /* 2 */
-    margin: 0;
-    /* 3 */
-  }
-  button,
-  html input[type=button],
-  input[type=reset],
-  input[type=submit] {
-    -webkit-appearance: button;
-    /* 2 */
-    cursor: pointer;
-    /* 3 */
-  }
-  input {
-    line-height: normal;
-  }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+input {
+  line-height: normal;
+}
 
-  /**
+/**
    * 1. Address box sizing set to `content-box` in IE 8/9/10.
    * 2. Remove excess padding in IE 8/9/10.
    *  Known issue: excess padding remains in IE 6.
    */
-  input[type=checkbox],
-  input[type=radio] {
-    box-sizing: border-box;
-    /* 1 */
-    padding: 0;
-    /* 2 */
-  }
-  textarea {
-    overflow: auto;
-  }
-
-
-
-.App{
-    margin: 0;
-
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+textarea {
+  overflow: auto;
 }
 
+.App {
+  margin: 0;
+}
 
-  //style
-.layout-2-column{
+//style
+.layout-2-column {
   display: flex;
   flex-wrap: wrap;
   height: 33vh;
-  justify-content: flex-start;
-
- .todo-container{
+  justify-content: start;
+  width: 100vw;
+  .todo-container {
     padding: 10px;
     flex-basis: 65vw;
     background: #b5b5b5;
-    color:rgb(236, 221, 221);
-    outline:8px solid rgb(255, 253, 253);
+    color: rgb(236, 221, 221);
+    outline: 8px solid rgb(255, 253, 253);
   }
   .icon-container {
     padding: 10px;
     flex-basis: 33vw;
     background-color: #eee2e2;
-    color:black;
-    outline:8px solid rgb(255, 253, 253);
+    color: black;
+    outline: 8px solid rgb(255, 253, 253);
   }
-  .weather-container{
-      padding: 10px;
+  .weather-container {
+    padding: 10px;
     flex-basis: 33vw;
     background: #f8f6f5;
-    color:#191919;
-    outline:8px solid rgb(255, 253, 253);
-  position: relative;
-
-}
+    color: #191919;
+    outline: 8px solid rgb(255, 253, 253);
+    position: relative;
+  }
   .quote-container {
     padding: 10px;
     flex-basis: 67vw;
     background-color: #fcf9ee;
-    color:black;
-    outline:8px solid rgb(255, 253, 253);
+    color: black;
+    outline: 8px solid rgb(255, 253, 253);
     position: relative;
-
   }
 }
 
-.layout-3-column{
-    display: flex;
-    flex-wrap: wrap;
-    height: 33vh;
-    justify-content: start;
- .news-container{
+.layout-3-column {
+  display: flex;
+  flex-wrap: wrap;
+  height: 33vh;
+  justify-content: start;
+  .news-container {
     padding: 10px;
     flex-basis: 33vw;
     background-color: #e5e3dc;
-    color:black;
-    outline:8px solid rgb(255, 253, 253);
+    color: black;
+    outline: 8px solid rgb(255, 253, 253);
   }
-  .clock-container{
+  .clock-container {
     padding: 10px;
     flex-basis: 33vw;
     background-color: #fade01;
-    outline:8px solid rgb(255, 253, 253);
+    outline: 8px solid rgb(255, 253, 253);
     height: 100%;
-   }
-  .dish-container{
+  }
+  .dish-container {
     padding: 10px;
-        flex-basis: 33vw;
+    flex-basis: 33vw;
     background-color: #fbf0e7;
-    color:black;
-    outline:8px solid rgb(255, 253, 253);
-font-size: 12px;
+    color: black;
+    outline: 8px solid rgb(255, 253, 253);
+    font-size: 12px;
     // .dishForToday{
     //    overflow-y : auto;
     //  //  height: 200px;
     // }
   }
 }
-
