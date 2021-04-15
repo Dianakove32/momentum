@@ -11,7 +11,7 @@ export default function Item({ label,image,calories,ingredientLines,quantity,onC
 
 <WrapperContent>
 <CloseIcon onClick={()=>onClick(label)} />
-<h2>{label}</h2>
+<h3>{label}</h3>
 
 <p>Calories: <i>{Math.ceil(calories)} </i> </p>
 <p>{ingredientLines.map(el=><li>{el}</li>)}</p>

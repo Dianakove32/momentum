@@ -1,8 +1,14 @@
+.newsList{
+    display: flex;
+}
 .cardNew {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 20px;
+    width:500px;
+height: 500px;
+    display: flex;
+   // max-width: 1170px;
+    // margin-left: auto;
+    // margin-right: auto;
+   // padding-bottom: 20px;
     a {
         text-decoration: none;
         padding-bottom: 15px;
@@ -11,7 +17,34 @@
             color: darken(blue, 50%)
         }
     }
-    img {
-        width: 50%;
-    }
+
+ }
+.cardNew-img{
+width:300px;
+height: 300px;
+img{
+    object-fit: contain;
+    width: 100%;
+}
+
+}
+.cardNew-content{
+height: 200px;
+}
+.nav{
+    display: flex;
+    width:300px;
+ margin-left: auto;
+
+
+}
+.nav-item{
+     text-decoration: none;
+     margin: 20px;
+     color: rgb(47, 46, 46);
+
+     &:hover{
+         color: rgb(56, 53, 53);
+         text-decoration: underline;
+     }
 }

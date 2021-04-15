@@ -1,22 +1,23 @@
 import React from 'react'
-import { DishWrapper,WrapperContent, } from "./style";
+import { DishWrapper, WrapperContent, Btn,WrapperImage } from "./style";
+
 export default function Dish({
-    label,image,calories,ingredientLines,onClick
+    label, image, calories, ingredientLines, onClick
 }) {
 
     return (
         <DishWrapper>
+        <WrapperImage>
+            <img src={image} alt={label} />
+            <Btn onClick={() => onClick(label)}>Add recipes
+            </Btn>
+        </WrapperImage>
 
-            <img  src={image} alt={label} />
-
-
-      <WrapperContent>
-      <h2>{label}</h2>
-      <p>Calories: <i>{Math.ceil(calories)} </i> </p>
-      <p>{ingredientLines.map(el=><li>{el}</li>)}</p>
-<button onClick= {( )=>onClick(label)}>add</button>
-      </WrapperContent>
-
+            <WrapperContent>
+                <h3>{label}</h3>
+                <p>Calories: <i>{Math.ceil(calories)} </i> </p>
+                <p>{ingredientLines.map(el => <li>{el}</li>)}</p>
+            </WrapperContent>
         </DishWrapper>
     )
 }
