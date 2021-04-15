@@ -131,9 +131,9 @@ class Home extends React.Component {
 
       }
     })
-    
+
     return (
-      <>
+      <div className='mainWrapper'>
         <div className='layout-2-column'>
           <div className="todo-container">
             <ToDo />
@@ -175,7 +175,7 @@ class Home extends React.Component {
             <Randomizer />
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

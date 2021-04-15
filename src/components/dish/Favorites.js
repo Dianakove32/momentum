@@ -80,22 +80,22 @@ export default function Favorites() {
     }
     return (
         <div >
-        <div className='modal'>
-                 <Modal appElement={document.querySelector('#app')}
-                isOpen={isOpen}
-                onRequestClose={toggleModal}
-                contentLabel="My dialog">
-                 <button className='btn-modal' onClick={toggleModal}>Close</button>
-                {
-                    !context.state.cart.length ? (
-                        <h2>There is nothing</h2>
-                    ) : (
-                        renderItem(context.state.cart)
-                    )
-                }
+            <div className='modal'>
+                <Modal appElement={document.querySelector('#app')}
+                    isOpen={isOpen}
+                    onRequestClose={toggleModal}
+                    contentLabel="My dialog">
+                    <button className='btn-modal' onClick={toggleModal}>Close</button>
+                    {
+                        !context.state.cart.length ? (
+                            <h2>There is nothing</h2>
+                        ) : (
+                            renderItem(context.state.cart)
+                        )
+                    }
 
-            </Modal>
-        </div>
+                </Modal>
+            </div>
 
             <button className='btn-wish' onClick={toggleModal}>Selected recipes</button>
         </div>

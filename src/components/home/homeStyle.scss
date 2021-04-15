@@ -76,15 +76,19 @@ textarea {
 }
 
 //style
+.mainWrapper{
+  margin-top: 6px;
+  margin-left: 8px;
+}
 .layout-2-column {
   display: flex;
   flex-wrap: wrap;
-  height: 33vh;
+  height: 32vh;
   justify-content: start;
   width: 100vw;
   .todo-container {
     padding: 10px;
-    flex-basis: 65vw;
+    flex-basis: 66vw;
     background: #b5b5b5;
     color: rgb(236, 221, 221);
     outline: 8px solid rgb(255, 253, 253);
@@ -106,7 +110,7 @@ textarea {
   }
   .quote-container {
     padding: 10px;
-    flex-basis: 67vw;
+    flex-basis: 66vw;
     background-color: #fcf9ee;
     color: black;
     outline: 8px solid rgb(255, 253, 253);
