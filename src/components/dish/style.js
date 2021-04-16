@@ -58,3 +58,15 @@ export const Btn = styled.button`
 margin-top:10px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
+export const QuantityLength = styled.div`
+position: absolute;
+  display: flex;
+justify-content: center;
+ align-items:center;
+right: -5px;
+top: 13px;
+width: 20px;
+height: 20px;
+background: #df6d85;
+border-radius: 50%;
+`;
