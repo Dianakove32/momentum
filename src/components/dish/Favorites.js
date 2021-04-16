@@ -4,7 +4,8 @@ import Modal from 'react-modal'
 import Item from './Item'
 import DishForToday from './DishForToday'
 import Home from '../../home'
-import './style.scss'
+import './style.scss';
+import {QuantityLength} from "./style";
 
 
 export default function Favorites() {
@@ -96,8 +97,11 @@ export default function Favorites() {
 
                 </Modal>
             </div>
-
+            <div className = "recipes-btn-wrapper">
+                  <QuantityLength>{context.state.cart.length}</QuantityLength>
             <button className='btn-wish' onClick={toggleModal}>Selected recipes</button>
+            </div>
+
         </div>
     )
 }
