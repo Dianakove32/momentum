@@ -11,9 +11,8 @@ import {QuantityLength} from "./style";
 export default function Favorites() {
     const context = useContext(ApiContext)
     const [isOpen, setIsOpen] = useState(false)
-
-
-
+    
+   
     //     useEffect(() => {
     // let cartFromStor=localStorage.getItem('recipy')
 
@@ -53,6 +52,7 @@ export default function Favorites() {
             cart: copyOfItems,
         });
     };
+ 
 
     const getQuantity = (arr, title) => arr.filter((el) => el.recipe.label == title)
     const renderItem = (arr) => {
@@ -61,6 +61,8 @@ export default function Favorites() {
         //    let a= arr.filter((value,index,self)=> self.indexOf(value)==index)
         //    let b=a.map(el=>console.log('map',el.recipe.label))
         //    console.log(a)
+
+
         return arr
             .filter((value, index, self) => self.indexOf(value) == index)
             .map((el, i) => {
@@ -73,6 +75,7 @@ export default function Favorites() {
                             calories={el.recipe.calories}
                             ingredientLines={el.recipe.ingredientLines}
                             quantity={getQuantity(context.state.cart).length}
+                           
                             onClick={deleteItem} />
 
                     </>
@@ -92,6 +95,8 @@ export default function Favorites() {
                             <h2>There is nothing</h2>
                         ) : (
                             renderItem(context.state.cart)
+                           // renderItem(cookies.context.state.cart)
+
                         )
                     }
 
@@ -99,6 +104,7 @@ export default function Favorites() {
             </div>
             <div className = "recipes-btn-wrapper">
                   <QuantityLength>{context.state.cart.length}</QuantityLength>
+                  {/* <QuantityLength>{cookies.context.state.cart.length}</QuantityLength> */}
             <button className='btn-wish' onClick={toggleModal}>Selected recipes</button>
             </div>
 
