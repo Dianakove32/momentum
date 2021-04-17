@@ -42,7 +42,7 @@ export default function DishList(props) {
 
        setTimeout(() => {
         setOpen(false);
-      }, 2000);
+      }, 3000);
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
