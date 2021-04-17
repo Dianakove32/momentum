@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { ApiContext } from "../../components/context/Context";
 import Dish from "./Dish.js";
@@ -25,7 +25,18 @@ export default function DishList(props) {
             cart: copyOfItems
         })
     }
-   
+
+       setTimeout(() => {
+        setOpen(false);
+      }, 2000);
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+        setOpen(false);
+      };
+
 
     return (
         <div className='dish-wrapper'>
@@ -47,6 +58,18 @@ export default function DishList(props) {
                 {context.state.isLoaded &&
                     context.state.data.data.hits.map((el, i) => <Dish key={i} {...el.recipe} onClick={onClick} />)}
             </div>
+
+            <div className={classes.root}>
+
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+         <Alert onClose={handleClose} severity="success">
+         Recipy has been added
+        </Alert>
+      </Snackbar>
+
+
+    </div>
+
         </div>
     )
 }
