@@ -1,16 +1,17 @@
 import Cookies from "js-cookie";
 
 
-export function setCookie(reciepy) {
-    console.log()
-  Cookies.set("reciepy", reciepy);
+export function setCookie(recipy) {
+
+  Cookies.set("recipy", recipy,{ path: '/'});
+  console.log('recipy')
 }
 
 export function getCookie() {
-  return Cookies.get("reciepy");
+  return Cookies.get("recipy");
 }
 
 export function removeCookie() {
-  Cookies.set("reciepy", "");
+  Cookies.set("recipy", "");
 }
 
