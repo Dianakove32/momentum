@@ -79,7 +79,7 @@ export default function DishList(props) {
         </Alert>
       </Snackbar>
 
-      <Alert severity="success">Recipy has been added </Alert>
+
     </div>
         </div>
     )
