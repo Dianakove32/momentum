@@ -7,14 +7,17 @@ import ContextProvider from './components/context/Context';
 import ApiProvider from "./context/ApiContext";
 
 
+
 ReactDOM.render(
   <HashRouter >
     <ApiProvider>
-  <ContextProvider>
-     <App />
-  </ContextProvider>
-</ApiProvider>
-    </HashRouter>,
+      <ContextProvider>
+       
+         <App />
+       
+      </ContextProvider>
+    </ApiProvider>
+  </HashRouter>,
   document.getElementById('root')
 );
 

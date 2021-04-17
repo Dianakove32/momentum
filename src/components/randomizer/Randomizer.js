@@ -54,7 +54,7 @@ class Randomizer extends React.Component {
             {this.state.quote}
           </p>
           <h3 className='author'>
-            - {this.state.author}
+            - {this.state.author} -
           </h3>
         </div>
 
