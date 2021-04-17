@@ -9980,11 +9980,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-<<<<<<< HEAD
 "react@^16.8.0 || ^17.0.0", "react@^17.0.1":
-=======
-"react@^17.0.1":
->>>>>>> 532b82f3a2765260df440aa61f82a966999dbf39
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"
