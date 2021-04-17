@@ -6,10 +6,34 @@ import Favorites from "./Favorites";
 import "./style.scss"
 import {setCookie,  getCookie , removeCookie} from "../../services/cookies";
 
+
+
+import MuiAlert from '@material-ui/lab/Alert';
+import { makeStyles } from '@material-ui/core/styles';
+import Snackbar from '@material-ui/core/Snackbar';
+
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
+
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      width: '100%',
+      '& > * + *': {
+        marginTop: theme.spacing(2),
+      },
+    },
+  }));
+
+
+
 export default function DishList(props) {
 
     const context = useContext(ApiContext);
-  
+
+    const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
+
 
     const onChange = (e) => {
         context.setSearch(e.target.value)
@@ -24,6 +48,7 @@ export default function DishList(props) {
             ...context.state,
             cart: copyOfItems
         })
+        setOpen(true);
     }
 
        setTimeout(() => {
