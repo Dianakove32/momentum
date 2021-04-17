@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { ApiContext } from "../../components/context/Context";
 import Dish from "./Dish.js";
@@ -39,6 +39,11 @@ export default function DishList(props) {
         })
         setOpen(true);
     }
+
+       setTimeout(() => {
+        setOpen(false);
+      }, 2000);
+
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
           return;
