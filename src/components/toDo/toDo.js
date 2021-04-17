@@ -79,13 +79,16 @@ componentDidUpdate(){
             <div>
                 <div className="Todo_item1">
                 <div className="inputToDo input">
+                    <form   onSubmit={this.addTodo} >
                     <input
                         className="inputToDo2"
+                       
                         value={this.state.todo.text}
                         onChange={this.putOneTodo}
                         placeholder="Write your todo here..."
+                        onSubmit={this.addTodo}
                     />
-
+                     </form>
                     <select
                         onChange={this.putOneCategory}
                         className="categories-container"
