@@ -1,24 +1,22 @@
 body {
     background: #bfddf8;
 }
-.nav-header{
+.nav-header {
     display: flex;
     margin-top: auto;
-
 }
 .dish-wrapper {
     max-width: 1200px;
     width: 100%;
     margin: auto;
-
 }
 .dish-output {
     display: flex;
     flex-wrap: wrap;
+    font-size: 16px;
 }
-.input-wrapper{
-
-margin-bottom: 20px;
+.input-wrapper {
+    margin-bottom: 20px;
 }
 .input-dish {
     width: 300px;
@@ -43,15 +41,14 @@ margin-bottom: 20px;
     text-decoration: none;
     margin: 20px;
 
-font-weight: bold;
-color: rgb(107, 89, 89);
+    font-weight: bold;
+    color: rgb(107, 89, 89);
     &:hover {
         color: rgb(56, 53, 53);
         text-decoration: underline;
     }
-
 }
-.innactiv{
+.innactiv {
     color: rgb(124, 116, 116);
     text-decoration: underline;
     &:hover {
@@ -60,10 +57,10 @@ color: rgb(107, 89, 89);
         cursor: default;
     }
 }
-.btn-wish{
-    background-color:rgb(246, 241, 241) ;
+.btn-wish {
+    background-color: rgb(246, 241, 241);
     border: 1px solid rgb(167, 182, 230);
-     margin-top: 18%;
+    margin-top: 18%;
     padding: 3px;
     margin-left: 51px;
     border-radius: 4px;
@@ -71,18 +68,16 @@ color: rgb(107, 89, 89);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
-.modal{
-
+.modal {
 }
- .btn-modal{
-        background-color:#bfddf8 ;
-        border: 1px solid rgb(167, 182, 230);
-        padding: 3px;
-        border-radius: 4px;
-        font-size: 12px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .recipes-btn-wrapper{
-        position: relative;
-    }
+.btn-modal {
+    background-color: #bfddf8;
+    border: 1px solid rgb(167, 182, 230);
+    padding: 3px;
+    border-radius: 4px;
+    font-size: 12px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.recipes-btn-wrapper {
+    position: relative;
+}

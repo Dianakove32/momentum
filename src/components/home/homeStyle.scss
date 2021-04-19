@@ -89,21 +89,21 @@ textarea {
   .todo-container {
     padding: 10px;
     flex-basis: 66vw;
-    background: #b5b5b5;
+    background: #5f9761;
     color: rgb(236, 221, 221);
     outline: 8px solid rgb(255, 253, 253);
   }
   .icon-container {
     padding: 10px;
     flex-basis: 33vw;
-    background-color: #eee2e2;
+    background-color: #1479f6;
     color: black;
     outline: 8px solid rgb(255, 253, 253);
   }
   .weather-container {
     padding: 10px;
     flex-basis: 33vw;
-    background: #f8f6f5;
+    background: #f2f2f3;
     color: #191919;
     outline: 8px solid rgb(255, 253, 253);
     position: relative;
@@ -111,8 +111,9 @@ textarea {
   .quote-container {
     padding: 10px;
     flex-basis: 66vw;
-    background-color: #504646;
-    color: black;
+    background-color: #d34141;
+
+    color: #fff;
     outline: 8px solid rgb(255, 253, 253);
     position: relative;
   }
@@ -126,27 +127,48 @@ textarea {
   .news-container {
     padding: 10px;
     flex-basis: 33vw;
-    background-color: #e5e3dc;
-    color: black;
+    background-color: #1479f6;
+    color: rgb(250, 245, 245);
     outline: 8px solid rgb(255, 253, 253);
+    a{
+      color: rgb(250, 245, 245);
+      font-size: 25px;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      &:hover{
+        color: burlywood;
+      }
+    }
   }
   .clock-container {
     padding: 10px;
     flex-basis: 33vw;
-    background-color: #fade01;
+    background-color: #f6e457;
     outline: 8px solid rgb(255, 253, 253);
     height: 100%;
   }
   .dish-container {
     padding: 10px;
     flex-basis: 33vw;
-    background-color: #fbf0e7;
-    color: black;
+    background-color: #1479f6;
+    color: rgb(241, 231, 231);
+    font-size: 20px;
     outline: 8px solid rgb(255, 253, 253);
     font-size: 12px;
-    // .dishForToday{
-    //    overflow-y : auto;
-    //  //  height: 200px;
-    // }
+    a{
+      color: rgb(250, 245, 245);
+      font-size: 25px;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      &:hover{
+        color: burlywood;
+      }}
+    .dishForToday{
+       overflow-y : auto;
+        height: 200px;
+      font-size: 16px;
+    }
   }
 }

@@ -38,8 +38,8 @@ class Home extends React.Component {
     // this.getlocation=this.getlocation.bind(this)
     // this.successCallback=this.getCoordinates.bind(this)
     // this.errorCallback=this.errorCallback.bind(this)
-    this.getCityLocation = this.getCityLocation.bind(this)
-
+     this.getCityLocation = this.getCityLocation.bind(this)
+this.getCityLocation()
 
 
   }
@@ -54,34 +54,37 @@ class Home extends React.Component {
     description: '...',
   }
   componentDidMount() {
-    console.log('func', this.getCityLocation())
+
 
 
 
   }
   getCityLocation() {
-    fetch('https://geolocation-db.com/json/639aa2f0-98c5-11eb-a996-0b3faf254bc0')
+    fetch('https://geolocation-db.com/json/f9902210-97f0-11eb-a459-b997d30983f1')
       .then(res => res.json())
-      .then(data => {
-        this.setState({
-          ...this.state,
-          city: data.city
-        })
-        return data.city
-      })
+           .then(data => console.log('new city', data)
+      //       {
+      //   this.setState({
+      //     ...this.state,
+      //     city: data.city
+      //   })
+
+      //   return data.city
+      // }
+      )
       .then(async (city) => {
         const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
         const res = await data.json()
         return res
       })
       .then(data => this.setState({
-        city: data.name,
-        temp: Math.ceil(data.main.temp) + '°C',
-        // icon:data.weather[0].icon,
-        country: data.sys.country,
-        humidity: data.main.humidity,
+        // city: data.name,
+        // temp: Math.ceil(data.main.temp) + '°C',
+        // // icon:data.weather[0].icon,
+        // country: data.sys.country,
+        // humidity: data.main.humidity,
 
-        description: data.weather[0].description
+        // description: data.weather[0].description
       }))
   }
 
