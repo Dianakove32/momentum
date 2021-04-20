@@ -9,7 +9,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 import Snackbar from '@material-ui/core/Snackbar';
 import { setCookie, getCookie, removeCookie } from "../../services/cookies";
-
+import Cookies from "js-cookie";
 
 
 
@@ -41,11 +41,18 @@ export default function DishList(props) {
         context.setSearch(e.target.value)
     }
     const onClick = (title) => {
+
         const item = context.state.data.data.hits.find(el => el.recipe.label == title)
+
         let copyOfItems = [...context.state.cart]
-        copyOfItems.push(item)
+        if (copyOfItems.includes(item)) {
+            return
+        } else
+            copyOfItems.push(item)
+
 
         setCookie(copyOfItems)
+
         context.setState({
             ...context.state,
             cart: copyOfItems
@@ -81,8 +88,10 @@ export default function DishList(props) {
             </div>
 
             <div className='dish-output'>
-                {context.state.isLoaded &&
-                    context.state.data.data.hits.map((el, i) => <Dish key={i} {...el.recipe} onClick={onClick} />)}
+                {context.state.isLoaded ?
+                   ( context.state.data.data.hits.map((el, i) => <Dish key={i} {...el.recipe} onClick={onClick} />)):(
+                    <h2>There is nothing</h2>
+                   )}
             </div>
             <div className={classes.root}>
 

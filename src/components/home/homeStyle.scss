@@ -90,7 +90,7 @@ textarea {
 .row{
   background-color: $bg4;
  //  outline: 8px solid rgb(255, 253, 253);
- border-bottom: 8px solid rgb(255, 253, 253);
+ border-bottom: $outline;
  height: 33.3vh;
 }
 
@@ -106,7 +106,7 @@ textarea {
      flex-basis: 66.7%;
     background: $bg1;
     color: rgb(236, 221, 221);
-    outline: 8px solid rgb(255, 253, 253);
+    outline: $outline;
     height:auto;
   }
   .icon-container {
@@ -114,14 +114,14 @@ textarea {
      flex-basis: 33.3%;
     background-color: $bg1;
     color: black;
-    outline: 8px solid rgb(255, 253, 253);
+    outline: $outline;
   }
   .weather-container {
     padding: 10px;
     flex-basis: 33.3%;
     background: #f2f2f3;
     color: #191919;
-    outline: 8px solid rgb(255, 253, 253);
+    outline: $outline;
     position: relative;
   }
   .quote-container {
@@ -130,7 +130,7 @@ textarea {
     background-color: $bg3;
 
     color: #fff;
-    outline: 8px solid rgb(255, 253, 253);
+    outline: $outline;
     position: relative;
   }
 }
@@ -146,7 +146,7 @@ textarea {
     flex-basis: 33.3%;
     background-color: $bg1;
     color: rgb(250, 245, 245);
-    outline: 8px solid rgb(255, 253, 253);
+    outline: $outline;
     a{
 
       color: rgb(250, 245, 245);
@@ -167,7 +167,7 @@ textarea {
     padding: 10px;
     flex-basis: 33.3%;
     background-color: $bg2;
-    outline: 8px solid rgb(255, 253, 253);
+    outline: $outline;
     height: 100%;
   }
   .dish-container {
@@ -176,7 +176,7 @@ textarea {
     background-color: $bg5;
     color: rgb(241, 231, 231);
     font-size: 20px;
-    outline: 8px solid rgb(255, 253, 253);
+    outline:$outline;
     font-size: 12px;
     a{
       color: rgb(250, 245, 245);

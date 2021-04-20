@@ -13,8 +13,11 @@ body {
 .dish-output {
     display: flex;
     flex-wrap: wrap;
-
+h2{
+    text-align: center;
 }
+}
+
 .input-wrapper {
     margin-bottom: 20px;
 }
