@@ -1,5 +1,7 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');*/
-
+$text:#fff;
+$opacity:0.7;
+$bg2:#5f9761;
 .Todo {
     font-size: 15px;
     letter-spacing: 0.1em;
@@ -47,10 +49,12 @@ select {
 
 .todos-container1 {
     border: none;
-    color: #191919;
+    color: $text;
     overflow-y: auto;
     width: 500px;
     height: 100px;
+    font-size: 20px;
+    opacity: $opacity;
 }
 
 .todos-container-item {
@@ -72,7 +76,9 @@ select {
 .category-button {
     display: block;
     border: none;
-    background-color: #b5b5b5
+    background-color: $bg2;
+ // opacity:$opacity;
+ color: $text;
 }
 
 //.todoNothing {
@@ -81,19 +87,22 @@ select {
 //}
 
 .categories-container {
-    background-color: #b5b5b5;
+    background-color: $bg2;
     color: #191919;
     border: solid 1px #b5b5b5;
+
     font-size: 15px;
 }
 
 .inputToDo2 {
-    background-color: #b5b5b5;
+    background-color: $bg2;
     outline: none;
     border: none;
     border-bottom: 1px solid #ffff;
+
     &::placeholder {
-        color: rgb(233, 215, 215);
+        opacity: 0.3;
+        color: rgb(14, 13, 13);
         font-size: 13px;
     }
 }
