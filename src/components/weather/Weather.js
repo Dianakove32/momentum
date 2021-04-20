@@ -1,36 +1,30 @@
 import React, { Component } from 'react'
 import Modalweather from './Modalweather'
 import SimpleSlide from './SwitcherWeather';
-import data from '../dataWeather'
+import data from '../dataWeather';
+import './Weather.scss'
 export default class Weather extends Component {
-    constructor(props) {
-        super(props)
-    }
+  constructor(props) {
+    super(props)
+  }
   // } else return Image= "https://thumbs.dreamstime.com/z/woman-riding-bicycle-plenty-park-krakow-poland-rainy-day-vector-cartoon-illustrat//ion-happy-woman-109593103.jpg"
-
-
-    render() {
-        const { city, country, temp, sunrise, description, humidity,image,  data } = this.props
-        let imageModal=null;
-        let phrase = null;
-      data.forEach(el=>{
-
-        if(description.includes(el.descriptionData)){
-        imageModal= el.image
+  render() {
+    const { city,  temp,  description, data } = this.props
+    let imageModal = null;
+    let phrase = null;
+    data.forEach(el => {
+      if (description.includes(el.descriptionData)) {
+        imageModal = el.image
         phrase = el.text
-
-          return (imageModal, phrase)
-
-        } })
-
-        return (
-
-            <div >
-
-             <p><b>{city} {temp} </b>   </p>
-            <p>Today is  {description}.</p>
-            <p>  {phrase}</p>
-                {/* <SimpleSlide city={city}
+        return (imageModal, phrase)
+      }
+    })
+    return (
+      <div className='weather-content'>
+        <p><b>{city} {temp} </b>   </p>
+        <p>Today is  {description}.</p>
+        <p>{phrase}</p>
+        {/* <SimpleSlide city={city}
                     country={country}
                     temp={temp}
                     sunrise={sunrise}
@@ -39,7 +33,7 @@ export default class Weather extends Component {
                     image={image}
                     data={data}
                     imageModal={imageModal} /> */}
-                {/* <Modalweather
+        {/* <Modalweather
                 city={city}
     country ={country}
     temp = {temp}
@@ -48,8 +42,7 @@ export default class Weather extends Component {
     humidity={humidity}
 
           /> */}
-
-            </div>
-        )
-    }
+      </div>
+    )
+  }
 }
