@@ -1,3 +1,4 @@
+@import '../../constant.scss';
 * {
   margin: 0;
   padding: 0;
@@ -80,16 +81,14 @@ textarea {
 //   margin-top: 6px;
 //   margin-left: 8px;
 // }
-$text:#fff;
-$bg1:#25456c;
-$bg2:#1479f6;
-$bg3:#25456c;
+
+
 .wrapper{
   max-width: 1200px;
   margin: auto;
 }
 .row{
-  background-color: $bg1;
+  background-color: $bg4;
  //  outline: 8px solid rgb(255, 253, 253);
  border-bottom: 8px solid rgb(255, 253, 253);
  height: 33.3vh;
@@ -105,7 +104,7 @@ $bg3:#25456c;
   .todo-container {
     padding: 10px;
      flex-basis: 66.7%;
-    background: #5f9761;
+    background: $bg1;
     color: rgb(236, 221, 221);
     outline: 8px solid rgb(255, 253, 253);
     height:auto;
@@ -128,7 +127,7 @@ $bg3:#25456c;
   .quote-container {
     padding: 10px;
      flex-basis: 66.7%;
-    background-color: #d34141;
+    background-color: $bg3;
 
     color: #fff;
     outline: 8px solid rgb(255, 253, 253);
@@ -167,14 +166,14 @@ $bg3:#25456c;
 
     padding: 10px;
     flex-basis: 33.3%;
-    background-color: #f6e457;
+    background-color: $bg2;
     outline: 8px solid rgb(255, 253, 253);
     height: 100%;
   }
   .dish-container {
     padding: 10px;
     flex-basis: 33.4%;
-    background-color: $bg1;
+    background-color: $bg5;
     color: rgb(241, 231, 231);
     font-size: 20px;
     outline: 8px solid rgb(255, 253, 253);
