@@ -47,7 +47,7 @@ this.getCityLocation()
 
     icon: undefined,
     temp: undefined,
-    city: undefined,
+    city: 'Smile. Life is wonderfull',
     country: undefined,
     humidity: undefined,
     sunset: undefined,

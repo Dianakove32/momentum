@@ -4,12 +4,13 @@ import moment from 'moment';
 export const ApiContext=createContext();
 let now = moment().format();
 let newNow=now.substring(0, now.length - 15);
+
 const ContextProvider=({children})=>{
     const [data, setData] = useState({});
-    
+
     useEffect(() => {
         // eslint-disable-next-line no-template-curly-in-string
-        const url = `https://newsapi.org/v2/everything?q=from=${newNow}&keyword&apiKey=0e428c7efd55415aba1f5a8b3fc39521`;
+        const url = `https://localhost:44378/weatherforecast`;
 console.log(newNow)
 
         fetch(url)
