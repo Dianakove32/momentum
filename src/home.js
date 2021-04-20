@@ -136,19 +136,27 @@ this.getCityLocation()
     })
 
     return (
-      <div className='mainWrapper'>
-        <div className='layout-2-column'>
+
+      //<div className='mainWrapper'>
+      <div >
+            <div className="row">
+<div className='wrapper'>
+    <div className='layout-2-column'>
           <div className="todo-container">
-            <ToDo />
+             <ToDo />
           </div>
           <div className="icon-container">
 
-            <Icon />
+              <Icon />
           </div>
         </div>
-        <div className='layout-3-column'>
+      </div>
+      </div>
+      <div className="row">
+<div className='wrapper'>
+ <div className='layout-3-column'>
           <div className="news-container">
-          <Currency />
+           <Currency  />
             <NavLink to="/news"> <h3>NEWS </h3></NavLink>
 
           </div>
@@ -160,11 +168,15 @@ this.getCityLocation()
             <div className='dishForToday'><DishForToday /></div>
           </div>
         </div>
-        <div className='layout-2-column'>
+      </div>
+      </div>
+      <div className="row">
+<div className='wrapper'>
+  <div className='layout-2-column'>
           <div className="weather-container"
             style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}>
             <div className='weatherBlock'>
-              <Form data={data} gettingWeather={gettingWeather} />
+                <Form data={data} gettingWeather={gettingWeather} />
               <Weather city={city}
                 country={country}
                 temp={temp}
@@ -180,6 +192,11 @@ this.getCityLocation()
           </div>
         </div>
       </div>
+      </div>
+
+
+
+    </div>
     );
   }
 }

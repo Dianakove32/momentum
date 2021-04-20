@@ -76,33 +76,46 @@ textarea {
 }
 
 //style
-.mainWrapper{
-  margin-top: 6px;
-  margin-left: 8px;
+// .mainWrapper{
+//   margin-top: 6px;
+//   margin-left: 8px;
+// }
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
 }
+.row{
+  background-color: #1479f6;
+ //  outline: 8px solid rgb(255, 253, 253);
+ border-bottom: 8px solid rgb(255, 253, 253);
+ height: 33.3vh;
+}
+
 .layout-2-column {
   display: flex;
   flex-wrap: wrap;
-  height: 32vh;
+  height: 33.3vh;
+ // height: 200px;
   justify-content: start;
-  width: 100vw;
+  // width: 100vw;
   .todo-container {
     padding: 10px;
-    flex-basis: 66vw;
+     flex-basis: 66.7%;
     background: #5f9761;
     color: rgb(236, 221, 221);
     outline: 8px solid rgb(255, 253, 253);
+    height:auto;
   }
   .icon-container {
     padding: 10px;
-    flex-basis: 33vw;
+     flex-basis: 33.3%;
     background-color: #1479f6;
     color: black;
     outline: 8px solid rgb(255, 253, 253);
   }
   .weather-container {
     padding: 10px;
-    flex-basis: 33vw;
+    flex-basis: 33.3%;
     background: #f2f2f3;
     color: #191919;
     outline: 8px solid rgb(255, 253, 253);
@@ -110,7 +123,7 @@ textarea {
   }
   .quote-container {
     padding: 10px;
-    flex-basis: 66vw;
+     flex-basis: 66.7%;
     background-color: #d34141;
 
     color: #fff;
@@ -122,11 +135,12 @@ textarea {
 .layout-3-column {
   display: flex;
   flex-wrap: wrap;
-  height: 33vh;
+  height: 33.3vh;
+  // height: 200px;
   justify-content: start;
   .news-container {
     padding: 10px;
-    flex-basis: 33vw;
+    flex-basis: 33.3%;
     background-color: #1479f6;
     color: rgb(250, 245, 245);
     outline: 8px solid rgb(255, 253, 253);
@@ -143,14 +157,14 @@ textarea {
   }
   .clock-container {
     padding: 10px;
-    flex-basis: 33vw;
+    flex-basis: 33.3%;
     background-color: #f6e457;
     outline: 8px solid rgb(255, 253, 253);
     height: 100%;
   }
   .dish-container {
     padding: 10px;
-    flex-basis: 33vw;
+    flex-basis: 33.4%;
     background-color: #1479f6;
     color: rgb(241, 231, 231);
     font-size: 20px;
