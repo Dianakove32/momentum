@@ -10,6 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Snackbar from '@material-ui/core/Snackbar';
 import { setCookie, getCookie, removeCookie } from "../../services/cookies";
 import Cookies from "js-cookie";
+import Loader from "../Loader/Loader";
 
 
 
@@ -71,6 +72,8 @@ export default function DishList(props) {
         setOpen(false);
     };
 
+
+
     return (
         <div className='dish-wrapper'>
             <div className="nav-header">
@@ -90,7 +93,7 @@ export default function DishList(props) {
             <div className='dish-output'>
                 {context.state.isLoaded ?
                    ( context.state.data.data.hits.map((el, i) => <Dish key={i} {...el.recipe} onClick={onClick} />)):(
-                    <h2>There is nothing</h2>
+                    <Loader/>
                    )}
             </div>
             <div className={classes.root}>

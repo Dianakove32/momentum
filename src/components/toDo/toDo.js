@@ -13,24 +13,23 @@ export default class ToDo extends React.Component {
     };
 
 
-// componentDidMount(){
-//    const localTodo = localStorage.getItem('todo')
-//     if(localTodo){
-//         this.setState({
-//               local:JSON.parse(localTodo)
-//         })
+    // componentDidMount(){
+    //    const localTodo = localStorage.getItem('todo')
+    //     if(localTodo){
+    //         this.setState({
+    //               local:JSON.parse(localTodo)
+    //         })
 
 
-//     }
-// }
-componentDidUpdate(){
+    //     }
+    // }
+    componentDidUpdate() {
 
-//    let todo = JSON.stringify(this.state.todoList)
-//           localStorage.setItem('todo', todo)
-}
+        //    let todo = JSON.stringify(this.state.todoList)
+        //           localStorage.setItem('todo', todo)
+    }
 
     addTodo = () => {
-
         let newTodoList = this.state.todoList;
         newTodoList.push(this.state.todo);
 
@@ -39,7 +38,6 @@ componentDidUpdate(){
             todoList: newTodoList,
         });
     };
-
     putOneTodo = (e) => {
 
         this.setState({
@@ -49,7 +47,6 @@ componentDidUpdate(){
             },
         });
     };
-
     putOneCategory = (e) => {
         this.setState({
             todo: {
@@ -58,7 +55,6 @@ componentDidUpdate(){
             },
         });
     };
-
     deleteTodo = (index) => {
         let newTodoList = this.state.todoList;
         newTodoList.splice(index, 1);
@@ -66,48 +62,43 @@ componentDidUpdate(){
             todoList: newTodoList,
         });
     };
-
     displayCategory = (e) => {
         this.setState({
             filter: e.target.innerText,
         });
     };
-
     render() {
         return (
             <div className="Todo">
-            <div>
-                <div className="Todo_item1">
-                <div className="inputToDo input">
-                    <form   onSubmit={this.addTodo} >
-                    <input
-                        className="inputToDo2"
-                       
-                        value={this.state.todo.text}
-                        onChange={this.putOneTodo}
-                        placeholder="Write your todo here..."
-                        onSubmit={this.addTodo}
-                    />
-                     </form>
-                    <select
-                        onChange={this.putOneCategory}
-                        className="categories-container"
-                    >
-                        <option> Coding</option>
-                        <option> Sports</option>
-                        <option> Food</option>
-                        <option> Extra</option>
-                    </select>
+                <div>
+                    <div className="Todo_item1">
+                        <div className="inputToDo input">
+                            <form onSubmit={this.addTodo} >
+                                <input
+                                    className="inputToDo2"
 
-                    <button className="addBtn"  onClick={this.addTodo}>
-                        Add it
+                                    value={this.state.todo.text}
+                                    onChange={this.putOneTodo}
+                                    placeholder="Write your todo here..."
+                                    onSubmit={this.addTodo}
+                                />
+                            </form>
+                            <select
+                                onChange={this.putOneCategory}
+                                className="categories-container"
+                            >
+                                <option> Coding</option>
+                                <option> Sports</option>
+                                <option> Food</option>
+                                <option> Extra</option>
+                            </select>
+
+                            <button className="addBtn" onClick={this.addTodo}>
+                                Add it
                     </button>
 
-                </div></div>
-<div className='todos-container1'>
-
-
-
+                        </div></div>
+                    <div className='todos-container1'>
                         {this.state.todoList.length !== 0 ? (
                             this.state.todoList
                                 .filter(
@@ -130,7 +121,6 @@ componentDidUpdate(){
                                                 onClick={() => {
                                                     this.deleteTodo(index);
                                                 }}
-
                                             >
                                                 X
                                             </button>
@@ -140,43 +130,42 @@ componentDidUpdate(){
                         ) : (
                             <div className='todoNothing'>You did not add any todo yet</div>
                         )}
-                </div></div>
-                    <div className="filter-container">
-                        <p>Filter it</p>
-                        <hr />
-                        <button
-                            className="category-button"
-                            onClick={this.displayCategory}
-                        >
-                             Coding
+                    </div></div>
+                <div className="filter-container">
+                    <p>Filter it</p>
+                    <hr />
+                    <button
+                        className="category-button"
+                        onClick={this.displayCategory}
+                    >
+                        Coding
                         </button>
-                        <button
-                            className="category-button"
-                            onClick={this.displayCategory}
-                        >
-                             Sports
+                    <button
+                        className="category-button"
+                        onClick={this.displayCategory}
+                    >
+                        Sports
                         </button>
-                        <button
-                            className="category-button"
-                            onClick={this.displayCategory}
-                        >
-                             Food
+                    <button
+                        className="category-button"
+                        onClick={this.displayCategory}
+                    >
+                        Food
                         </button>
-                        <button
-                            className="category-button"
-                            onClick={this.displayCategory}
-                        >
-                             Extra
+                    <button
+                        className="category-button"
+                        onClick={this.displayCategory}
+                    >
+                        Extra
                         </button>
-                        <button
-                            className="category-button"
-                            onClick={this.displayCategory}
-                        >
-                            All
+                    <button
+                        className="category-button"
+                        onClick={this.displayCategory}
+                    >
+                        All
                         </button>
-                    </div>
                 </div>
-
+            </div>
         );
     }
 }
