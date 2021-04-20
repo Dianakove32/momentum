@@ -1,17 +1,17 @@
 import React from 'react';
 import './news.scss';
 
-export default function CardNew({ title, description, url, urlToImage }) {
+export default function CardNew({ name, url, image }) {
 
   return (
     <div className="cardNew">
       <div className="cardNew-img">
-        <img src={urlToImage} alt="news-pict" />
+        <img src={image} alt="news-pict" />
       </div>
       <div className='cardNew-content'>
-        <h3>{title}</h3>
+        <h3>{name}</h3>
         <div>
-          <p>{description}</p>
+          
           <a href={url}>read more &gt;</a>
         </div>
       </div>
