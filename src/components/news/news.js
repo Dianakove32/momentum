@@ -20,15 +20,15 @@ const News = () => {
  <div classname="newsList">
 
         {
-            context.data.articles?.map((el) => {
+            context.data.value?.map((el) => {
               return (
 
                 <CardNew
-                  key={el.title}
-                  title={el.title}
-                  description={el.description}
+                  // key={el.title}
+                  name={el.name}
+                  // description={el.description}
                   url={el.url}
-                  urlToImage={el.urlToImage}
+                  image={el.image}
                 />
 
                 );
