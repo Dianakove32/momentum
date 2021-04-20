@@ -62,15 +62,15 @@ this.getCityLocation()
   getCityLocation() {
     fetch('https://geolocation-db.com/json/f9902210-97f0-11eb-a459-b997d30983f1')
       .then(res => res.json())
-           .then(data => console.log('new city', data)
-      //       {
-      //   this.setState({
-      //     ...this.state,
-      //     city: data.city
-      //   })
+           .then(data =>
+            {
+        this.setState({
+          ...this.state,
+          city: data.city
+        })
 
-      //   return data.city
-      // }
+        return data.city
+      }
       )
       .then(async (city) => {
         const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
@@ -78,13 +78,13 @@ this.getCityLocation()
         return res
       })
       .then(data => this.setState({
-        // city: data.name,
-        // temp: Math.ceil(data.main.temp) + '°C',
-        // // icon:data.weather[0].icon,
-        // country: data.sys.country,
-        // humidity: data.main.humidity,
+        city: data.name,
+        temp: Math.ceil(data.main.temp) + '°C',
+        // icon:data.weather[0].icon,
+        country: data.sys.country,
+        humidity: data.main.humidity,
 
-        // description: data.weather[0].description
+        description: data.weather[0].description
       }))
   }
 
