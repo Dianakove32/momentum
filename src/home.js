@@ -12,7 +12,7 @@ import Navbar from './components/navbar/navbar';
 import axios from 'axios'
 import { NavLink } from "react-router-dom";
 import News from './components/news/news'
-import Dish from './components/dish/dishRandom'
+
 import Currency from './components/currency/currency'
 import Icon from './components/icon/Icon';
 import DishForToday from './components/dish/DishForToday';
@@ -98,12 +98,18 @@ this.getCityLocation()
       const api_url = await
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
       const data = await api_url.json()
+      if(data.message =="city not found"){
+        alert ('City not found. Please enter correct data')
+      }else{
+
+
+
       // var sunset = data.sys.sunset;
       // var date = new Date();
       // date.setTime(sunset);
       // var sunset_date = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
 
-      this.setState({
+   this.setState({
         city: data.name,
         temp: Math.ceil(data.main.temp) + '°C',
         // icon:data.weather[0].icon,
@@ -112,6 +118,8 @@ this.getCityLocation()
         // sunset: sunset_date,
         description: data.weather[0].description
       })
+
+    }
 
 
     }

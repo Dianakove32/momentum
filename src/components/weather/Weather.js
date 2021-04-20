@@ -9,11 +9,10 @@ export default class Weather extends Component {
   }
   // } else return Image= "https://thumbs.dreamstime.com/z/woman-riding-bicycle-plenty-park-krakow-poland-rainy-day-vector-cartoon-illustrat//ion-happy-woman-109593103.jpg"
   render() {
-    const { city, country, temp, sunrise, description, humidity, image, data } = this.props
+    const { city,  temp,  description, data } = this.props
     let imageModal = null;
     let phrase = null;
     data.forEach(el => {
-
       if (description.includes(el.descriptionData)) {
         imageModal = el.image
         phrase = el.text
