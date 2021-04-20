@@ -1,3 +1,4 @@
+@import '../../constant.scss';
 * {
   margin: 0;
   padding: 0;
@@ -76,43 +77,59 @@ textarea {
 }
 
 //style
-.mainWrapper{
-  margin-top: 6px;
-  margin-left: 8px;
+// .mainWrapper{
+//   margin-top: 6px;
+//   margin-left: 8px;
+// }
+
+
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
 }
+.row{
+  background-color: $bg4;
+ //  outline: 8px solid rgb(255, 253, 253);
+ border-bottom: 8px solid rgb(255, 253, 253);
+ height: 33.3vh;
+}
+
 .layout-2-column {
   display: flex;
   flex-wrap: wrap;
-  height: 32vh;
+  height: 33.3vh;
+ // height: 200px;
   justify-content: start;
-  width: 100vw;
+  // width: 100vw;
   .todo-container {
     padding: 10px;
-    flex-basis: 66vw;
-    background: #b5b5b5;
+     flex-basis: 66.7%;
+    background: $bg1;
     color: rgb(236, 221, 221);
     outline: 8px solid rgb(255, 253, 253);
+    height:auto;
   }
   .icon-container {
     padding: 10px;
-    flex-basis: 33vw;
-    background-color: #eee2e2;
+     flex-basis: 33.3%;
+    background-color: $bg1;
     color: black;
     outline: 8px solid rgb(255, 253, 253);
   }
   .weather-container {
     padding: 10px;
-    flex-basis: 33vw;
-    background: #f8f6f5;
+    flex-basis: 33.3%;
+    background: #f2f2f3;
     color: #191919;
     outline: 8px solid rgb(255, 253, 253);
     position: relative;
   }
   .quote-container {
     padding: 10px;
-    flex-basis: 66vw;
-    background-color: #504646;
-    color: black;
+     flex-basis: 66.7%;
+    background-color: $bg3;
+
+    color: #fff;
     outline: 8px solid rgb(255, 253, 253);
     position: relative;
   }
@@ -121,32 +138,59 @@ textarea {
 .layout-3-column {
   display: flex;
   flex-wrap: wrap;
-  height: 33vh;
+  height: 33.3vh;
+  // height: 200px;
   justify-content: start;
   .news-container {
     padding: 10px;
-    flex-basis: 33vw;
-    background-color: #e5e3dc;
-    color: black;
+    flex-basis: 33.3%;
+    background-color: $bg1;
+    color: rgb(250, 245, 245);
     outline: 8px solid rgb(255, 253, 253);
+    a{
+
+      color: rgb(250, 245, 245);
+      font-size: 25px;
+      text-align: center;
+      text-decoration: none;
+         &:hover{
+        color: burlywood;
+      }
+      h3{
+        margin-top: 70px;
+      }
+    }
+
   }
   .clock-container {
+
     padding: 10px;
-    flex-basis: 33vw;
-    background-color: #fade01;
+    flex-basis: 33.3%;
+    background-color: $bg2;
     outline: 8px solid rgb(255, 253, 253);
     height: 100%;
   }
   .dish-container {
     padding: 10px;
-    flex-basis: 33vw;
-    background-color: #fbf0e7;
-    color: black;
+    flex-basis: 33.4%;
+    background-color: $bg5;
+    color: rgb(241, 231, 231);
+    font-size: 20px;
     outline: 8px solid rgb(255, 253, 253);
     font-size: 12px;
-    // .dishForToday{
-    //    overflow-y : auto;
-    //  //  height: 200px;
-    // }
+    a{
+      color: rgb(250, 245, 245);
+      font-size: 25px;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      &:hover{
+        color: burlywood;
+      }}
+    .dishForToday{
+       overflow-y : auto;
+        height: 200px;
+      font-size: 16px;
+    }
   }
 }

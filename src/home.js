@@ -38,8 +38,8 @@ class Home extends React.Component {
     // this.getlocation=this.getlocation.bind(this)
     // this.successCallback=this.getCoordinates.bind(this)
     // this.errorCallback=this.errorCallback.bind(this)
-    this.getCityLocation = this.getCityLocation.bind(this)
-
+     this.getCityLocation = this.getCityLocation.bind(this)
+this.getCityLocation()
 
 
   }
@@ -54,21 +54,24 @@ class Home extends React.Component {
     description: '...',
   }
   componentDidMount() {
-    console.log('func', this.getCityLocation())
+
 
 
 
   }
   getCityLocation() {
-    fetch('https://geolocation-db.com/json/639aa2f0-98c5-11eb-a996-0b3faf254bc0')
+    fetch('https://geolocation-db.com/json/f9902210-97f0-11eb-a459-b997d30983f1')
       .then(res => res.json())
-      .then(data => {
+           .then(data =>
+            {
         this.setState({
           ...this.state,
           city: data.city
         })
+
         return data.city
-      })
+      }
+      )
       .then(async (city) => {
         const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
         const res = await data.json()
@@ -133,19 +136,27 @@ class Home extends React.Component {
     })
 
     return (
-      <div className='mainWrapper'>
-        <div className='layout-2-column'>
+
+      //<div className='mainWrapper'>
+      <div >
+            <div className="row">
+<div className='wrapper'>
+    <div className='layout-2-column'>
           <div className="todo-container">
-            <ToDo />
+             <ToDo />
           </div>
           <div className="icon-container">
 
-            <Icon />
+              <Icon />
           </div>
         </div>
-        <div className='layout-3-column'>
+      </div>
+      </div>
+      <div className="row">
+<div className='wrapper'>
+ <div className='layout-3-column'>
           <div className="news-container">
-          <Currency />
+           <Currency  />
             <NavLink to="/news"> <h3>NEWS </h3></NavLink>
 
           </div>
@@ -157,11 +168,15 @@ class Home extends React.Component {
             <div className='dishForToday'><DishForToday /></div>
           </div>
         </div>
-        <div className='layout-2-column'>
+      </div>
+      </div>
+      <div className="row">
+<div className='wrapper'>
+  <div className='layout-2-column'>
           <div className="weather-container"
             style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}>
             <div className='weatherBlock'>
-              <Form data={data} gettingWeather={gettingWeather} />
+                <Form data={data} gettingWeather={gettingWeather} />
               <Weather city={city}
                 country={country}
                 temp={temp}
@@ -177,6 +192,11 @@ class Home extends React.Component {
           </div>
         </div>
       </div>
+      </div>
+
+
+
+    </div>
     );
   }
 }

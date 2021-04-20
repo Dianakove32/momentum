@@ -6,6 +6,7 @@ width:500px;
 position:relative;
 display: flex;
 padding:20px 10px 10px 10px;
+border-radius: 4px;
 
 margin: 0 auto;
 background: unset;

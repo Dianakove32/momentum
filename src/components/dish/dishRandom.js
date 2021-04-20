@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 
 
 // class Dish extends React.Component {
@@ -10,7 +10,7 @@ import React from 'react';
 //       label:"",
 //       image:""
 //           }
-    
+
 //           this.getRecipe = this.getRecipe.bind(this);
 //   }
 
@@ -19,34 +19,34 @@ import React from 'react';
 //     fetch(API)
 //         .then((response) =>{ response.json();
 //         console.log(response)})
-        
+
 //         .then((data) => {
 //           console.log(data)
 //             this.setState({
-//               uri:data.uri, image:data.image, label:data.label 
-             
+//               uri:data.uri, image:data.image, label:data.label
+
 //             })
-       
+
 //         })
 //         .catch(error => console.log('Error', error));
-        
+
 
 //   }
-    
+
 //   render() {
 //     return (
 //       <div>
 //      Hello dish from Diana!
-//       <button onClick={this.getRecipe}>dish</button> 
+//       <button onClick={this.getRecipe}>dish</button>
 //       </div>
-       
-     
+
+
 //     )
 //   }
 // }
 
-    
-    
+
+
 
 
 // export default Dish;

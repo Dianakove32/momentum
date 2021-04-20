@@ -35,5 +35,10 @@ const data = [
         image: "https://lh3.googleusercontent.com/proxy/hUnspsQnxkph3Tg8I-E7OJ0bV6OHN_qE9sWGmBX0cMCT6SBRGcXt1XQumYIaxDlmHCt1J3WrnHyhwhvQEAt8ko9tcEckt7UnaBae2eNTuCdiUDhSNbKrgEpXtQY2nn4",
         text: 'Be careful. its not clear on the road'
     },
+    {
+        descriptionData: 'haze',
+        image: "https://lh3.googleusercontent.com/proxy/hUnspsQnxkph3Tg8I-E7OJ0bV6OHN_qE9sWGmBX0cMCT6SBRGcXt1XQumYIaxDlmHCt1J3WrnHyhwhvQEAt8ko9tcEckt7UnaBae2eNTuCdiUDhSNbKrgEpXtQY2nn4",
+        text: 'Be careful. its not clear on the road'
+    },
 ]
 export default data
