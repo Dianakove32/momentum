@@ -17,6 +17,8 @@ import Currency from './components/currency/currency'
 import Icon from './components/icon/Icon';
 import DishForToday from './components/dish/DishForToday';
 import CardNews from './components/news/cardNew'
+import CardNew from './components/news/cardNew';
+import CardOneNew from './components/news/CardOneNew';
 import ChangeScene from './components/changeScene/changeScene';
 
 
@@ -39,8 +41,8 @@ class Home extends React.Component {
     // this.getlocation=this.getlocation.bind(this)
     // this.successCallback=this.getCoordinates.bind(this)
     // this.errorCallback=this.errorCallback.bind(this)
-     this.getCityLocation = this.getCityLocation.bind(this)
-this.getCityLocation()
+    this.getCityLocation = this.getCityLocation.bind(this)
+    this.getCityLocation()
 
 
   }
@@ -48,7 +50,7 @@ this.getCityLocation()
 
     icon: undefined,
     temp: undefined,
-    city: undefined,
+    city: 'Smile. Life is wonderfull',
     country: undefined,
     humidity: undefined,
     sunset: undefined,
@@ -63,8 +65,7 @@ this.getCityLocation()
   getCityLocation() {
     fetch('https://geolocation-db.com/json/f9902210-97f0-11eb-a459-b997d30983f1')
       .then(res => res.json())
-           .then(data =>
-            {
+      .then(data => {
         this.setState({
           ...this.state,
           city: data.city
@@ -99,28 +100,28 @@ this.getCityLocation()
       const api_url = await
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
       const data = await api_url.json()
-      if(data.message =="city not found"){
-        alert ('City not found. Please enter correct data')
-      }else{
+      if (data.message == "city not found") {
+        alert('City not found. Please enter correct data')
+      } else {
 
 
 
-      // var sunset = data.sys.sunset;
-      // var date = new Date();
-      // date.setTime(sunset);
-      // var sunset_date = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+        // var sunset = data.sys.sunset;
+        // var date = new Date();
+        // date.setTime(sunset);
+        // var sunset_date = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
 
-   this.setState({
-        city: data.name,
-        temp: Math.ceil(data.main.temp) + '°C',
-        // icon:data.weather[0].icon,
-        country: data.sys.country,
-        humidity: data.main.humidity,
-        // sunset: sunset_date,
-        description: data.weather[0].description
-      })
+        this.setState({
+          city: data.name,
+          temp: Math.ceil(data.main.temp) + '°C',
+          // icon:data.weather[0].icon,
+          country: data.sys.country,
+          humidity: data.main.humidity,
+          // sunset: sunset_date,
+          description: data.weather[0].description
+        })
 
-    }
+      }
 
 
     }
@@ -148,44 +149,42 @@ this.getCityLocation()
 
       //<div className='mainWrapper'>
       <div >
-            <div className="row">
-<div className='wrapper'>
-    <div className='layout-2-column'>
-          <div className="todo-container">
-             <ToDo />
-          </div>
-          <div className="icon-container">
 
-              <Icon />
+        <div className='wrapper'>
+
+          <div className="todo-container card">
+            <div className="title-card">My todo list</div>
+            <ToDo />
           </div>
-        </div>
-      </div>
-      </div>
-      <div className="row">
-<div className='wrapper'>
- <div className='layout-3-column'>
-          <div className="news-container">
-           <Currency  />
-            <NavLink to="/news"> <h3>NEWS </h3></NavLink>
-<ChangeScene/>
+          <div className="icon-container card">
+            <div className="title-card">Social media</div>
+            <Icon />
           </div>
-          <div className="clock-container">
+
+
+
+
+          <div className="news-container card">
+            <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
+<CardOneNew/>
+            {/* <Currency />
+                 */}
+          </div>
+          <div className="clock-container card">
             <Clock />
           </div>
-          <div className="dish-container">
-            <NavLink to="/dish"> <h3>Dish for today</h3></NavLink>
+          <div className="dish-container card">
+            <div className="title-card">Dish for today<div className="title-link"><NavLink to="/dish">find more recipy</NavLink></div></div>
             <div className='dishForToday'><DishForToday /></div>
           </div>
-        </div>
-      </div>
-      </div>
-      <div className="row">
-<div className='wrapper'>
-  <div className='layout-2-column'>
-          <div className="weather-container"
-            style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}>
+
+
+          <div className="weather-container card">
+          {/* // style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}> */}
+            <div className="title-card">weather</div>
+
             <div className='weatherBlock'>
-                <Form data={data} gettingWeather={gettingWeather} />
+              <Form data={data} gettingWeather={gettingWeather} />
               <Weather city={city}
                 country={country}
                 temp={temp}
@@ -196,16 +195,15 @@ this.getCityLocation()
                 data={data} />
             </div>
           </div>
-          <div className="quote-container">
-            <Randomizer />
+          <div className="quote-container card">
+            <div className="title-card">phrase of the day</div>
+            {/* <Randomizer /> */}
+          </div>
+          <div className="footer card">
+<ChangeScene/>
           </div>
         </div>
       </div>
-      </div>
-
-
-
-    </div>
     );
   }
 }
@@ -251,4 +249,68 @@ export default Home;
 //         alert("An unknown error occurred.")
 //         break;
 //     }
+// }
+
+
+ //<div className='mainWrapper'>
+//  <div >
+//  <div className="row row1">
+//    <div className='wrapper'>
+//      <div className='layout-2-column'>
+//        <div className="todo-container">
+//          <ToDo />
+//        </div>
+//        <div className="icon-container">
+
+//          <Icon />
+//        </div>
+//      </div>
+//    </div>
+//  </div>
+//  <div className="row">
+//    <div className='wrapper'>
+//      <div className='layout-3-column'>
+//        <div className="news-container">
+//          <Currency />
+//          <NavLink to="/news"> <h3>NEWS </h3></NavLink>
+//        </div>
+//        <div className="clock-container">
+//          <Clock />
+//        </div>
+//        <div className="dish-container">
+//          <NavLink to="/dish"> <h3>Dish for today</h3></NavLink>
+//          <div className='dishForToday'><DishForToday /></div>
+//        </div>
+//      </div>
+//    </div>
+//  </div>
+//  <div className="row row1">
+//    <div className='wrapper'>
+//      <div className='layout-2-column'>
+//        <div className="weather-container"
+//          style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}>
+//          <div className='weatherBlock'>
+//            <Form data={data} gettingWeather={gettingWeather} />
+//            <Weather city={city}
+//              country={country}
+//              temp={temp}
+//              sunset={sunset}
+//              icon={icon}
+//              humidity={humidity}
+//              description={description}
+//              data={data} />
+//          </div>
+//        </div>
+//        <div className="quote-container">
+//          <Randomizer />
+//        </div>
+//      </div>
+//    </div>
+//  </div>
+
+
+
+// </div>
+// );
+// }
 // }

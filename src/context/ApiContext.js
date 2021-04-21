@@ -6,7 +6,7 @@ export const ApiContext=createContext();
 // let newNow=now.substring(0, now.length - 15);
 const ContextProvider=({children})=>{
     const [data, setData] = useState({});
-    
+
     useEffect(() => {
         // eslint-disable-next-line no-template-curly-in-string
         fetch("https://bing-news-search1.p.rapidapi.com/news?safeSearch=Off&textFormat=Raw", {
@@ -21,8 +21,9 @@ const ContextProvider=({children})=>{
             .then(res => setData(res))
 
     }, [])
+
     return(
-      
+
        <ApiContext.Provider value={{data,setData}}>
            {children}
        </ApiContext.Provider>

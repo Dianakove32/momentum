@@ -9,11 +9,17 @@ import "./icon.scss"
 export default function Icon() {
     return (
         <div className="icons">
-<a href="https://www.facebook.com/"><img src={facebook} alt=""></img></a>
-<a href="https://www.instagram.com/"><img src={instagram} alt=""></img></a>
-<a href="https://app.slack.com/"><img src={slack} alt=""></img></a>
-<a href="https://twitter.com/"><img src={twitter} alt=""></img></a>
-<a href="https://github.com/"><img src={github} alt=""></img></a>
+        <div className="icon-item"><a href="https://www.facebook.com/"><img src={facebook} alt="facebook"></img></a> </div>
+        <div className="icon-item"><a href="https://www.instagram.com/"><img src={instagram} alt="instagram"></img></a> </div>
+        <div className="icon-item"><a href="https://app.slack.com/"><img src={slack} alt="slack"></img></a> </div>
+        <div className="icon-item"><a href="https://twitter.com/"><img src={twitter} alt="twitter"></img></a> </div>
+        <div className="icon-item"><a href="https://github.com/"><img src={github} alt="github"></img></a> </div>
+        <div className="icon-item"><div className="last">+ </div></div>
+
+
+
+
+
         </div>
     )
 }

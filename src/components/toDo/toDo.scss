@@ -1,5 +1,5 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');*/
-@import '../../constant.scss';
+@import "../../constant.scss";
+@import "../../mixins.scss";
 .Todo {
     font-size: 15px;
     letter-spacing: 0.1em;
@@ -10,37 +10,28 @@
 form {
     display: inline-block;
 }
-
+.todo_item1 {
+    display: flex;
+}
 .addBtn {
-    width: 40px;
+    width: 200px;
     height: 40px;
-    color:#a89f9f;
-  font-size: 10px;
-    border: solid 2px #ccc3c3;
-    border-radius: 50%;
-    background-color: #f3ecec;
-margin-left: 10px;
+    color: #a89f9f;
+    font-size: 15px;
+    box-shadow: $boxshadowLess;
+    border-radius: 10px;
+    background-color: $bgFilter;
+    border: none;
 }
 
 .addBtn:hover {
     cursor: pointer;
-    box-shadow: 1px 1px 2px 0;
 }
 
-input:focus {
-    outline: none;
-}
-
-select {
-    padding: 10px;
-    border-right: none;
-    border-left: none;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    outline: none;
-    >option {
-        font-size: 12px;
-    }
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
 }
 
 .addBtn:focus {
@@ -49,78 +40,115 @@ select {
 
 .todos-container1 {
     margin-top: 10px;
-
+    margin-left: 15px;
     border: none;
     color: $text;
     overflow-y: auto;
-    width: 500px;
+
     height: 190px;
     font-size: 20px;
-  //  opacity: $opacity;
+    //  opacity: $opacity;
 }
 
 .todos-container-item {
     display: flex;
     p {
+        margin-left: 10px;
         word-wrap: break-word;
         width: 400px;
+        font-style: italic;
+        margin: 5px;
     }
 }
 
 .filter-container {
     width: 100px;
     padding: 10px;
-    border-left: 1px solid #b5b5b5;
-    border-radius: 15%;
+    color: lightcyan;
+    border-radius: 10%;
     text-align: left;
-    height: 150px;
-
+    height: 200px;
+    background: $bgFilter;
+    @include big {
+        width: 80px;
+        height: 160px;
+    }
 }
 
 .category-button {
     display: block;
     border: none;
-    background-color: $bg1;
-   opacity:$opacity;
- color: $text;
- height: 20px;
-
-
+    background-color: $bgFilter;
+    opacity: $opacity;
+    color: $text;
+    height: 20px;
 }
 
-//.todoNothing {
-    // margin-bottom: 15px;
-    // width: 40%;
-//}
+.todoNothing {
+    font-style: italic;
+}
 
 .categories-container {
     background-color: $bg1;
     color: $text;
-    border: solid 1px #38707e;
+    // border: solid 1px #38707e;
     font-size: 15px;
     margin-left: 10px;
 }
 
-.inputToDo2 {
-    background-color: $bg1;
+.enter-note {
+    height: 130px;
+    width: 200px;
+    background-color: $bgFilter;
     outline: none;
     border: none;
-    border-bottom: 1px solid #ffff;
-
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: $boxshadowLess;
     &::placeholder {
-    opacity: 0.4;
+        opacity: 0.4;
         color: $text;
         font-size: 13px;
-
     }
 }
 
 .btn-delete {
-    color: rgb(233, 215, 215);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: #948e8e;
+    color: rgb(235, 49, 49);
+    background-color: $bg1;
     font-size: 12px;
-    border: none
+    border: none;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+.category-containe {
+    font-size: 14px;
+    @include middle {
+        font-size: 12px;
+    }
+}
+.category {
+    width: 200px;
+    background-color: $bgFilter;
+    color: $text;
+    border: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: $boxshadowLess;
+}
+select {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: #ccc3c3;
+    > option {
+        font-size: 12px;
+        border: none;
+    }
+    &:hover {
+        cursor: pointer;
+    }
 }

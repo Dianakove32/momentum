@@ -1,22 +1,33 @@
-// .icons {
-//     display: flex;
-//     justify-content: space-around;
-//     flex-wrap: wrap;
-//     align-items: center;
-//     a {
-//         width: 30%;
-//         padding-bottom: 20px;
-//         padding-top: 20px;
-//     }
-// }
-.icons{
+@import '../../mixins.scss';
+
+.icons {
     padding-top: 20px;
-    display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        align-items: center;
->a{
-    display: inline-block;
-    margin: 30px;
+      display: flex;
+
+    flex-wrap: wrap;
+    align-items: center;
+    .icon-item{
+    width: 70px;
+    height: 70px;
+    margin: 12px;
+&:hover{
+     transform: scale(1.2);
 }
+
+}}
+.last{
+    width: 50px;
+    height: 50px;
+    background: #cdc7e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: lightcyan;
+    border-radius: 10px;
+    &:hover{
+        cursor: pointer;
+        box-shadow: $boxshadowLess;
+    }
 }

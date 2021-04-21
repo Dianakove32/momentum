@@ -29,7 +29,8 @@ export default class ToDo extends React.Component {
         //           localStorage.setItem('todo', todo)
     }
 
-    addTodo = () => {
+    addTodo = (e) => {
+        e.preventDefault()
         let newTodoList = this.state.todoList;
         newTodoList.push(this.state.todo);
 
@@ -71,19 +72,10 @@ export default class ToDo extends React.Component {
         return (
             <div className="Todo">
                 <div>
-                    <div className="Todo_item1">
-                        <div className="inputToDo input">
-                            <form onSubmit={this.addTodo} >
-                                <input
-                                    className="inputToDo2"
-
-                                    value={this.state.todo.text}
-                                    onChange={this.putOneTodo}
-                                    placeholder="Write your todo here..."
-                                    onSubmit={this.addTodo}
-                                />
-                            </form>
-                            <select
+                    <div className="todo_item1">
+                        <div className="input-wrapper">
+                       <div className="category">
+                           Category:   <select
                                 onChange={this.putOneCategory}
                                 className="categories-container"
                             >
@@ -91,13 +83,31 @@ export default class ToDo extends React.Component {
                                 <option> Sports</option>
                                 <option> Food</option>
                                 <option> Extra</option>
-                            </select>
+                            </select></div>
 
+                             <form onSubmit={this.addTodo} >
+
+                                {/* <input
+                                    className="inputToDo2"
+                                    value={this.state.todo.text}
+                                    onChange={this.putOneTodo}
+                                    placeholder="Write your todo here..."
+                                    onSubmit={this.addTodo}
+                                /> */}
+                                <textarea
+                                    className="enter-note"
+                                    value={this.state.todo.text}
+                                    onChange={this.putOneTodo}
+                                    placeholder="Write your todo here..."
+                                    onSubmit={this.addTodo}
+                                />
+                            </form>
                             <button className="addBtn" onClick={this.addTodo}>
                                 Add it
                     </button>
 
-                        </div></div>
+                        </div>
+
                     <div className='todos-container1'>
                         {this.state.todoList.length !== 0 ? (
                             this.state.todoList
@@ -112,11 +122,6 @@ export default class ToDo extends React.Component {
                                             className="todos-container-item"
                                             key={index}
                                         >
-                                            <p>- {todo.text}  </p>
-                                            <span className="category-containe">
-                                                {' '}
-                                               |{todo.category}{' '}
-                                            </span>
                                             <button className="btn-delete"
                                                 onClick={() => {
                                                     this.deleteTodo(index);
@@ -124,13 +129,19 @@ export default class ToDo extends React.Component {
                                             >
                                                 X
                                             </button>
+                                            <p>  {todo.text}  </p>
+                                            {/* <span className="category-containe">
+                                                {' '}
+                                               |{todo.category}{' '}
+                                            </span> */}
+
                                         </div>
                                     );
                                 })
                         ) : (
                             <div className='todoNothing'>You did not add any todo yet</div>
                         )}
-                    </div></div>
+                    </div></div> </div>
                 <div className="filter-container">
                     <p>Filter it</p>
                     <hr />
