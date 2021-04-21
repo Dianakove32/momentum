@@ -146,63 +146,61 @@ class Home extends React.Component {
 
       //<div className='mainWrapper'>
       <div >
-        <div className="row row1">
-          <div className='wrapper'>
-            <div className='layout-2-column'>
-              <div className="todo-container">
-                <ToDo />
-              </div>
-              <div className="icon-container">
 
-                <Icon />
-              </div>
+        <div className='wrapper'>
+
+          <div className="todo-container card">
+          <div className="title-card">My todo list</div>
+             <ToDo />
+          </div>
+          <div className="icon-container card">
+          <div className="title-card">Social media</div>
+            {/* <Icon /> */}
+          </div>
+
+
+
+
+          <div className="news-container card">
+          <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">read more</NavLink></div></div>
+
+            {/* <Currency />
+                 */}
+          </div>
+          <div className="clock-container card">
+            <Clock />
+          </div>
+          <div className="dish-container card">
+          <div className="title-card">Dish for today<div className="title-link"><NavLink to="/dish">find more</NavLink></div></div>
+
+            {/* <NavLink to="/dish"> <h3>Dish for today</h3></NavLink>
+                <div className='dishForToday'><DishForToday /></div> */}
+          </div>
+
+
+          <div className="weather-container card">
+          <div className="title-card">weather</div>
+            {/* style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}> */}
+            <div className='weatherBlock'>
+              <Form data={data} gettingWeather={gettingWeather} />
+              <Weather city={city}
+                country={country}
+                temp={temp}
+                sunset={sunset}
+                icon={icon}
+                humidity={humidity}
+                description={description}
+                data={data} />
             </div>
           </div>
-        </div>
-        <div className="row">
-          <div className='wrapper'>
-            <div className='layout-3-column'>
-              <div className="news-container">
-                <Currency />
-                <NavLink to="/news"> <h3>NEWS </h3></NavLink>
+          <div className="quote-container card">
+          <div className="title-card">phrase of the day</div>
+            {/* <Randomizer /> */}
+          </div>
+          <div className="footer card">
 
-              </div>
-              <div className="clock-container">
-                <Clock />
-              </div>
-              <div className="dish-container">
-                <NavLink to="/dish"> <h3>Dish for today</h3></NavLink>
-                <div className='dishForToday'><DishForToday /></div>
-              </div>
-            </div>
           </div>
         </div>
-        <div className="row row1">
-          <div className='wrapper'>
-            <div className='layout-2-column'>
-              <div className="weather-container"
-                style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}>
-                <div className='weatherBlock'>
-                  <Form data={data} gettingWeather={gettingWeather} />
-                  <Weather city={city}
-                    country={country}
-                    temp={temp}
-                    sunset={sunset}
-                    icon={icon}
-                    humidity={humidity}
-                    description={description}
-                    data={data} />
-                </div>
-              </div>
-              <div className="quote-container">
-                <Randomizer />
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
       </div>
     );
   }
@@ -249,4 +247,68 @@ export default Home;
 //         alert("An unknown error occurred.")
 //         break;
 //     }
+// }
+
+
+ //<div className='mainWrapper'>
+//  <div >
+//  <div className="row row1">
+//    <div className='wrapper'>
+//      <div className='layout-2-column'>
+//        <div className="todo-container">
+//          <ToDo />
+//        </div>
+//        <div className="icon-container">
+
+//          <Icon />
+//        </div>
+//      </div>
+//    </div>
+//  </div>
+//  <div className="row">
+//    <div className='wrapper'>
+//      <div className='layout-3-column'>
+//        <div className="news-container">
+//          <Currency />
+//          <NavLink to="/news"> <h3>NEWS </h3></NavLink>
+//        </div>
+//        <div className="clock-container">
+//          <Clock />
+//        </div>
+//        <div className="dish-container">
+//          <NavLink to="/dish"> <h3>Dish for today</h3></NavLink>
+//          <div className='dishForToday'><DishForToday /></div>
+//        </div>
+//      </div>
+//    </div>
+//  </div>
+//  <div className="row row1">
+//    <div className='wrapper'>
+//      <div className='layout-2-column'>
+//        <div className="weather-container"
+//          style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}>
+//          <div className='weatherBlock'>
+//            <Form data={data} gettingWeather={gettingWeather} />
+//            <Weather city={city}
+//              country={country}
+//              temp={temp}
+//              sunset={sunset}
+//              icon={icon}
+//              humidity={humidity}
+//              description={description}
+//              data={data} />
+//          </div>
+//        </div>
+//        <div className="quote-container">
+//          <Randomizer />
+//        </div>
+//      </div>
+//    </div>
+//  </div>
+
+
+
+// </div>
+// );
+// }
 // }
