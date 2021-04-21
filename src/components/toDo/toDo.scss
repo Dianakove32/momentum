@@ -1,5 +1,6 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');*/
-@import '../../constant.scss';
+@import "../../constant.scss";
+@import "../../mixins.scss";
 .Todo {
     font-size: 15px;
     letter-spacing: 0.1em;
@@ -14,12 +15,12 @@ form {
 .addBtn {
     width: 40px;
     height: 40px;
-    color:#a89f9f;
-  font-size: 10px;
+    color: #a89f9f;
+    font-size: 10px;
     border: solid 2px #ccc3c3;
     border-radius: 50%;
     background-color: #f3ecec;
-margin-left: 10px;
+    margin-left: 10px;
 }
 
 .addBtn:hover {
@@ -38,7 +39,7 @@ select {
     border-top: 1px solid;
     border-bottom: 1px solid;
     outline: none;
-    >option {
+    > option {
         font-size: 12px;
     }
 }
@@ -56,7 +57,10 @@ select {
     width: 500px;
     height: 190px;
     font-size: 20px;
-  //  opacity: $opacity;
+    //  opacity: $opacity;
+    @include big {
+        width: 300px;
+    }
 }
 
 .todos-container-item {
@@ -64,6 +68,10 @@ select {
     p {
         word-wrap: break-word;
         width: 400px;
+        font-style: italic;
+        @include big {
+            width: 300px;
+        }
     }
 }
 
@@ -74,24 +82,24 @@ select {
     border-radius: 15%;
     text-align: left;
     height: 150px;
-
+    @include big {
+        width: 80px;
+        height: 160px;
+    }
 }
 
 .category-button {
     display: block;
     border: none;
     background-color: $bg1;
-   opacity:$opacity;
- color: $text;
- height: 20px;
-
-
+    opacity: $opacity;
+    color: $text;
+    height: 20px;
 }
 
-//.todoNothing {
-    // margin-bottom: 15px;
-    // width: 40%;
-//}
+.todoNothing {
+    font-style: italic;
+}
 
 .categories-container {
     background-color: $bg1;
@@ -108,19 +116,26 @@ select {
     border-bottom: 1px solid #ffff;
 
     &::placeholder {
-    opacity: 0.4;
+        opacity: 0.4;
         color: $text;
         font-size: 13px;
-
     }
 }
 
 .btn-delete {
-    color: rgb(233, 215, 215);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: #948e8e;
+    color: rgb(235, 49, 49);
+    // border-radius: 50%;
+    // width: 20px;
+    // height: 20px;
+    background-color: $bg1;
     font-size: 12px;
-    border: none
+    border: none;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+.category-containe {
+    font-size: 14px;
+    @include middle {
+        font-size: 12px;
+    }
 }

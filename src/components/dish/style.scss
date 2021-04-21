@@ -1,3 +1,5 @@
+@import '../../mixins';
+
 body {
     background: #bfddf8;
 }
@@ -17,6 +19,14 @@ h2{
     text-align: center;
 }
 }
+.dishForToday {
+    overflow-y: auto;
+    height: 200px;
+    font-size: 16px;
+    @include middle{
+        width: 100px;
+    }
+  }
 
 .input-wrapper {
     margin-bottom: 20px;

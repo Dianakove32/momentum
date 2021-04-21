@@ -1,22 +1,23 @@
-// .icons {
-//     display: flex;
-//     justify-content: space-around;
-//     flex-wrap: wrap;
-//     align-items: center;
-//     a {
-//         width: 30%;
-//         padding-bottom: 20px;
-//         padding-top: 20px;
-//     }
-// }
-.icons{
-    padding-top: 20px;
+@import '../../mixins.scss';
+
+.icons {
+
+    padding-top: 2%;
     display: flex;
-        justify-content: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    > a {
+        display: flex;
         flex-wrap: wrap;
-        align-items: center;
->a{
-    display: inline-block;
-    margin: 30px;
-}
+        margin: 30px;
+        @include big{
+            margin: 10px;
+
+        }
+    }
+    @include big{
+        padding-top: 8px;
+
+    }
 }

@@ -29,7 +29,8 @@ export default class ToDo extends React.Component {
         //           localStorage.setItem('todo', todo)
     }
 
-    addTodo = () => {
+    addTodo = (e) => {
+e.preventDefault()
         let newTodoList = this.state.todoList;
         newTodoList.push(this.state.todo);
 

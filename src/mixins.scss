@@ -1,0 +1,17 @@
+@import './constant.scss';
+
+@mixin big {
+    @media (max-width: $big) { @content; }
+}
+
+@mixin middle {
+    @media (max-width: $middle) { @content; }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) { @content; }
+}
+
+@mixin mobail {
+    @media (max-width: $mobail) { @content; }
+}
