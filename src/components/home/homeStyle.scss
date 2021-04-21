@@ -63,90 +63,70 @@ textarea {
   margin: 0;
 }
 
-
-
 .wrapper {
-  max-width:$big;
+  max-width: $big;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
-.card{
-height: 300px;
-box-shadow: $boxshadow;
-width: 300px;
-border-radius: 4px;
-margin-top: 20px;
-padding: 10px;
+.card {
+  height: 300px;
+  box-shadow: $boxshadow;
+  width: 300px;
+  border-radius: 4px;
+  margin-top: 20px;
+  padding: 10px;
 }
-.title-card{
-  text-transform:uppercase;
+.title-card {
+  text-transform: uppercase;
   color: $text1;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  .title-link{
-    text-transform:lowercase;
-    a{
-         color:  #a38097
+  .title-link {
+    text-transform: lowercase;
+    a {
+      color: #a38097;
     }
-
   }
 }
-.todo-container{
-background:$bg1 ;
-width:$width-long ;
+.todo-container {
+  background: $bg1;
+  width: $width-long;
 }
 
-.icon-container{
-  background:$bg2;
+.icon-container {
+  background: $bg2;
   width: $width-short;
 }
-.news-container{
-  background:$bg3 ;
+.news-container {
+  background: $bg3;
   width: $width-short;
 }
 
-.clock-container{
-  background:$bg4 ;
+.clock-container {
+  background: $bg4;
   width: $width-short;
 }
-.dish-container{
-  background:$bg5 ;
+.dish-container {
+  background: $bg5;
   width: $width-short;
 }
-.weather-container{
-  background:$bg6 ;
+.weather-container {
+  background: $bg6;
   width: $width-short;
 }
-.quote-container{
-    background:$bg7 ;
-    width: $width-long;
+.quote-container {
+  background: $bg7;
+  width: $width-long;
 }
-.footer{
+.footer {
   height: 80px;
   background: $bg1;
   width: 100%;
   margin-bottom: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // .row {
 //   margin-top: 5px;

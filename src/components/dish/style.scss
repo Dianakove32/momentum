@@ -1,4 +1,4 @@
-@import '../../mixins';
+@import "../../mixins";
 
 body {
     background: #bfddf8;
@@ -15,18 +15,17 @@ body {
 .dish-output {
     display: flex;
     flex-wrap: wrap;
-h2{
-    text-align: center;
-}
+    h2 {
+        text-align: center;
+    }
 }
 .dishForToday {
     overflow-y: auto;
     height: 200px;
-    font-size: 16px;
-    @include middle{
-        width: 100px;
-    }
-  }
+    font-size: 18px;
+    font-style: italic;
+     color: $text;
+}
 
 .input-wrapper {
     margin-bottom: 20px;

@@ -10,7 +10,9 @@
     width: 70px;
     height: 70px;
     margin: 12px;
-
+&:hover{
+     transform: scale(1.2);
+}
 
 }}
 .last{

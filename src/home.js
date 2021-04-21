@@ -17,6 +17,8 @@ import Currency from './components/currency/currency'
 import Icon from './components/icon/Icon';
 import DishForToday from './components/dish/DishForToday';
 import CardNews from './components/news/cardNew'
+import CardNew from './components/news/cardNew';
+import CardOneNew from './components/news/CardOneNew';
 
 
 
@@ -150,20 +152,20 @@ class Home extends React.Component {
         <div className='wrapper'>
 
           <div className="todo-container card">
-          <div className="title-card">My todo list</div>
-             <ToDo />
+            <div className="title-card">My todo list</div>
+            <ToDo />
           </div>
           <div className="icon-container card">
-          <div className="title-card">Social media</div>
-              <Icon />
+            <div className="title-card">Social media</div>
+            <Icon />
           </div>
 
 
 
 
           <div className="news-container card">
-          <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">read more</NavLink></div></div>
-
+            <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
+<CardOneNew/>
             {/* <Currency />
                  */}
           </div>
@@ -171,15 +173,13 @@ class Home extends React.Component {
             <Clock />
           </div>
           <div className="dish-container card">
-          <div className="title-card">Dish for today<div className="title-link"><NavLink to="/dish">find more</NavLink></div></div>
-
-            {/* <NavLink to="/dish"> <h3>Dish for today</h3></NavLink>
-                <div className='dishForToday'><DishForToday /></div> */}
+            <div className="title-card">Dish for today<div className="title-link"><NavLink to="/dish">find more recipy</NavLink></div></div>
+            <div className='dishForToday'><DishForToday /></div>
           </div>
 
 
           <div className="weather-container card">
-          <div className="title-card">weather</div>
+            <div className="title-card">weather</div>
             {/* style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}> */}
             <div className='weatherBlock'>
               <Form data={data} gettingWeather={gettingWeather} />
@@ -194,7 +194,7 @@ class Home extends React.Component {
             </div>
           </div>
           <div className="quote-container card">
-          <div className="title-card">phrase of the day</div>
+            <div className="title-card">phrase of the day</div>
             {/* <Randomizer /> */}
           </div>
           <div className="footer card">
