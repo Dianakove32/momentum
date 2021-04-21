@@ -129,10 +129,15 @@ textarea {
   width: $width-long;
 }
 .footer {
-  height: 80px;
+  height: 100px;
   background: $bg8;
   width: 100%;
   margin-bottom: 20px;
+  padding-bottom: 10px;
+.footer-content{
+  display: flex;
+  align-items: center;
+}
 }
 
 // .row {

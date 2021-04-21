@@ -1,5 +1,25 @@
 @import '../../constant.scss';
+// #selectColor{
+// margin-left: 10px;
+// background: $bg1;
+// color: $text3;
+// }
 #selectColor{
-    margin-top: 10px;
-background: $bg1;
+    padding: 10px;
+
+    margin-left: 10px;
+    width: 200px;
+    height: 50px;
+    background: #cdc7e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: lightcyan;
+    border-radius: 10px;
+    &:hover{
+        cursor: pointer;
+        box-shadow: $boxshadowLess;
+    }
 }
