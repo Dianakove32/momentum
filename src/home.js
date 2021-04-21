@@ -155,7 +155,7 @@ class Home extends React.Component {
           </div>
           <div className="icon-container card">
           <div className="title-card">Social media</div>
-            {/* <Icon /> */}
+              <Icon />
           </div>
 
 
