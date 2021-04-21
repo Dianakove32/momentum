@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/momentum/static/css/main.0797341c.chunk.css",
-    "main.js": "/momentum/static/js/main.10c73e75.chunk.js",
-    "main.js.map": "/momentum/static/js/main.10c73e75.chunk.js.map",
+    "main.css": "/momentum/static/css/main.9388ee8b.chunk.css",
+    "main.js": "/momentum/static/js/main.77b37f38.chunk.js",
+    "main.js.map": "/momentum/static/js/main.77b37f38.chunk.js.map",
     "runtime-main.js": "/momentum/static/js/runtime-main.034026fc.js",
     "runtime-main.js.map": "/momentum/static/js/runtime-main.034026fc.js.map",
-    "static/js/2.c8cb3938.chunk.js": "/momentum/static/js/2.c8cb3938.chunk.js",
-    "static/js/2.c8cb3938.chunk.js.map": "/momentum/static/js/2.c8cb3938.chunk.js.map",
+    "static/js/2.9f07a20c.chunk.js": "/momentum/static/js/2.9f07a20c.chunk.js",
+    "static/js/2.9f07a20c.chunk.js.map": "/momentum/static/js/2.9f07a20c.chunk.js.map",
     "index.html": "/momentum/index.html",
-    "static/css/main.0797341c.chunk.css.map": "/momentum/static/css/main.0797341c.chunk.css.map",
-    "static/js/2.c8cb3938.chunk.js.LICENSE.txt": "/momentum/static/js/2.c8cb3938.chunk.js.LICENSE.txt",
+    "static/css/main.9388ee8b.chunk.css.map": "/momentum/static/css/main.9388ee8b.chunk.css.map",
+    "static/js/2.9f07a20c.chunk.js.LICENSE.txt": "/momentum/static/js/2.9f07a20c.chunk.js.LICENSE.txt",
     "static/media/facebook.ad64850b.svg": "/momentum/static/media/facebook.ad64850b.svg",
     "static/media/github.3fdab464.svg": "/momentum/static/media/github.3fdab464.svg",
     "static/media/instagram.ca5891e4.svg": "/momentum/static/media/instagram.ca5891e4.svg",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.034026fc.js",
-    "static/js/2.c8cb3938.chunk.js",
-    "static/css/main.0797341c.chunk.css",
-    "static/js/main.10c73e75.chunk.js"
+    "static/js/2.9f07a20c.chunk.js",
+    "static/css/main.9388ee8b.chunk.css",
+    "static/js/main.77b37f38.chunk.js"
   ]
 }
