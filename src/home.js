@@ -199,7 +199,7 @@ class Home extends React.Component {
           </div>
           <div className="quote-container card">
             <div className="title-card">phrase of the day</div>
-            {/* <Randomizer /> */}
+              <Randomizer />
           </div>
           <div className="footer card">
           <div className="title-card">settings</div>
