@@ -1,21 +1,20 @@
 @import '../../mixins.scss';
-
 .icons {
     padding-top: 20px;
-      display: flex;
-
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
-    .icon-item{
-    width: 70px;
-    height: 70px;
-    margin: 12px;
-&:hover{
-     transform: scale(1.2);
+    .icon-item {
+        width: 70px;
+        height: 70px;
+        margin: 12px;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
 
-}}
-.last{
+.last {
     width: 50px;
     height: 50px;
     background: #cdc7e5;
@@ -26,8 +25,12 @@
     font-weight: bold;
     color: lightcyan;
     border-radius: 10px;
-    &:hover{
+    &:hover {
         cursor: pointer;
         box-shadow: $boxshadowLess;
     }
+}
+
+.modal {
+    width: 400;
 }
