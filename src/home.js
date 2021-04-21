@@ -151,7 +151,9 @@ class Home extends React.Component {
       <div >
 
         <div className='wrapper'>
-
+          {/* <div className="header card">
+<ChangeScene/>
+          </div> */}
           <div className="todo-container card">
             <div className="title-card">My todo list</div>
             <ToDo />
@@ -166,7 +168,7 @@ class Home extends React.Component {
 
           <div className="news-container card">
             <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
-<CardOneNew/>
+            <CardOneNew />
             {/* <Currency />
                  */}
           </div>
@@ -179,8 +181,8 @@ class Home extends React.Component {
           </div>
 
 
-          <div className="weather-container card">
-          {/* // style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}> */}
+          <div className="weather-container card"
+           style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width:'400px', height: '300px' }}>
             <div className="title-card">weather</div>
 
             <div className='weatherBlock'>
@@ -197,10 +199,14 @@ class Home extends React.Component {
           </div>
           <div className="quote-container card">
             <div className="title-card">phrase of the day</div>
-            {/* <Randomizer /> */}
+              <Randomizer />
           </div>
           <div className="footer card">
-<ChangeScene/>
+          <div className="title-card">settings</div>
+          <div className="footer-content">
+            <div className="icon-item"><div className="last">+ </div></div>
+            <ChangeScene />
+          </div>
           </div>
         </div>
       </div>

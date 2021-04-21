@@ -11,14 +11,18 @@ console.log(context.state.cart)
     return (
         <div>
 
- {context.state.cart.map((el,i)=>{
+ {/* {context.state.cart.map((el,i)=>{
      return <div className= "circul-img"><img   src = {el.recipe.image} />
      <p key={i}>  {el.recipe.label}</p> </div>
 
- } ) }
-{/* {
-    !context.state.cart ? (context.state.cart.map((el,i)=><li key={i}>{el.recipe.image}  {el.recipe.label}</li>)) :  ( <DishOneForToday/>)
-} */}
+ } ) } */}
+{
+       !context.state.cart.length ? (<div>  <DishOneForToday/>  </div>):(context.state.cart.map((el,i)=>{
+     return <div className= "circul-img"><img   src = {el.recipe.image} />
+     <p key={i}>  {el.recipe.label}</p> </div>
+
+ } ))
+ }
         </div>
     )
 }
