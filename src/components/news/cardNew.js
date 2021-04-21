@@ -1,7 +1,7 @@
 import React from 'react';
 import './news.scss';
 
-export default function CardNew({ name, url, image }) {
+export default function CardNew({ name, url,image}) {
 
   return (
     <div className="cardNew">
