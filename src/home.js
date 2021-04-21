@@ -19,6 +19,7 @@ import DishForToday from './components/dish/DishForToday';
 import CardNews from './components/news/cardNew'
 import CardNew from './components/news/cardNew';
 import CardOneNew from './components/news/CardOneNew';
+import ChangeScene from './components/changeScene/changeScene';
 
 
 
@@ -199,7 +200,7 @@ class Home extends React.Component {
             {/* <Randomizer /> */}
           </div>
           <div className="footer card">
-
+<ChangeScene/>
           </div>
         </div>
       </div>

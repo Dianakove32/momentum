@@ -23,10 +23,10 @@ const News = () => {
             context.data.value?.map((el) => {
               return (
                 <CardNew
-                  // key={el.title}
+                  key={el.name}
                   name={el.name}
                 //    description={el.description}
-                 // url={el.image.thumbnail.contentUrl}
+                 url={el.image.thumbnail.contentUrl}
                 />
                 );
             })}  </div>
