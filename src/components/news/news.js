@@ -24,11 +24,11 @@ const News = () => {
               return (
 
                 <CardNew
-                  // key={el.title}
+                  key={el.name}
                   name={el.name}
                   // description={el.description}
                   url={el.url}
-                  image={el.image}
+                  // image={el.image.thumbnail.contentUrl}
                 />
 
                 );

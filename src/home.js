@@ -17,6 +17,7 @@ import Currency from './components/currency/currency'
 import Icon from './components/icon/Icon';
 import DishForToday from './components/dish/DishForToday';
 import CardNews from './components/news/cardNew'
+import ChangeScene from './components/changeScene/changeScene';
 
 
 
@@ -166,7 +167,7 @@ this.getCityLocation()
           <div className="news-container">
            <Currency  />
             <NavLink to="/news"> <h3>NEWS </h3></NavLink>
-
+<ChangeScene/>
           </div>
           <div className="clock-container">
             <Clock />
