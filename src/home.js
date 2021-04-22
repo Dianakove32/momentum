@@ -20,6 +20,7 @@ import CardNews from './components/news/cardNew'
 import CardNew from './components/news/cardNew';
 import CardOneNew from './components/news/CardOneNew';
 import ChangeScene from './components/changeScene/changeScene';
+import RemoveCard from './components/removeCard/RemoveCard';
 
 
 
@@ -57,9 +58,6 @@ class Home extends React.Component {
     description: '...',
   }
   componentDidMount() {
-
-
-
 
   }
   getCityLocation() {
@@ -161,11 +159,8 @@ class Home extends React.Component {
           <div className="icon-container card">
             <div className="title-card">Social media</div>
             <Icon />
+            <RemoveCard/>
           </div>
-
-
-
-
           <div className="news-container card">
             <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
             <CardOneNew />
@@ -180,9 +175,8 @@ class Home extends React.Component {
             <div className='dishForToday'><DishForToday /></div>
           </div>
 
-
           <div className="weather-container card"
-           style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundWidth:'400', backgroundHeight: '300' }}>
+            style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundWidth: '400', backgroundHeight: '300' }}>
             <div className="title-card">weather</div>
 
             <div className='weatherBlock'>
@@ -199,14 +193,14 @@ class Home extends React.Component {
           </div>
           <div className="quote-container card">
             <div className="title-card">phrase of the day</div>
-              <Randomizer />
+            <Randomizer />
           </div>
           <div className="footer card">
-          <div className="title-card">settings</div>
-          <div className="footer-content">
-            <div className="icon-item"><div className="last">+ </div></div>
-            <ChangeScene />
-          </div>
+            <div className="title-card">settings</div>
+            <div className="footer-content">
+              <div className="icon-item"><div className="last">+ </div></div>
+              <ChangeScene />
+            </div>
           </div>
         </div>
       </div>
