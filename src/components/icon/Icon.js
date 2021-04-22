@@ -4,6 +4,7 @@ import instagram from "./../../assets/icons/instagram.svg";
 import slack from "./../../assets/icons/slack.svg";
 import twitter from "./../../assets/icons/twitter.svg";
 import github from "./../../assets/icons/github.svg";
+import ok from "./../../assets/icons/ok.svg";
 import "./icon.scss";
 import Modal from 'react-modal'
 import ReactModal from 'react-modal';
@@ -50,6 +51,8 @@ export default function Icon() {
                         <div className="icon-item"><a href="#"><img src={slack} alt="slack"></img></a> </div>
                         <div className="icon-item"><a href="#"><img src={twitter} alt="twitter"></img></a> </div>
                         <div className="icon-item"><a href="#"><img src={github} alt="github"></img></a> </div>
+                        <div className="icon-item"><a href="#"><img src={ok} alt="ok"></img></a> </div>
+                      <div className="icon-item"><a href="#"><img src="https://res.cloudinary.com/wildcodeschool/image/upload/c_fill,h_50/v1/static/irjoy97aq0eol8bf6959"></img></a></div>
                     </div>
                 </Modal>
             </div>
