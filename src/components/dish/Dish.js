@@ -1,5 +1,5 @@
 import React from 'react'
-import { DishWrapper, WrapperContent, Btn,WrapperImage } from "./style";
+import { DishWrapper, WrapperContent, Btn, WrapperImage } from "./style";
 
 export default function Dish({
     label, image, calories, ingredientLines, onClick
@@ -7,11 +7,11 @@ export default function Dish({
 
     return (
         <DishWrapper>
-        <WrapperImage>
-            <img src={image} alt={label} />
-            <Btn onClick={() => onClick(label)}>Add recipes
+            <WrapperImage>
+                <img src={image} alt={label} />
+                <Btn onClick={() => onClick(label)}>Add recipes
             </Btn>
-        </WrapperImage>
+            </WrapperImage>
 
             <WrapperContent>
                 <h3>{label}</h3>

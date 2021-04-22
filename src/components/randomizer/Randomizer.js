@@ -50,9 +50,11 @@ class Randomizer extends React.Component {
     return (
       <div id='quote-box'>
         <div className='text-container'>
-          <p id='text'>
-            {this.state.quote}
-          </p>
+        <span className='text-brac '>&#8223;</span>
+          <span id='text'>
+            {this.state.quote} <span className='text-brac-right '>&#8222;</span>
+          </span>
+
           <h3 className='author'>
             - {this.state.author} -
           </h3>

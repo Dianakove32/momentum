@@ -79,6 +79,12 @@ textarea {
   margin-top: 20px;
   padding: 10px;
 }
+.header{
+  height: 50px;
+  background: $bg6;
+  width: 100%;
+  margin-bottom: 10px;
+}
 .title-card {
   text-transform: uppercase;
   color: $text1;
@@ -121,12 +127,18 @@ textarea {
 .quote-container {
   background: $bg7;
   width: $width-long;
+  position: relative;
 }
 .footer {
-  height: 80px;
-  background: $bg1;
+  height: 100px;
+  background: $bg8;
   width: 100%;
   margin-bottom: 20px;
+  padding-bottom: 10px;
+.footer-content{
+  display: flex;
+  align-items: center;
+}
 }
 
 // .row {

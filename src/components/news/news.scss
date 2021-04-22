@@ -1,3 +1,5 @@
+@import '../../constant.scss';
+
 .dish-wrapper {
     max-width: 1200px;
     width: 100%;
@@ -17,14 +19,8 @@ h2 {
     margin-right: auto;
     padding: 10px;
     width: 700px;
-    //height: 300px;
     display: flex;
-
-    // max-width: 1170px;
-    // margin-left: auto;
-    // margin-right: auto;
-    // padding-bottom: 20px;
-    a {
+   a {
         text-decoration: none;
         padding-bottom: 15px;
         transition: 0.2s;
@@ -73,9 +69,8 @@ h2 {
     }
 }
 .CardOneNew {
-    // background: #b4c3d9;
     border-radius: 10px;
-    color: rgb(51, 67, 83);
+    color: $text3;
     p{
         padding-top: 5px;
       text-align: justify;

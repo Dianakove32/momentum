@@ -19,9 +19,9 @@
 }
 .dishForToday {
     overflow-y: auto;
-    height: 200px;
-    font-size: 18px;
-    font-style: italic;
+    height: 250px;
+    font-size: 16px;
+
      color: $text;
 }
 
@@ -101,4 +101,22 @@
     height: 50px;
    }
 
+}
+.dishFor{
+    border-radius: 10px;
+    color: $text3;
+    p{
+        padding-top: 5px;
+      text-align: justify;
+    }
+}
+.img-round{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    img {
+        border-radius: 10px;
+        width: 200px;
+        height: 100px;
+    }
 }
