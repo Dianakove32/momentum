@@ -20,6 +20,7 @@ import CardNews from './components/news/cardNew'
 import CardNew from './components/news/cardNew';
 import CardOneNew from './components/news/CardOneNew';
 import ChangeScene from './components/changeScene/changeScene';
+import Footer from './components/footer/footer';
 
 
 
@@ -204,7 +205,7 @@ class Home extends React.Component {
           <div className="footer card">
           <div className="title-card">settings</div>
           <div className="footer-content">
-            <div className="icon-item"><div className="last">+ </div></div>
+            <Footer/>
             <ChangeScene />
           </div>
           </div>
