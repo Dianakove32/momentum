@@ -4,6 +4,7 @@ import instagram from "./../../assets/icons/instagram.svg";
 import slack from "./../../assets/icons/slack.svg";
 import twitter from "./../../assets/icons/twitter.svg";
 import github from "./../../assets/icons/github.svg";
+//import ok from "./../../assets/icons/ok.svg";
 import "./icon.scss";
 import Modal from 'react-modal'
 import ReactModal from 'react-modal';
@@ -30,6 +31,14 @@ let objIcon=[
     {
         id: 5,
         name:github,
+    },
+    // {
+    //     id: 6,
+    //     name:ok,
+    // },
+    {
+        id: 7,
+        name:"https://res.cloudinary.com/wildcodeschool/image/upload/c_fill,h_50/v1/static/irjoy97aq0eol8bf6959",
     },
 
 ]
@@ -88,11 +97,13 @@ const [state, setState] = useState(initialState)
                     </div>
                     <h3 >Add icon</h3>
                     <div className="icons" >
-                        <div  onClick={onClick}  className="icon-item"><a href="#"><img id='1'src={facebook} alt="facebook"></img></a> </div>
-                        <div  onClick={onClick}  className="icon-item"><a href="#"><img id='2'src={instagram} alt="instagram"></img></a> </div>
-                        <div  onClick={onClick}  className="icon-item"><a href="#"><img id='3'src={slack} alt="slack"></img></a> </div>
-                        <div  onClick={onClick}  className="icon-item"><a href="#"><img id='4'src={twitter} alt="twitter"></img></a> </div>
-                        <div  onClick={onClick}  className="icon-item"><a href="#"><img id='5'src={github} alt="github"></img></a> </div>
+                        <div  onClick={onClick}  className="icon-item"><a href="#"><img id='1' src={facebook} alt="facebook"></img></a> </div>
+                        <div  onClick={onClick}  className="icon-item"><a href="#"><img id='2' src={instagram} alt="instagram"></img></a> </div>
+                        <div  onClick={onClick}  className="icon-item"><a href="#"><img id='3' src={slack} alt="slack"></img></a> </div>
+                        <div  onClick={onClick}  className="icon-item"><a href="#"><img id='4' src={twitter} alt="twitter"></img></a> </div>
+                        <div  onClick={onClick}  className="icon-item"><a href="#"><img id='5' src={github} alt="github"></img></a> </div>
+                       {/* <div onClick={onClick}  className="icon-item"><a href="#"><img id='6' src={ok} alt="ok"></img></a> </div> */}
+                      <div onClick={onClick}  className="icon-item"><a href="#"><img id='7' src="https://res.cloudinary.com/wildcodeschool/image/upload/c_fill,h_50/v1/static/irjoy97aq0eol8bf6959"></img></a></div>
                     </div>
                 </Modal>
             </div>
