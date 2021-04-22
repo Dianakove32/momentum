@@ -9,7 +9,7 @@ export default function Dish({
         <DishWrapper>
             <WrapperImage>
                 <img src={image} alt={label} />
-                <Btn onClick={() => onClick(label)}>Add recipes
+                <Btn onClick={() => onClick(label)}>Add recipy
             </Btn>
             </WrapperImage>
 

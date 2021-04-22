@@ -5,40 +5,14 @@ import Item from './Item'
 import DishForToday from './DishForToday'
 import Home from '../../home'
 import './style.scss';
-import {QuantityLength} from "./style";
+import { QuantityLength } from "./style";
 
 
 export default function Favorites() {
     const context = useContext(ApiContext)
     const [isOpen, setIsOpen] = useState(false)
-    
-   
-    //     useEffect(() => {
-    // let cartFromStor=localStorage.getItem('recipy')
-
-
-    //         let localRecipy = JSON.parse(cartFromStor)
-
-    //         context.setState({
-    //             ...context.state,
-    //             cart: localRecipy
-    //         })
-
-
-
-
-    //     }, [])
-    // let dataStore=JSON.parse(localStorage.getItem('dish'))
-    // console.log(dataStore)
-    //     const [state,setState] = useState([])
-    //     console.log(context.state.cart)
-
-
-
-
 
     const toggleModal = () => {
-        console.log('click')
         setIsOpen(!isOpen)
     }
     const findItem = (arr, label) => arr.find((el) => el.recipe.label === label);
@@ -52,7 +26,7 @@ export default function Favorites() {
             cart: copyOfItems,
         });
     };
- 
+
 
     const getQuantity = (arr, title) => arr.filter((el) => el.recipe.label == title)
     const renderItem = (arr) => {
@@ -75,7 +49,6 @@ export default function Favorites() {
                             calories={el.recipe.calories}
                             ingredientLines={el.recipe.ingredientLines}
                             quantity={getQuantity(context.state.cart).length}
-                           
                             onClick={deleteItem} />
 
                     </>
@@ -95,19 +68,42 @@ export default function Favorites() {
                             <h2>There is nothing</h2>
                         ) : (
                             renderItem(context.state.cart)
-                           // renderItem(cookies.context.state.cart)
+                            // renderItem(cookies.context.state.cart)
 
                         )
                     }
 
                 </Modal>
             </div>
-            <div className = "recipes-btn-wrapper">
-                  <QuantityLength>{context.state.cart.length}</QuantityLength>
-                  {/* <QuantityLength>{cookies.context.state.cart.length}</QuantityLength> */}
-            <button className='btn-wish' onClick={toggleModal}>Selected recipes</button>
+            <div className="recipes-btn-wrapper">
+                <QuantityLength>{context.state.cart.length}</QuantityLength>
+                {/* <QuantityLength>{cookies.context.state.cart.length}</QuantityLength> */}
+                <button className='btn-wish' onClick={toggleModal}>Selected recipes</button>
             </div>
 
         </div>
     )
 }
+
+
+
+    //     useEffect(() => {
+    // let cartFromStor=localStorage.getItem('recipy')
+
+
+    //         let localRecipy = JSON.parse(cartFromStor)
+
+    //         context.setState({
+    //             ...context.state,
+    //             cart: localRecipy
+    //         })
+
+
+
+
+    //     }, [])
+    // let dataStore=JSON.parse(localStorage.getItem('dish'))
+    // console.log(dataStore)
+    //     const [state,setState] = useState([])
+    //     console.log(context.state.cart)
+
