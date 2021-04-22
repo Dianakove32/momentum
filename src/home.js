@@ -182,7 +182,7 @@ class Home extends React.Component {
 
 
           <div className="weather-container card"
-           style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width:'400px', height: '300px' }}>
+           style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundWidth:'400', backgroundHeight: '300' }}>
             <div className="title-card">weather</div>
 
             <div className='weatherBlock'>

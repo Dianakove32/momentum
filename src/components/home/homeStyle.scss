@@ -65,11 +65,30 @@ textarea {
 }
 
 .wrapper {
+//padding: 7px;
   max-width: $big;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include middle {
+   width: 987px;
+   padding: 7px;
+  }
+  @include tablet {
+   width: 840px;
+   padding: 10px;
+  }
+  @include surface {
+   width: 560px;
+   padding: 10px;
+  }
+  @include mobail {
+   width: 340px;
+   padding: 10px;
+   justify-content: center;
+  }
+
 }
 .card {
   height: 300px;
@@ -78,6 +97,13 @@ textarea {
   border-radius: 4px;
   margin-top: 20px;
   padding: 10px;
+  @include middle {
+    margin-top: 15px;
+   }
+   @include tablet {
+    margin-top: 20px;
+
+   }
 }
 .header{
   height: 50px;
@@ -99,35 +125,130 @@ textarea {
   }
 }
 .todo-container {
+  position: relative;
   background: $bg1;
   width: $width-long;
+   @include middle{
+     width:$width-long-resp;
+   }
+   @include tablet {
+    width: $width-long;
+    margin-top: 0;
+   }
+   @include mobail {
+    display: none;
+   }
+
 }
 
 .icon-container {
   background: $bg2;
   width: $width-short;
+  @include middle{
+    width:$width-short-resp;
+  }
+  @include tablet {
+    width: $width-short;
+   }
+   @include surface {
+    width: $width-long;
+
+   }
+   @include mobail {
+    width: $width-short;
+
+   }
 }
 .news-container {
   background: $bg3;
   width: $width-short;
+  @include middle{
+    width:$width-short-resp;
+  }
+  @include tablet {
+    width: $width-short;
+   }
+   @include surface {
+    width: $width-long;
+   }
+   @include mobail {
+    width: $width-short;
+
+   }
 }
 
 .clock-container {
   background: $bg4;
   width: $width-short;
+  @include middle{
+    width:$width-short-resp;
+  }
+  @include tablet {
+    width: $width-short;
+   }
+   @include surface {
+    width: $width-long;
+
+   }
+   @include mobail {
+    width: $width-short;
+
+   }
 }
 .dish-container {
   background: $bg5;
   width: $width-short;
+  @include middle{
+    width:$width-short-resp;
+  }
+  @include tablet {
+    width: $width-short;
+   }
+   @include surface {
+    width: $width-long;
+
+   }
+   @include mobail {
+    width: $width-short;
+
+   }
 }
 .weather-container {
   background: $bg6;
   width: $width-short;
+  @include middle{
+    width:$width-short-resp;
+  }
+  @include tablet {
+    width: $width-short;
+   }
+   @include surface {
+    width: $width-long;
+
+   }
+   @include mobail {
+    width: $width-short;
+
+   }
 }
 .quote-container {
   background: $bg7;
   width: $width-long;
   position: relative;
+  @include middle{
+    width:$width-long-resp;
+  }
+  @include tablet {
+    width: $width-short;
+   }
+   @include surface {
+    width: $width-long;
+
+   }
+   @include mobail {
+    width: $width-short;
+
+   }
 }
 .footer {
   height: 100px;

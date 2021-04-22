@@ -49,16 +49,19 @@ class Randomizer extends React.Component {
   render() {
     return (
       <div id='quote-box'>
-        <div className='text-container'>
+        {/* <div className='text-container'>
         <span className='text-brac '>&#8223;</span>
           <span id='text'>
             {this.state.quote} <span className='text-brac-right '>&#8222;</span>
           </span>
-
           <h3 className='author'>
             - {this.state.author} -
           </h3>
-        </div>
+        </div> */}
+        <blockquote>
+          <p> {this.state.quote}</p>
+          <footer>— <cite>{this.state.author}</cite></footer>
+        </blockquote>
 
         <ButtonRandomizer handleClick={this.handleClick} />
       </div>

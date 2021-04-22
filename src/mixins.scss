@@ -11,6 +11,9 @@
 @mixin tablet {
     @media (max-width: $tablet) { @content; }
 }
+@mixin surface {
+    @media (max-width: $surface) { @content; }
+}
 
 @mixin mobail {
     @media (max-width: $mobail) { @content; }
