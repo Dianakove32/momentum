@@ -53,9 +53,6 @@ color:red;
 export const CloseWidgets = styled(IoIosCloseCircleOutline)`
 width: 20px;
 height: 20px;
-position: absolute;
-bottom: 5px;
-right: 5px;
 color:red;
 
 &:hover{

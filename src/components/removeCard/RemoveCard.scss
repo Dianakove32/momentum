@@ -1,6 +1,36 @@
-.delite-none{
-display: none;
+.delite-none {
+  opacity: 0;
 }
-.delite-block{
-display: block;
+.delite-block {
+    width: 200px;
+    height: 30px;
+     opacity: 1;
+    padding-left: 81px;
+    &:hover{
+        cursor: pointer;
+    }
+.span-widget{
+margin-top: 25px;
+}
+}
+.delite-widget {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: red;
+}
+.iconClose{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  color: red;
+  border-radius: 50%;
+  border: 1px solid red;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+padding-left: 5px;
+padding-top: 3px;
+
+  font-size: 10px;
 }
