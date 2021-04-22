@@ -50,6 +50,16 @@ color:red;
     cursor:pointer
 }
 `
+export const CloseWidgets = styled(IoIosCloseCircleOutline)`
+width: 20px;
+height: 20px;
+color:red;
+
+&:hover{
+
+    cursor:pointer
+}
+`
 export const Btn = styled.button`
     background-color:  rgb(191, 221, 248);
     border: 1px solid rgb(167, 182, 230);

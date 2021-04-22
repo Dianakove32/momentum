@@ -20,6 +20,7 @@ import CardNews from './components/news/cardNew'
 import CardNew from './components/news/cardNew';
 import CardOneNew from './components/news/CardOneNew';
 import ChangeScene from './components/changeScene/changeScene';
+import RemoveCard from './components/removeCard/RemoveCard';
 import Footer from './components/footer/footer';
 
 
@@ -58,9 +59,6 @@ class Home extends React.Component {
     description: '...',
   }
   componentDidMount() {
-
-
-
 
   }
   getCityLocation() {
@@ -158,32 +156,32 @@ class Home extends React.Component {
           <div className="todo-container card">
             <div className="title-card">My todo list</div>
             <ToDo />
+            <RemoveCard/>
           </div>
           <div className="icon-container card">
             <div className="title-card">Social media</div>
             <Icon />
+            <RemoveCard/>
           </div>
-
-
-
-
           <div className="news-container card">
             <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
             <CardOneNew />
             {/* <Currency />
                  */}
+                 <RemoveCard/>
           </div>
           <div className="clock-container card">
             <Clock />
+            <RemoveCard/>
           </div>
           <div className="dish-container card">
             <div className="title-card">Dish for today<div className="title-link"><NavLink to="/dish">find more recipy</NavLink></div></div>
             <div className='dishForToday'><DishForToday /></div>
+            <RemoveCard/>
           </div>
 
-
           <div className="weather-container card"
-           style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundWidth:'400', backgroundHeight: '300' }}>
+            style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundWidth: '400', backgroundHeight: '300' }}>
             <div className="title-card">weather</div>
 
             <div className='weatherBlock'>
@@ -197,10 +195,12 @@ class Home extends React.Component {
                 description={description}
                 data={data} />
             </div>
+            <RemoveCard/>
           </div>
           <div className="quote-container card">
             <div className="title-card">phrase of the day</div>
-              <Randomizer />
+            <Randomizer />
+            <RemoveCard/>
           </div>
           <div className="footer card">
           <div className="title-card">settings</div>
