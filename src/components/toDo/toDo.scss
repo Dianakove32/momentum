@@ -16,9 +16,9 @@ form {
 .addBtn {
     width: 200px;
     height: 40px;
-    color: #a89f9f;
+    color: $text;
     font-size: 15px;
-    box-shadow: $boxshadowLess;
+    box-shadow: $boxshadowInput;
     border-radius: 10px;
     background-color: $bgFilter;
     border: none;
@@ -44,10 +44,8 @@ form {
     border: none;
     color: $text;
     overflow-y: auto;
-
     height: 190px;
     font-size: 20px;
-    //  opacity: $opacity;
 }
 
 .todos-container-item {
@@ -55,33 +53,48 @@ form {
     p {
         margin-left: 10px;
         word-wrap: break-word;
-        width: 400px;
+        width: 550px;
         font-style: italic;
         margin: 5px;
+        @include middle{
+            width: 400px;
+        }
+        @include tablet{
+            width: 550px;
+        }
+        @include surface{
+            width: 270px;
+        }
     }
 }
 
 .filter-container {
-    width: 100px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    display: flex;
+    width: 400px;
     padding: 10px;
     color: lightcyan;
     border-radius: 10%;
-    text-align: left;
-    height: 200px;
-    background: $bgFilter;
-    @include big {
-        width: 80px;
-        height: 160px;
-    }
 }
 
 .category-button {
-    display: block;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
+    border-radius: 10px;
+    margin-left: 5px;
+
     background-color: $bgFilter;
     opacity: $opacity;
     color: $text;
     height: 20px;
+    &:hover{
+        transform: scale(1.11);
+    }
 }
 
 .todoNothing {
@@ -106,7 +119,7 @@ form {
     margin-bottom: 5px;
     border-radius: 10px;
     padding: 5px;
-    box-shadow: $boxshadowLess;
+    box-shadow: $boxshadowInput;
     &::placeholder {
         opacity: 0.4;
         color: $text;
@@ -136,7 +149,7 @@ form {
     margin-top: 10px;
     border-radius: 10px;
     padding: 5px;
-    box-shadow: $boxshadowLess;
+    box-shadow: $boxshadowInput;
 }
 select {
     padding: 10px;

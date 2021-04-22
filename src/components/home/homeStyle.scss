@@ -125,6 +125,7 @@ textarea {
   }
 }
 .todo-container {
+  position: relative;
   background: $bg1;
   width: $width-long;
    @include middle{

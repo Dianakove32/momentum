@@ -143,8 +143,8 @@ export default class ToDo extends React.Component {
                         )}
                     </div></div> </div>
                 <div className="filter-container">
-                    <p>Filter it</p>
-                    <hr />
+                    {/* <p>Filter it</p> */}
+
                     <button
                         className="category-button"
                         onClick={this.displayCategory}
