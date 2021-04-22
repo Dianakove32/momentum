@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/momentum/static/css/main.1b5e6a5c.chunk.css",
-    "main.js": "/momentum/static/js/main.54dcd8ed.chunk.js",
-    "main.js.map": "/momentum/static/js/main.54dcd8ed.chunk.js.map",
+    "main.js": "/momentum/static/js/main.203836ab.chunk.js",
+    "main.js.map": "/momentum/static/js/main.203836ab.chunk.js.map",
     "runtime-main.js": "/momentum/static/js/runtime-main.034026fc.js",
     "runtime-main.js.map": "/momentum/static/js/runtime-main.034026fc.js.map",
-    "static/js/2.cd660462.chunk.js": "/momentum/static/js/2.cd660462.chunk.js",
-    "static/js/2.cd660462.chunk.js.map": "/momentum/static/js/2.cd660462.chunk.js.map",
+    "static/js/2.8bf820cd.chunk.js": "/momentum/static/js/2.8bf820cd.chunk.js",
+    "static/js/2.8bf820cd.chunk.js.map": "/momentum/static/js/2.8bf820cd.chunk.js.map",
     "index.html": "/momentum/index.html",
     "static/css/main.1b5e6a5c.chunk.css.map": "/momentum/static/css/main.1b5e6a5c.chunk.css.map",
-    "static/js/2.cd660462.chunk.js.LICENSE.txt": "/momentum/static/js/2.cd660462.chunk.js.LICENSE.txt",
-    "static/media/facebook.ad64850b.svg": "/momentum/static/media/facebook.ad64850b.svg",
-    "static/media/github.3fdab464.svg": "/momentum/static/media/github.3fdab464.svg",
-    "static/media/instagram.ca5891e4.svg": "/momentum/static/media/instagram.ca5891e4.svg",
-    "static/media/slack.867246f3.svg": "/momentum/static/media/slack.867246f3.svg",
-    "static/media/twitter.da0951fd.svg": "/momentum/static/media/twitter.da0951fd.svg"
+    "static/js/2.8bf820cd.chunk.js.LICENSE.txt": "/momentum/static/js/2.8bf820cd.chunk.js.LICENSE.txt",
+    "static/media/facebook.022aeb7b.svg": "/momentum/static/media/facebook.022aeb7b.svg",
+    "static/media/github.b2294bcc.svg": "/momentum/static/media/github.b2294bcc.svg",
+    "static/media/instagram.0e6a2b6f.svg": "/momentum/static/media/instagram.0e6a2b6f.svg",
+    "static/media/slack.d92ec102.svg": "/momentum/static/media/slack.d92ec102.svg",
+    "static/media/twitter.79bc2890.svg": "/momentum/static/media/twitter.79bc2890.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.034026fc.js",
-    "static/js/2.cd660462.chunk.js",
+    "static/js/2.8bf820cd.chunk.js",
     "static/css/main.1b5e6a5c.chunk.css",
-    "static/js/main.54dcd8ed.chunk.js"
+    "static/js/main.203836ab.chunk.js"
   ]
 }
