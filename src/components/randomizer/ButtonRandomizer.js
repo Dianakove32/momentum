@@ -9,7 +9,6 @@ class ButtonRandomizer extends React.Component {
     render() {
       return(
         <div className='buttons'>
-
           <button   id='new-quote' className='button floating-button' onClick={this.props.handleClick}>
             New quote
           </button>

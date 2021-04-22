@@ -15,43 +15,87 @@ font-size: 10px;
     box-shadow: $boxshadow;
   }
 }
-#quote-box{
+// #quote-box{
 
-.text-container{
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 25px;
- color: $text3;
- font-style: italic;
- font-weight: bold;
+// .text-container{
+//   margin-top: 30px;
+//   margin-bottom: 10px;
+//   font-size: 25px;
+//  color: $text3;
+//  font-style: italic;
+//  font-weight: bold;
 
-}
-.quote-container{
+// }
+// .quote-container{
 
-  background: #504646;
-}
+//   background: #504646;
+// }
 
-h3{
-text-align: right;
+// h3{
+// text-align: right;
 
-}
-}
-.text-brac{
- font-size: 40px;
- font-weight: bold;
- margin-right: 10px;
-}
-.text-brac-right{
- font-size: 40px;
- font-weight: bold;
+// }
+// }
+// .text-brac{
+//  font-size: 40px;
+//  font-weight: bold;
+//  margin-right: 10px;
+// }
+// .text-brac-right{
+//  font-size: 40px;
+//  font-weight: bold;
 
 
 
- //clear:  none;
-}
-.author{
-   position: absolute;
-   bottom: 10px;
-   right: 10px;
+//  //clear:  none;
+// }
+// .author{
+//    position: absolute;
+//    bottom: 10px;
+//    right: 10px;
 
-}
+// }
+blockquote {
+  height: 250px;
+  margin: 0;
+
+ // background: #FFF4ED;
+  padding-top: 70px;
+  color: #3F484D;
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  }
+  blockquote:before, blockquote:after {
+  font-size: 45px;
+  color: #3CA1D9;
+  position: absolute;
+  height: 2px;
+  left: 40px;
+  right: 40px;
+  line-height: .5;
+  background: linear-gradient(to right, #3CA1D9 45%, transparent 45%, transparent), linear-gradient(to right, transparent, transparent 55%, #3CA1D9 55%);
+  font-family: serif;
+
+  }
+  blockquote:before {
+  content: "\201C";
+  top: 30px;
+  }
+  blockquote:after {
+  content: "\201D";
+  bottom: 30px;
+  }
+  blockquote p {
+  font-size: 20px;
+  @include mobail{
+    font-size: 14px;
+  }
+  }
+  blockquote footer {
+  margin-bottom: 5px;
+  margin-top: 10px;
+  }
+  blockquote cite {
+  font-style: normal;
+  }
