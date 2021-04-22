@@ -25,8 +25,8 @@ const News = () => {
                 <CardNew
                   key={el.name}
                   name={el.name}
-                //    description={el.description}
-                 url={el.image.thumbnail.contentUrl}
+                url={el.url}
+                 image={el.image.thumbnail.contentUrl}
                 />
                 );
             })}  </div>
