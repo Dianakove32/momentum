@@ -58,16 +58,16 @@ class Home extends React.Component {
     sunset: undefined,
     description: '...',
   }
-  componentDidMount() {
+  // componentDidMount() {
 
-    const name = localStorage.getItem('city')
-    console.log('name', name)
-    this.setState({
-      city: name
-    })
+  //   const name = localStorage.getItem('city')
+  //   console.log('name', name)
+  //   this.setState({
+  //     city: name
+  //   })
 
 
-  }
+  // }
   // componentDidUpdate(prev,cur){
   //   console.log('prev',prev)
   //    console.log('cur',cur)
