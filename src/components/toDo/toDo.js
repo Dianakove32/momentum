@@ -23,17 +23,25 @@ export default class ToDo extends React.Component {
 
     //     }
     // }
-    componentDidUpdate() {
+    componentDidMount() {
+        const todo =JSON.parse(localStorage.getItem('todo'))
+        if(todo){
+             this.setState({
+            ...this.state,
+            todoList: todo,
+        });
+        }
 
-        //    let todo = JSON.stringify(this.state.todoList)
-        //           localStorage.setItem('todo', todo)
+
+
     }
 
     addTodo = (e) => {
         e.preventDefault()
         let newTodoList = this.state.todoList;
         newTodoList.push(this.state.todo);
-
+        let todo = JSON.stringify(newTodoList )
+        localStorage.setItem('todo', todo)
         this.setState({
             todo: { text: '', category: this.state.todo.category },
             todoList: newTodoList,

@@ -52,16 +52,36 @@ class Home extends React.Component {
 
     icon: undefined,
     temp: undefined,
-    city: 'Smile. Life is wonderfull',
+    city: 'Enter the city to find out the weather',
     country: undefined,
     humidity: undefined,
     sunset: undefined,
     description: '...',
   }
-  componentDidMount() {
+  // componentDidMount() {
 
-  }
+  //   const name = localStorage.getItem('city')
+  //   console.log('name', name)
+  //   this.setState({
+  //     city: name
+  //   })
+
+
+  // }
+  // componentDidUpdate(prev,cur){
+  //   console.log('prev',prev)
+  //    console.log('cur',cur)
+  //      if (prev.city!==cur.city){
+  //      const name =localStorage.getItem('city')
+  //      console.log('name',name)
+  //       this.setState({
+  //         city: name
+  //       })
+  //     }
+  // }
+
   getCityLocation() {
+
     fetch('https://geolocation-db.com/json/f9902210-97f0-11eb-a459-b997d30983f1')
       .then(res => res.json())
       .then(data => {
@@ -69,14 +89,23 @@ class Home extends React.Component {
           ...this.state,
           city: data.city
         })
-
         return data.city
+
       }
       )
       .then(async (city) => {
-        const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
-        const res = await data.json()
-        return res
+        const name =JSON.parse(localStorage.getItem('city'))
+
+        if (!name) {
+          const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
+          const res = await data.json()
+          return res
+        } else {
+           console.log('res2', name)
+          const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
+          const res = await data.json()
+          return res
+        }
       })
       .then(data => this.setState({
         city: data.name,
@@ -84,7 +113,6 @@ class Home extends React.Component {
         // icon:data.weather[0].icon,
         country: data.sys.country,
         humidity: data.main.humidity,
-
         description: data.weather[0].description
       }))
   }
@@ -95,6 +123,7 @@ class Home extends React.Component {
   gettingWeather = async (e) => {
     e.preventDefault();
     const city = e.target.elements.city.value;
+    localStorage.setItem('city', JSON.stringify(city))
     if (city) {
       const api_url = await
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
@@ -103,9 +132,7 @@ class Home extends React.Component {
         alert('City not found. Please enter correct data')
       } else {
 
-
-
-        // var sunset = data.sys.sunset;
+      // var sunset = data.sys.sunset;
         // var date = new Date();
         // date.setTime(sunset);
         // var sunset_date = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
@@ -127,10 +154,8 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log('city', this.state.city);
     const gettingWeather = this.gettingWeather
     const { city, country, temp, icon, sunset, humidity, description, } = this.state
-
     let imageModal = null;
     let phrase = null;
     data.forEach(el => {
@@ -138,9 +163,7 @@ class Home extends React.Component {
       if (description.includes(el.descriptionData)) {
         imageModal = el.image
         phrase = el.text
-
         return (imageModal, phrase)
-
       }
     })
 
@@ -156,28 +179,28 @@ class Home extends React.Component {
           <div className="todo-container card">
             <div className="title-card">My todo list</div>
             <ToDo />
-            <RemoveCard/>
+            <RemoveCard />
           </div>
           <div className="icon-container card">
             <div className="title-card">Social media</div>
             <Icon />
-            <RemoveCard/>
+            <RemoveCard />
           </div>
           <div className="news-container card">
             <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
             <CardOneNew />
             {/* <Currency />
                  */}
-                 <RemoveCard/>
+            <RemoveCard />
           </div>
           <div className="clock-container card">
             <Clock />
-            <RemoveCard/>
+            <RemoveCard />
           </div>
           <div className="dish-container card">
             <div className="title-card">Dish for today<div className="title-link"><NavLink to="/dish">find more recipy</NavLink></div></div>
             <div className='dishForToday'><DishForToday /></div>
-            <RemoveCard/>
+            <RemoveCard />
           </div>
 
           <div className="weather-container card"
@@ -195,19 +218,19 @@ class Home extends React.Component {
                 description={description}
                 data={data} />
             </div>
-            <RemoveCard/>
+            <RemoveCard />
           </div>
           <div className="quote-container card">
             <div className="title-card">phrase of the day</div>
             <Randomizer />
-            <RemoveCard/>
+            <RemoveCard />
           </div>
           <div className="footer card">
-          <div className="title-card">settings</div>
-          <div className="footer-content">
-            <Footer/>
-            <ChangeScene />
-          </div>
+            <div className="title-card">settings</div>
+            <div className="footer-content">
+              <Footer />
+              <ChangeScene />
+            </div>
           </div>
         </div>
       </div>

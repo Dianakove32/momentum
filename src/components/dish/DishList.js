@@ -36,6 +36,23 @@ export default function DishList(props) {
 
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
+    // useEffect(() => {
+    //     let cartFromStor = localStorage.getItem('recipy')
+    //     let localRecipy = JSON.parse(cartFromStor)
+    //     if(localRecipy){
+    //       context.setState({
+    //         ...context.state,
+    //         cart: localRecipy
+    //     })
+    //     }
+
+    // }, [])
+
+
+
+
+
+
 
 
     const onChange = (e) => {
@@ -51,7 +68,7 @@ export default function DishList(props) {
         } else
             copyOfItems.push(item)
 
-
+    localStorage.setItem('recipy', JSON.stringify(copyOfItems))
         setCookie(copyOfItems)
 
         context.setState({
@@ -92,16 +109,16 @@ export default function DishList(props) {
 
             <div className='dish-output'>
                 {context.state.isLoaded ?
-                   ( context.state.data.data.hits.map((el, i) => <Dish key={i} {...el.recipe} onClick={onClick} />)):(
-                    <Loader/>
-                   )}
+                    (context.state.data.data.hits.map((el, i) => <Dish key={i} {...el.recipe} onClick={onClick} />)) : (
+                        <Loader />
+                    )}
             </div>
             <div className={classes.root}>
 
                 <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="success">
                         Recipy has been added
-        </Alert>
+                    </Alert>
                 </Snackbar>
 
 
