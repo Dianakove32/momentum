@@ -92,16 +92,16 @@ export default function DishList(props) {
 
             <div className='dish-output'>
                 {context.state.isLoaded ?
-                   ( context.state.data.data.hits.map((el, i) => <Dish key={i} {...el.recipe} onClick={onClick} />)):(
-                    <Loader/>
-                   )}
+                    (context.state.data.data.hits.map((el, i) => <Dish key={i} {...el.recipe} onClick={onClick} />)) : (
+                        <Loader />
+                    )}
             </div>
             <div className={classes.root}>
 
                 <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="success">
                         Recipy has been added
-        </Alert>
+                    </Alert>
                 </Snackbar>
 
 

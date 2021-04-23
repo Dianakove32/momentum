@@ -52,7 +52,7 @@ class Home extends React.Component {
 
     icon: undefined,
     temp: undefined,
-    city: 'Smile. Life is wonderfull',
+    city: 'Enter the city to find out the weather',
     country: undefined,
     humidity: undefined,
     sunset: undefined,
@@ -99,13 +99,11 @@ class Home extends React.Component {
         if (!name) {
           const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
           const res = await data.json()
-          console.log('res1', res)
           return res
         } else {
            console.log('res2', name)
           const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
           const res = await data.json()
-
           return res
         }
       })
@@ -158,10 +156,8 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log('city', this.state.city);
     const gettingWeather = this.gettingWeather
     const { city, country, temp, icon, sunset, humidity, description, } = this.state
-
     let imageModal = null;
     let phrase = null;
     data.forEach(el => {
