@@ -132,9 +132,7 @@ class Home extends React.Component {
         alert('City not found. Please enter correct data')
       } else {
 
-
-
-        // var sunset = data.sys.sunset;
+      // var sunset = data.sys.sunset;
         // var date = new Date();
         // date.setTime(sunset);
         // var sunset_date = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
@@ -165,9 +163,7 @@ class Home extends React.Component {
       if (description.includes(el.descriptionData)) {
         imageModal = el.image
         phrase = el.text
-
         return (imageModal, phrase)
-
       }
     })
 

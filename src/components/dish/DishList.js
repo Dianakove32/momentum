@@ -36,6 +36,23 @@ export default function DishList(props) {
 
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
+    // useEffect(() => {
+    //     let cartFromStor = localStorage.getItem('recipy')
+    //     let localRecipy = JSON.parse(cartFromStor)
+    //     if(localRecipy){
+    //       context.setState({
+    //         ...context.state,
+    //         cart: localRecipy
+    //     })
+    //     }
+
+    // }, [])
+
+
+
+
+
+
 
 
     const onChange = (e) => {
@@ -51,7 +68,7 @@ export default function DishList(props) {
         } else
             copyOfItems.push(item)
 
-
+    localStorage.setItem('recipy', JSON.stringify(copyOfItems))
         setCookie(copyOfItems)
 
         context.setState({

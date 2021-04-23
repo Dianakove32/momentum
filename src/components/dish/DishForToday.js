@@ -1,4 +1,4 @@
-import React, { useContext  }from 'react'
+import React, { useContext, useEffect  }from 'react'
 import {ApiContext} from '../context/Context'
 import Dish from './Dish'
 import DishOneForToday from './DishOneForToday'
@@ -6,6 +6,10 @@ import './style.scss'
 
 export default function DishForToday( ) {
     const context=useContext(ApiContext)
+
+        let cartFromStor = localStorage.getItem('recipy')
+        let localRecipy = JSON.parse(cartFromStor)
+console.log("localRecipy",localRecipy)
     return (
         <div>
 
@@ -15,7 +19,7 @@ export default function DishForToday( ) {
 
  } ) } */}
 {
-       !context.state.cart.length ? (<div>  <DishOneForToday/>  </div>):(context.state.cart.map((el,i)=>{
+       !localRecipy  ? (<div>  <DishOneForToday/>  </div>):(localRecipy.map((el,i)=>{
      return <div key={i} className= "circul-img"><img   src = {el.recipe.image} />
      <p>   {el.recipe.label}</p> </div>
 

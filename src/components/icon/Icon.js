@@ -53,7 +53,10 @@ export default function Icon() {
 
     useEffect(() => {
      const raw =localStorage.getItem('icon') || []
-     setState(JSON.parse(raw))
+     if(raw){
+        setState(JSON.parse(raw))
+     }
+
     }, [])
 
     useEffect(() => {

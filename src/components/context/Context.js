@@ -15,15 +15,17 @@ export default function ContextProvider({ children }) {
 
     const [state, setState] = useState(initialState)
     const [search, setSearch] = useState("pizza");
-    useEffect(() => {
-        let cartFromStor = localStorage.getItem('recipy')
+    // useEffect(() => {
+    //     let cartFromStor = localStorage.getItem('recipy')
+    //     let localRecipy = JSON.parse(cartFromStor)
+    //     if(localRecipy){
+    //        setState({
+    //         ...state,
+    //         cart: localRecipy
+    //     })
+    //     }
 
-        let localRecipy = JSON.parse(cartFromStor)
-        setState({
-            ...state,
-            cart: localRecipy
-        })
-    }, [])
+    // }, [])
 
     const APP_ID = "ab443e56";
     const APP_KEY = "ebebb0b4e7e8e2c9dd2b09a8fceb27ee";
