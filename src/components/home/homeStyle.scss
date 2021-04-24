@@ -66,6 +66,29 @@ textarea {
   margin: 0;
 }
 
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #dad7d7;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #b3abcb;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #85837f;
+}
+
 .wrapper {
 //padding: 7px;
   max-width: $big;
@@ -98,7 +121,7 @@ textarea {
   width: 300px;
   border-radius: 4px;
   margin-top: 20px;
-  padding: 10px;
+  padding: 15px;
   position: relative;
   @include middle {
     margin-top: 15px;
@@ -115,11 +138,20 @@ textarea {
   margin-bottom: 10px;
 }
 .title-card {
+
+
   text-transform: uppercase;
   color: $text1;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  span{
+    display: inline-block;
+
+     padding: 3px 7px;
+      background-color: rgba(255, 235, 205,0.4);
+      border-radius: 4px;
+  }
   .title-link {
     text-transform: lowercase;
     a {
@@ -254,7 +286,7 @@ textarea {
    }
 }
 .footer {
-  height: 100px;
+  height: 110px;
   background: $bg8;
   width: 100%;
   margin-bottom: 20px;

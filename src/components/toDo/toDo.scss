@@ -45,17 +45,19 @@ form {
     color: $text;
     overflow-y: auto;
     height: 190px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .todos-container-item {
     display: flex;
     p {
+
         margin-left: 10px;
         word-wrap: break-word;
         width: 550px;
         font-style: italic;
         margin: 5px;
+        text-align: justify;
         @include middle{
             width: 400px;
         }
@@ -70,13 +72,14 @@ form {
 
 .filter-container {
     position: absolute;
-    top: 5px;
+    top: 8px;
     right: 0;
     display: flex;
     width: 400px;
     padding: 10px;
     color: lightcyan;
     border-radius: 10%;
+    margin-right: 15px;
 }
 
 .category-button {
@@ -116,9 +119,9 @@ form {
     outline: none;
     border: none;
     margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 10px;
-    padding: 5px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    padding: 7px;
     box-shadow: $boxshadowInput;
     &::placeholder {
         opacity: 0.4;

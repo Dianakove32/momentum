@@ -26,26 +26,15 @@ import NewList from './components/addCard/NewList';
 import Card2 from './components/CardForAdd/Card2';
 import Card1 from './components/CardForAdd/Card1';
 
-let objWidget = [<Card1/>,<Card2/>]
+
 
 const API_KEY = '8768da57bd891fa41359848c1665c9e4';
-// function getCityLocation (){
 
-
-//   fetch('https://geolocation-db.com/json/639aa2f0-98c5-11eb-a996-0b3faf254bc0')
-//   .then(res=>res.json())
-//   .then(data=>console.log(data))
-
-// }
-
-// getCityLocation()
 
 class Home extends React.Component {
   constructor(props) {
     super(props)
-    // this.getlocation=this.getlocation.bind(this)
-    // this.successCallback=this.getCoordinates.bind(this)
-    // this.errorCallback=this.errorCallback.bind(this)
+
     this.getCityLocation = this.getCityLocation.bind(this)
     this.getCityLocation()
 
@@ -61,27 +50,7 @@ class Home extends React.Component {
     sunset: undefined,
     description: '...',
   }
-  // componentDidMount() {
 
-  //   const name = localStorage.getItem('city')
-  //   console.log('name', name)
-  //   this.setState({
-  //     city: name
-  //   })
-
-
-  // }
-  // componentDidUpdate(prev,cur){
-  //   console.log('prev',prev)
-  //    console.log('cur',cur)
-  //      if (prev.city!==cur.city){
-  //      const name =localStorage.getItem('city')
-  //      console.log('name',name)
-  //       this.setState({
-  //         city: name
-  //       })
-  //     }
-  // }
 
   getCityLocation() {
 
@@ -113,7 +82,7 @@ class Home extends React.Component {
       .then(data => this.setState({
         city: data.name,
         temp: Math.ceil(data.main.temp) + '°C',
-        // icon:data.weather[0].icon,
+
         country: data.sys.country,
         humidity: data.main.humidity,
         description: data.weather[0].description
@@ -135,18 +104,14 @@ class Home extends React.Component {
         alert('City not found. Please enter correct data')
       } else {
 
-      // var sunset = data.sys.sunset;
-        // var date = new Date();
-        // date.setTime(sunset);
-        // var sunset_date = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
 
         this.setState({
           city: data.name,
           temp: Math.ceil(data.main.temp) + '°C',
-          // icon:data.weather[0].icon,
+
           country: data.sys.country,
           humidity: data.main.humidity,
-          // sunset: sunset_date,
+
           description: data.weather[0].description
         })
 
@@ -157,21 +122,7 @@ class Home extends React.Component {
   }
 
 
-     onClick = (e) => {
-         const objWidget1 = Array.from(document.querySelectorAll('.card-modal'));
-       //  console.log(objWidget1)
-        // const item = objWidget.find(el => el.id.toString() === e.target.id)
-         const item = objWidget.find(el => el.id ==  e.target.id)
-         console.log('widgetItem',this.state.widgetItem)
-        let copyOfItems = [...this.state.widgetItem]
-        if (copyOfItems.includes(item)) {
-            alert('You have added this icon already')
-        } else {
-            copyOfItems.push(item)
-            this.setState({ widgetItem: copyOfItems })
-        }
-        console.log('widgetItem',this.state.widgetItem)
-    }
+
 
   render() {
     const gettingWeather = this.gettingWeather
@@ -189,25 +140,23 @@ class Home extends React.Component {
 
     return (
 
-      //<div className='mainWrapper'>
+
       <div >
 
         <div className='wrapper'>
-          {/* <div className="header card">
-<ChangeScene/>
-          </div> */}
+
           <div className="todo-container card">
-            <div className="title-card">My todo list</div>
+            <div className="title-card"><span>My todo list</span> </div>
             <ToDo />
             <RemoveCard />
           </div>
           <div className="icon-container card">
-            <div className="title-card">Social media</div>
+            <div className="title-card"><span>Social media</span></div>
             <Icon />
             <RemoveCard />
           </div>
           <div className="news-container card">
-            <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
+            <div className="title-card"><span>NEWS </span><div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
             <CardOneNew />
             {/* <Currency />
                  */}
@@ -218,7 +167,7 @@ class Home extends React.Component {
             <RemoveCard />
           </div>
           <div className="dish-container card">
-            <div className="title-card">Dish for today<div className="title-link"><NavLink to="/dish">find more recipy</NavLink></div></div>
+            <div className="title-card"><span>Dish for today</span><div className="title-link"><NavLink to="/dish">find more recipy</NavLink></div></div>
             <div className='dishForToday'><DishForToday /></div>
             <RemoveCard />
           </div>
@@ -241,16 +190,13 @@ class Home extends React.Component {
             <RemoveCard />
           </div>
           <div className="quote-container card">
-            <div className="title-card">phrase of the day</div>
+            <div className="title-card"><span>phrase of the day</span></div>
             <Randomizer />
             <RemoveCard />
           </div>
-          <div className="new-list">
-          <NewList data ={this.state.widgetItem} />
-          {/* { this.state.widgetItem.map((el, i) => <NewList key={i} {el} /> ) } */}
-          </div>
+
           <div className="footer card">
-            <div className="title-card">settings</div>
+            <div className="title-card"><span>settings</span></div>
             <div className="footer-content">
               <Footer  onClick={this.onClick}/>
 
@@ -266,106 +212,4 @@ class Home extends React.Component {
 export default Home;
 
 
-//    .then(data=>
-  //       this.setState({
-  //     city: data.name,
-  //     temp: Math.ceil(data.main.temp) + '°C',
-  //     // icon:data.weather[0].icon,
-  //     country: data.sys.country,
-  //     humidity: data.main.humidity,
 
-  //     description: data.weather[0].description
-  //   })
-  //  )
-//     getlocation() {
-//     if(navigator.geolocation){
-//       navigator.geolocation.getCurrentPosition(this.getCoordinates, this.errorCallback);
-//     }else {alert('error')}
-//   }
-//   getCoordinates(position) {
-//      let latitude=position.coords.latitude
-//     console.log('a',latitude)
-//     console.log(position.coords.longitude)
-
-// }
-
-//   errorCallback (error) {
-//     switch(error.code) {
-//       case error.PERMISSION_DENIED:
-//         alert("User denied the request for Geolocation.")
-//         break;
-//       case error.POSITION_UNAVAILABLE:
-//         alert("Location information is unavailable.")
-//         break;
-//       case error.TIMEOUT:
-//         alert("The request to get user location timed out.")
-//         break;
-//       case error.UNKNOWN_ERROR:
-//         alert("An unknown error occurred.")
-//         break;
-//     }
-// }
-
-
- //<div className='mainWrapper'>
-//  <div >
-//  <div className="row row1">
-//    <div className='wrapper'>
-//      <div className='layout-2-column'>
-//        <div className="todo-container">
-//          <ToDo />
-//        </div>
-//        <div className="icon-container">
-
-//          <Icon />
-//        </div>
-//      </div>
-//    </div>
-//  </div>
-//  <div className="row">
-//    <div className='wrapper'>
-//      <div className='layout-3-column'>
-//        <div className="news-container">
-//          <Currency />
-//          <NavLink to="/news"> <h3>NEWS </h3></NavLink>
-//        </div>
-//        <div className="clock-container">
-//          <Clock />
-//        </div>
-//        <div className="dish-container">
-//          <NavLink to="/dish"> <h3>Dish for today</h3></NavLink>
-//          <div className='dishForToday'><DishForToday /></div>
-//        </div>
-//      </div>
-//    </div>
-//  </div>
-//  <div className="row row1">
-//    <div className='wrapper'>
-//      <div className='layout-2-column'>
-//        <div className="weather-container"
-//          style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', height: 'auto' }}>
-//          <div className='weatherBlock'>
-//            <Form data={data} gettingWeather={gettingWeather} />
-//            <Weather city={city}
-//              country={country}
-//              temp={temp}
-//              sunset={sunset}
-//              icon={icon}
-//              humidity={humidity}
-//              description={description}
-//              data={data} />
-//          </div>
-//        </div>
-//        <div className="quote-container">
-//          <Randomizer />
-//        </div>
-//      </div>
-//    </div>
-//  </div>
-
-
-
-// </div>
-// );
-// }
-// }

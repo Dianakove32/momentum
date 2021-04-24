@@ -60,7 +60,7 @@ blockquote {
   margin: 0;
 
  // background: #FFF4ED;
-  padding-top: 70px;
+  padding-top: 50px;
   color: $text3;
   position: relative;
  // font-family: 'Lato', sans-serif;
@@ -81,11 +81,11 @@ blockquote {
   }
   blockquote:before {
   content: "\201C";
-  top: 30px;
+  top: 8px;
   }
   blockquote:after {
   content: "\201D";
-  bottom: 30px;
+  bottom: 40px;
   }
   blockquote p {
   font-size: 20px;
