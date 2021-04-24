@@ -1,0 +1,50 @@
+@import '../../constant';
+@import '../../mixins.scss';
+@import '../home/homeStyle';
+
+.modal-header{
+    display: flex;
+    flex-wrap: wrap;
+    h3{
+        margin-left: 100px;
+    }
+}
+.widget-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.card-modal{
+
+        height: 300px;
+        box-shadow: $boxshadow;
+        width: 400px;
+        border-radius: 4px;
+        margin-top: 20px;
+        padding: 10px;
+        position: relative;
+        @include middle {
+          margin-top: 15px;
+         }
+         @include tablet {
+          margin-top: 20px;
+
+         }
+}
+.todo-container {
+    position: relative;
+    background: $bg1;
+    width: $width-long;
+     @include middle{
+       width:$width-long-resp;
+     }
+     @include tablet {
+      width: $width-long;
+      margin-top: 0;
+     }
+     @include mobail {
+      display: none;
+     }
+
+  }

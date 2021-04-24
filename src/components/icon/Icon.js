@@ -36,10 +36,7 @@ let objIcon = [
         id: 6,
         name:ok,
     },
-    {
-        id: 7,
-        name: "https://res.cloudinary.com/wildcodeschool/image/upload/c_fill,h_50/v1/static/irjoy97aq0eol8bf6959",
-    },
+
 
 ]
 const initialState = {
@@ -139,7 +136,7 @@ const showAlert=()=>{
                         <div onClick={onClick} className="icon-item"><a href="#"><img id='4' src={twitter} alt="twitter"></img></a> </div>
                         <div onClick={onClick} className="icon-item"><a href="#"><img id='5' src={github} alt="github"></img></a> </div>
                         <div onClick={onClick}  className="icon-item"><a href="#"><img id='6' src={ok} alt="ok"></img></a> </div>
-                        <div onClick={onClick} className="icon-item"><a href="#"><img id='7' src="https://res.cloudinary.com/wildcodeschool/image/upload/c_fill,h_50/v1/static/irjoy97aq0eol8bf6959"></img></a></div>
+                        {/* <div onClick={onClick} className="icon-item"><a href="#"><img id='7' src="https://res.cloudinary.com/wildcodeschool/image/upload/c_fill,h_50/v1/static/irjoy97aq0eol8bf6959"></img></a></div> */}
                     </div>
                 </Modal>
             </div>
