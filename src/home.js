@@ -34,13 +34,7 @@ const API_KEY = '8768da57bd891fa41359848c1665c9e4';
 class Home extends React.Component {
   constructor(props) {
     super(props)
-
-    this.getCityLocation = this.getCityLocation.bind(this)
-    this.getCityLocation()
-
-
-  }
-  state = {
+  this.state = {
     widgetItem:[],
     icon: undefined,
     temp: undefined,
@@ -50,6 +44,12 @@ class Home extends React.Component {
     sunset: undefined,
     description: '...',
   }
+    this.getCityLocation = this.getCityLocation.bind(this)
+    this.getCityLocation()
+
+
+  }
+
 
 
   getCityLocation() {
@@ -173,7 +173,7 @@ class Home extends React.Component {
           </div>
 
           <div className="weather-container card"
-            style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundWidth: '400', backgroundHeight: '300' }}>
+            style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain',  backgroundPosition:'center' }}>
             <div className="title-card">weather</div>
 
             <div className='weatherBlock'>
