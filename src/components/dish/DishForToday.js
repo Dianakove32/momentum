@@ -9,7 +9,6 @@ export default function DishForToday( ) {
 
         let cartFromStor = localStorage.getItem('recipy')
         let localRecipy = JSON.parse(cartFromStor)
-console.log("localRecipy",localRecipy)
     return (
         <div>
 

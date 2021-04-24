@@ -22,8 +22,11 @@ import CardOneNew from './components/news/CardOneNew';
 import ChangeScene from './components/changeScene/changeScene';
 import RemoveCard from './components/removeCard/RemoveCard';
 import Footer from './components/footer/footer';
+import NewList from './components/addCard/NewList';
+import Card2 from './components/CardForAdd/Card2';
+import Card1 from './components/CardForAdd/Card1';
 
-
+let objWidget = [<Card1/>,<Card2/>]
 
 const API_KEY = '8768da57bd891fa41359848c1665c9e4';
 // function getCityLocation (){
@@ -49,7 +52,7 @@ class Home extends React.Component {
 
   }
   state = {
-
+    widgetItem:[],
     icon: undefined,
     temp: undefined,
     city: 'Enter the city to find out the weather',
@@ -101,7 +104,7 @@ class Home extends React.Component {
           const res = await data.json()
           return res
         } else {
-           console.log('res2', name)
+
           const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
           const res = await data.json()
           return res
@@ -152,6 +155,23 @@ class Home extends React.Component {
 
     }
   }
+
+
+     onClick = (e) => {
+         const objWidget1 = Array.from(document.querySelectorAll('.card-modal'));
+       //  console.log(objWidget1)
+        // const item = objWidget.find(el => el.id.toString() === e.target.id)
+         const item = objWidget.find(el => el.id ==  e.target.id)
+         console.log('widgetItem',this.state.widgetItem)
+        let copyOfItems = [...this.state.widgetItem]
+        if (copyOfItems.includes(item)) {
+            alert('You have added this icon already')
+        } else {
+            copyOfItems.push(item)
+            this.setState({ widgetItem: copyOfItems })
+        }
+        console.log('widgetItem',this.state.widgetItem)
+    }
 
   render() {
     const gettingWeather = this.gettingWeather
@@ -225,10 +245,15 @@ class Home extends React.Component {
             <Randomizer />
             <RemoveCard />
           </div>
+          <div className="new-list">
+          <NewList data ={this.state.widgetItem} />
+          {/* { this.state.widgetItem.map((el, i) => <NewList key={i} {el} /> ) } */}
+          </div>
           <div className="footer card">
             <div className="title-card">settings</div>
             <div className="footer-content">
-              <Footer />
+              <Footer  onClick={this.onClick}/>
+
               <ChangeScene />
             </div>
           </div>
