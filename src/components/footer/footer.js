@@ -14,20 +14,20 @@ const initialState = {
 
 
 
-export default function Footer({onClick}) {
+export default function Footer() {
     const [isOpen, setIsOpen] = useState(false)
-    // const [state, setState] = useState(initialState)
-    // const onClick = (e) => {
-    //     const objWidget = Array.from(document.querySelectorAll('.card-modal'));
-    //     const item = objWidget.find(el => el.id.toString() === e.target.id)
-    //     let copyOfItems = [...state.widgetItem]
-    //     if (copyOfItems.includes(item)) {
-    //         alert('You have added this icon already')
-    //     } else {
-    //         copyOfItems.push(item)
-    //         setState({ widgetItem: copyOfItems })
-    //     }
-    // }
+    const [state, setState] = useState(initialState)
+    const onClick = (e) => {
+        const objWidget = Array.from(document.querySelectorAll('.card-modal'));
+        const item = objWidget.find(el => el.id.toString() === e.target.id)
+        let copyOfItems = [...state.widgetItem]
+        if (copyOfItems.includes(item)) {
+            alert('You have added this icon already')
+        } else {
+            copyOfItems.push(item)
+            setState({ widgetItem: copyOfItems })
+        }
+    }
 
     const toggleModal = () => {
         setIsOpen(!isOpen)
