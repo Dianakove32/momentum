@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/momentum/static/css/main.f3337ea5.chunk.css",
-    "main.js": "/momentum/static/js/main.6cfe93c0.chunk.js",
-    "main.js.map": "/momentum/static/js/main.6cfe93c0.chunk.js.map",
+    "main.js": "/momentum/static/js/main.e89d8b45.chunk.js",
+    "main.js.map": "/momentum/static/js/main.e89d8b45.chunk.js.map",
     "runtime-main.js": "/momentum/static/js/runtime-main.034026fc.js",
     "runtime-main.js.map": "/momentum/static/js/runtime-main.034026fc.js.map",
     "static/js/2.db6fcfb1.chunk.js": "/momentum/static/js/2.db6fcfb1.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.034026fc.js",
     "static/js/2.db6fcfb1.chunk.js",
     "static/css/main.f3337ea5.chunk.css",
-    "static/js/main.6cfe93c0.chunk.js"
+    "static/js/main.e89d8b45.chunk.js"
   ]
 }
