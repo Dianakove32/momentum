@@ -30,9 +30,18 @@ import Footer from './components/footer/footer';
 //       localStorage.setItem('cards', JSON.stringify(cards));
 //       dropObg = localStorage.getItem('cards');
 //     }
-  let dropObg  = Array.from(document.querySelectorAll('.card'));
 
-// console.log(dropObg);
+const sortCards= (a,b)=>{
+  if(a.order>b.order){
+    return 1
+  }else return -1
+}
+let dropObg = Array.from(document.querySelectorAll('.card'));
+let newDrop= dropObg.sort(sortCards).map((el,i)=> {return { id: i+1, cont:el, order:i+5}})
+
+
+
+console.log(newDrop);
 
 const API_KEY = '8768da57bd891fa41359848c1665c9e4';
 class Home extends React.Component {
@@ -40,11 +49,11 @@ class Home extends React.Component {
     super(props)
     this.getCityLocation = this.getCityLocation.bind(this)
     this.getCityLocation()
-    console.log(JSON.parse(localStorage.getItem('cards')));
+
   }
   state = {
-    cardList: dropObg,
-    curentCard:null,
+    cardList: newDrop,
+    curentCard: null,
     icon: undefined,
     temp: undefined,
     city: 'Enter the city to find out the weather',
@@ -116,35 +125,41 @@ class Home extends React.Component {
     }
   }
 
-  dragStartHandler = (e,card)=>{
-    e.preventDefault();
-    this.setState({curentCard:card})
+  dragStartHandler = (  card) => {
+  //   e.preventDefault();
+
+    this.setState({
+      ...this.state,
+      curentCard:card})
+  console.log('drug2', this.state.curentCard)
   }
-  dragEndHandler = (e)=>{
-    e.preventDefault();
-    e.target.style.background='';
-    console.log( )
+  dragEndHandler = (e) => {
+      e.preventDefault();
+    e.target.style.opacity = 1;;
+    console.log()
   }
-  dragOverHandler = (e)=>{
-    e.preventDefault();
-    e.target.style.background='lightgray';
-    console.log( e.target)
-    console.log( 1)
+  dragOverHandler = (e) => {
+      e.preventDefault();
+    e.target.style.opacity = .5;;
+
+
   }
-  dropHandler = (e,card)=>{
-    e.preventDefault();
+  dropHandler = (  card) => {
+//e.preventDefault();
      this.setState({
        ...this.state,
-       cardList: dropObg.map(c=>{
-         if(c.id===card.id){
-           return {...c, order:curentCard.order}
-         }if(c.id===curentCard.id){
-          return {...c, order:card.order}
+       cardList: newDrop.map(el=>{
+         if(el.id===card.id){
+           return {...el, order:this.state.curentCard.order}
+         }if(el.id===this.state.curentCard.id){
+          return {...el, order:card.order}
         }
        }
-        )
-     })
+       )
+    })
+    console.log('drop', card)
   }
+
 
   render() {
     const gettingWeather = this.gettingWeather
@@ -167,24 +182,28 @@ class Home extends React.Component {
       <div >
 
         <div className='wrapper'>
-               <div order='1'
-             //  onDragStart={(e)=>this.dragStartHandler(e, dropObg[0])} onDragLeave={(e)=>this.dragEndHandler(e)} onDragEnd={(e)=>this.dragEndHandler(e)} onDragOver={(e)=>this.dragOverHandler(e)} onDrop={(e)=>this.dropHandler(e,dropObg[0])}
-                draggable={true}
-                id='h1' className="todo-container card">
+          <div order='1' id='h1'
+            onDragStart={() => this.dragStartHandler( this.state.cardList[0])}
+            onDragLeave={(e) => this.dragEndHandler(e)} onDragEnd={(e) => this.dragEndHandler(e)} onDragOver={(e) => this.dragOverHandler(e)}
+            onDrop={() => this.dropHandler(this.state.cardList[0])}
+            draggable={true}
+            className="todo-container card">
             <div className="title-card">My todo list</div>
             <ToDo />
             <RemoveCard />
           </div>
-          <div order='1'
-           onDragStart={(e)=>this.dragStartHandler(e,dropObg[1])} onDragLeave={(e)=>this.dragEndHandler(e)} onDragEnd={(e)=>this.dragEndHandler(e)} onDragOver={(e)=>this.dragOverHandler(e)} onDrop={(e)=>this.dropHandler(e,dropObg[1])}
-          draggable={true}
-          id='h2' className="icon-container card">
+          <div order='2' id='h2'
+            onDragStart={ ()  => this.dragStartHandler(  this.state.cardList[1])}
+            onDragLeave={(e) => this.dragEndHandler(e)} onDragEnd={(e) => this.dragEndHandler(e)} onDragOver={(e) => this.dragOverHandler(e)}
+            onDrop={() => this.dropHandler(this.state.cardList[1])}
+            draggable={true}
+            className="icon-container card">
             <div className="title-card">Social media</div>
             <Icon />
             <RemoveCard />
           </div>
-          <div  draggable={true}
-          id='h3' className="news-container card">
+          <div draggable={true}
+            id='h3' className="news-container card">
             <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
             <CardOneNew />
             {/* <Currency />
@@ -201,7 +220,7 @@ class Home extends React.Component {
             <RemoveCard />
           </div>
 
-          <div  id='h6' className="weather-container card"
+          <div id='h6' className="weather-container card"
             style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundWidth: '400', backgroundHeight: '300' }}>
             <div className="title-card">weather</div>
 
@@ -227,7 +246,7 @@ class Home extends React.Component {
           <div className="footer card">
             <div className="title-card">settings</div>
             <div className="footer-content">
-              <Footer   />
+              <Footer />
 
               <ChangeScene />
             </div>
