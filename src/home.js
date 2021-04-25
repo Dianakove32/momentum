@@ -214,8 +214,8 @@ class Home extends React.Component {
             <Clock />
             <RemoveCard />
           </div>
-          <div id='h5' className="dish-container card">
-            <div className="title-card">Dish for today<div className="title-link"><NavLink to="/dish">find more recipy</NavLink></div></div>
+          <div className="dish-container card">
+            <div className="title-card"><span>Dish for today</span><div className="title-link"><NavLink to="/dish">find more recipy</NavLink></div></div>
             <div className='dishForToday'><DishForToday /></div>
             <RemoveCard />
           </div>
@@ -237,18 +237,53 @@ class Home extends React.Component {
             </div>
             <RemoveCard />
           </div>
-          <div id='h7' className="quote-container card">
-            <div className="title-card">phrase of the day</div>
+          <div className="quote-container card">
+            <div className="title-card"><span>phrase of the day</span></div>
             <Randomizer />
             <RemoveCard />
           </div>
-
+<div className="title-card"><span>settings</span></div>
           <div className="footer card">
-            <div className="title-card">settings</div>
-            <div className="footer-content">
-              <Footer />
 
+            <div className="title-card"><span>settings</span></div>
+            <div className="footer-content">
+              <Footer  onClick={this.onClick}/>
               <ChangeScene />
+            <div className="contacts">
+            <h3 className="footer__dev-desc">
+            Created&nbsp;by
+            Wild&nbsp;Code&nbsp;School
+            Students
+          </h3>
+          <ul className="footer__contacts">
+            <li className="footer__contacts-item">
+              <span className="footer__contacts-name">Diana Kovaleva</span>
+              <div className="footer__contacts-list">
+                <a className="footer__contacts-github" href="https://github.com/Dianakove32" target="_blank" rel="noreferrer">GitHub</a>
+                <span role="separator">|</span>
+                <a className="footer__contacts-linkedin" href="https://www.linkedin.com/in/dziana-kavaleva-5347051aa/" target="_blank" rel="noreferrer">LinkedIn</a>
+              </div>
+            </li>
+            <li className="footer__contacts-item">
+              <span className="footer__contacts-name">Tatsiana Horbatsevich</span>
+              <div className="footer__contacts-list">
+                <a className="footer__contacts-github" href="https://github.com/gortatka" target="_blank" rel="noreferrer">GitHub</a>
+                <span role="separator">|</span>
+                <a className="footer__contacts-linkedin" href="https://www.linkedin.com/in/tatsiana-horbatsevich/" target="_blank" rel="noreferrer">LinkedIn</a>
+              </div>
+            </li>
+            <li className="footer__contacts-item">
+              <span className="footer__contacts-name">Natalia Lapitskaya</span>
+              <div className="footer__contacts-list">
+                <a className="footer__contacts-github" href="https://github.com/LapitskayaN" target="_blank" rel="noreferrer">GitHub</a>
+                <span role="separator">|</span>
+                <a className="footer__contacts-linkedin" href="https://www.linkedin.com/in/nataliya-lapitskaya-a61a96197/" target="_blank" rel="noreferrer">LinkedIn</a>
+              </div>
+            </li>
+          </ul>
+          </div>
+
+              {/* <ChangeScene /> */}
             </div>
           </div>
         </div>

@@ -1,15 +1,16 @@
 @import "../../constant.scss";
 @import "../../mixins.scss";
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-  background: #dad1d1;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
- // font-family: 'Roboto Mono', monospace;
+    background: #dad1d1;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto Mono', monospace;
 }
 
 article,
@@ -25,257 +26,357 @@ menu,
 nav,
 section,
 summary {
-  display: block;
+    display: block;
 }
+
 button,
 input,
 optgroup,
 select,
 textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
+    color: inherit;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+    margin: 0;
+    /* 3 */
 }
+
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
+    -webkit-appearance: button;
+    /* 2 */
+    cursor: pointer;
+    /* 3 */
 }
+
 input {
-  line-height: normal;
+    line-height: normal;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
 }
+
 textarea {
-  overflow: auto;
+    overflow: auto;
 }
 
 .App {
-  margin: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dad7d7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b3abcb;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #85837f;
 }
 
 .wrapper {
-//padding: 7px;
-  max-width: $big;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  @include middle {
-   width: 987px;
-   padding: 7px;
-  }
-  @include tablet {
-   width: 840px;
-   padding: 10px;
-  }
-  @include surface {
-   width: 560px;
-   padding: 10px;
-  }
-  @include mobail {
-   width: 340px;
-   padding: 10px;
-   justify-content: center;
-  }
-
-}
-.card {
-  height: 300px;
-  box-shadow: $boxshadow;
-  width: 300px;
-  border-radius: 4px;
-  margin-top: 20px;
-  padding: 10px;
-  position: relative;
-  @include middle {
-    margin-top: 15px;
-   }
-   @include tablet {
-    margin-top: 20px;
-
-   }
-}
-.header{
-  height: 50px;
-  background: $bg6;
-  width: 100%;
-  margin-bottom: 10px;
-}
-.title-card {
-  text-transform: uppercase;
-  color: $text1;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  .title-link {
-    text-transform: lowercase;
-    a {
-      color: #a38097;
+    //padding: 7px;
+    max-width: $big;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include middle {
+        width: 987px;
+        padding: 7px;
     }
-  }
+    @include tablet {
+        width: 840px;
+        padding: 10px;
+    }
+    @include surface {
+        width: 560px;
+        padding: 10px;
+    }
+    @include mobail {
+        width: 340px;
+        padding: 10px;
+        justify-content: center;
+    }
 }
-.todo-container {
-  position: relative;
-  background: $bg1;
-  width: $width-long;
-   @include middle{
-     width:$width-long-resp;
-   }
-   @include tablet {
-    width: $width-long;
-    margin-top: 0;
-   }
-   @include mobail {
-    display: none;
-   }
 
+.card {
+    height: 300px;
+    box-shadow: $boxshadow;
+    width: 300px;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 15px;
+    position: relative;
+    @include middle {
+        margin-top: 15px;
+    }
+    @include tablet {
+        margin-top: 20px;
+    }
+}
+
+.header {
+    height: 50px;
+    background: $bg6;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.title-card {
+    text-transform: uppercase;
+    color: $text1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    span {
+        display: inline-block;
+        padding: 3px 7px;
+        background-color: rgba(255, 235, 205, 0.4);
+        border-radius: 4px;
+    }
+    .title-link {
+        text-transform: lowercase;
+        a {
+            color: #a38097;
+        }
+    }
+}
+
+.todo-container {
+    position: relative;
+    background: $bg1;
+    width: $width-long;
+    @include middle {
+        width: $width-long-resp;
+    }
+    @include tablet {
+        width: $width-long;
+        margin-top: 0;
+    }
+    @include mobail {
+        display: none;
+    }
 }
 
 .icon-container {
-  background: $bg2;
-  width: $width-short;
-  @include middle{
-    width:$width-short-resp;
-  }
-  @include tablet {
+    background: $bg2;
     width: $width-short;
-   }
-   @include surface {
-    width: $width-long;
-
-   }
-   @include mobail {
-    width: $width-short;
-
-   }
+    @include middle {
+        width: $width-short-resp;
+    }
+    @include tablet {
+        width: $width-short;
+    }
+    @include surface {
+        width: $width-long;
+    }
+    @include mobail {
+        width: $width-short;
+    }
 }
-.news-container {
-  background: $bg3;
-  width: $width-short;
-  @include middle{
-    width:$width-short-resp;
-  }
-  @include tablet {
-    width: $width-short;
-   }
-   @include surface {
-    width: $width-long;
-   }
-   @include mobail {
-    width: $width-short;
 
-   }
+.news-container {
+    background: $bg3;
+    width: $width-short;
+    @include middle {
+        width: $width-short-resp;
+    }
+    @include tablet {
+        width: $width-short;
+    }
+    @include surface {
+        width: $width-long;
+    }
+    @include mobail {
+        width: $width-short;
+    }
 }
 
 .clock-container {
-  background: $bg4;
-  width: $width-short;
-  @include middle{
-    width:$width-short-resp;
-  }
-  @include tablet {
+    background: $bg4;
     width: $width-short;
-   }
-   @include surface {
-    width: $width-long;
-
-   }
-   @include mobail {
-    width: $width-short;
-
-   }
+    @include middle {
+        width: $width-short-resp;
+    }
+    @include tablet {
+        width: $width-short;
+    }
+    @include surface {
+        width: $width-long;
+    }
+    @include mobail {
+        width: $width-short;
+    }
 }
+
 .dish-container {
-  background: $bg5;
-  width: $width-short;
-  @include middle{
-    width:$width-short-resp;
-  }
-  @include tablet {
+    background: $bg5;
     width: $width-short;
-   }
-   @include surface {
-    width: $width-long;
-
-   }
-   @include mobail {
-    width: $width-short;
-
-   }
+    @include middle {
+        width: $width-short-resp;
+    }
+    @include tablet {
+        width: $width-short;
+    }
+    @include surface {
+        width: $width-long;
+    }
+    @include mobail {
+        width: $width-short;
+    }
 }
+
 .weather-container {
-  background: $bg6;
-  width: $width-short;
-  @include middle{
-    width:$width-short-resp;
-  }
-  @include tablet {
+    background: $bg6;
     width: $width-short;
-   }
-   @include surface {
-    width: $width-long;
-
-   }
-   @include mobail {
-    width: $width-short;
-
-   }
+    @include middle {
+        width: $width-short-resp;
+    }
+    @include tablet {
+        width: $width-short;
+    }
+    @include surface {
+        width: $width-long;
+    }
+    @include mobail {
+        width: $width-short;
+    }
 }
+
 .quote-container {
-  background: $bg7;
-  width: $width-long;
-  position: relative;
-  @include middle{
-    width:$width-long-resp;
-  }
-  @include tablet {
-    width: $width-short;
-   }
-   @include surface {
+    background: $bg7;
     width: $width-long;
-
-   }
-   @include mobail {
-    width: $width-short;
-
-   }
+    position: relative;
+    @include middle {
+        width: $width-long-resp;
+    }
+    @include tablet {
+        width: $width-short;
+    }
+    @include surface {
+        width: $width-long;
+    }
+    @include mobail {
+        width: $width-short;
+    }
 }
+
 .footer {
-  height: 100px;
-  background: $bg8;
-  width: 100%;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-.footer-content{
-  display: flex;
-  align-items: center;
-}
+    height: 110px;
+    background: $bg8;
+    width: 100%;
+    .footer-content {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+    }
 }
 
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+// .footer__contacts {
+//     margin-left: auto;
+// }
+.footer__dev-desc {
+    text-align: center;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media(max-width: 700px) {
+        flex-direction: column;
+        margin-left: 20%;
+    }
+}
+
+.footer__contacts-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 30%;
+    @media(max-width: 700px) {
+        width: auto;
+        margin-bottom: 15px;
+    }
+}
+
+.footer__contacts-name {
+    width: 100%;
+    margin: 0 0 5px 0;
+    font-size: 15px;
+    line-height: 20px;
+    // font-weight: 600;
+}
+
+.footer__contacts-list {
+    display: flex;
+}
+
+.footer__contacts-list span {
+    margin: 0 5px 0 0;
+}
+
+.footer__contacts-github {
+    margin-right: 10px;
+}
+
+.footer__contacts-list a {
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.9s;
+    &:focus,
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+// .footer {
+//   height: 110px;
+//   background: $bg8;
+//   width: 100%;
+//   margin-bottom: 20px;
+//   padding-bottom: 10px;
+// .footer-content{
+//   display: flex;
+//   align-items: center;
+// }
+// }
 // .row {
 //   margin-top: 5px;
 //   background-color: $bg4;
 //   //  outline: 8px solid rgb(255, 253, 253);
 //   //border-bottom: $outline;
-
 // }
 // .row1 {
 //   height: 33.3vh;
 // }
-
 // .layout-2-column {
 //   display: flex;
 //   flex-wrap: wrap;
@@ -314,13 +415,11 @@ textarea {
 //     padding: 10px;
 //     flex-basis: 66.7%;
 //     background-color: $bg3;
-
 //     color: #fff;
 //     outline: $outline;
 //     position: relative;
 //   }
 // }
-
 // .layout-3-column {
 //   display: flex;
 //   flex-wrap: wrap;
@@ -345,7 +444,6 @@ textarea {
 //         margin-top: 70px;
 //       }
 //     }
-
 //   }
 //   .clock-container {
 //     padding: 10px;
@@ -375,14 +473,11 @@ textarea {
 //         font-size: 20px;
 //       }
 //     }
-
 //   }
 // }
-
 // .layout-3-column{
 //   flex-shrink: 1;
 //   @include tablet{
-
 //     position: relative;
 //   }
 //   .news-container{
@@ -395,7 +490,6 @@ textarea {
 //      width: 100px;
 //      flex-basis: unset;
 //     flex-grow: 2;
-
 //      a {
 //       font-size: 20px;
 //       h3{
@@ -404,10 +498,8 @@ textarea {
 //       }
 //     }}
 //   }
-
 //   .clock-container {
 //     @include tablet{
-
 //   }
 // }
 //   .dish-container {
