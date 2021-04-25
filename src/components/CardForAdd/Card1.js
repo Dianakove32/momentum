@@ -5,11 +5,11 @@ import RemoveCard from '../removeCard/RemoveCard'
 export default function Card1({ onClick }) {
     return (
         <div id='11'>
-            <div onClick={onClick} className="dish-container card-modal">
+            <div onClick={onClick} style={{background:'#a99ee3'}} className=" card-modal">
                 <div className="title-card">Title</div>
                 <AddCard />
-                                   1
-                <RemoveCard />
+
+
             </div>
         </div>
     )
