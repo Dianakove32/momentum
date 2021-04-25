@@ -26,7 +26,7 @@ const News = () => {
                   key={el.name}
                   name={el.name}
                 url={el.url}
-                 image={el.image.thumbnail.contentUrl}
+                //  image={el.image.thumbnail.contentUrl}
                 />
                 );
             })}  </div>
