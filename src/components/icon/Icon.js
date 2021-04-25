@@ -15,6 +15,7 @@ let objIcon = [
     {
         id: 1,
         name: facebook,
+
     },
     {
         id: 2,
@@ -23,18 +24,22 @@ let objIcon = [
     {
         id: 3,
         name: slack,
+        href:"https://app.slack.com/",
     },
     {
         id: 4,
         name: twitter,
+        href:"https://twitter.com/",
     },
     {
         id: 5,
         name: github,
+        href:"https://github.com/",
     },
     {
         id: 6,
         name:ok,
+        href: "https://ok.ru/ ",
     },
 
 
@@ -74,7 +79,7 @@ export default function Icon() {
             marginRight: '-50%',
             width: '60%',
             transform: 'translate(-40%, -10%)',
-
+            zIndex: 100,
         },
 
     };
@@ -117,7 +122,7 @@ const showAlert=()=>{
             {/* <div className="icon-item"><a href="https://app.slack.com/"><img src={slack} alt="slack"></img></a> </div>
             <div className="icon-item"><a href="https://twitter.com/"><img src={twitter} alt="twitter"></img></a> </div> */}
             {/* <div className="icon-item"><a href="https://github.com/"><img src={github} alt="github"></img></a> </div> */}
-            {state.iconItem.map(el => <div onDoubleClick={deleteItem} className="icon-item"><img src={el.name} alt="instagram" /> </div>)}
+            {state.iconItem.map(el => <div onDoubleClick={deleteItem} className="icon-item"><a href={el.href}><img src={el.name} alt={el.name}  /></a> </div>)}
 
             <div className="icon-item"><div className="last" onClick={toggleModal} >+ </div></div>
             <div className="popup">

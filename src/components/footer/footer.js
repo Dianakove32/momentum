@@ -35,7 +35,7 @@ export default function Footer() {
     }
     return (
         <div>
-            
+
             <div className="icon-item"><div className="last" onClick={toggleModal} >+ </div></div>
             {/* <ChangeScene />
             <div>
@@ -87,41 +87,28 @@ export default function Footer() {
                                <Card1   onClick={onClick}/>
                                <Card2   onClick={onClick}/>
 
-                                <div id='13' onClick={onClick} className="news-container card-modal">
+                                <div id='13' onClick={onClick} className=" card-modal" style={{background:'#ed9cb6'}} >
+                                    <div className="title-card">Title</div>
+                                    <AddCard />
+
+                                </div>
+                                <div id='14' onClick={onClick} className=" card-modal" style={{background:'#9cedcf'}}>
                                     <div className="title-card">Title</div>
                                     <AddCard />
                                     <RemoveCard />
                                 </div>
-                                <div id='14' onClick={onClick} className="weather-container card-modal">
+                                <div id='15' onClick={onClick} className=" card-modal" style={{background:'#d99ced'}}>
                                     <div className="title-card">Title</div>
                                     <AddCard />
-                                    <RemoveCard />
-                                </div>
-                                <div id='15' onClick={onClick} className="clock-container card-modal">
-                                    <div className="title-card">Title</div>
-                                    <AddCard />
-                                    <RemoveCard />
-                                </div>
-                                <div className="news-container card-modal">
-                                    <div className="title-card">Title</div>
-                                    <AddCard />
-                                    <RemoveCard />
-                                </div>
-                                <div className="weather-container card-modal">
-                                    <div className="title-card">Title</div>
-                                    <AddCard />
-                                    <RemoveCard />
-                                </div>
-                                <div className="clock-container card-modal">
-                                    <div className="title-card">Title</div>
-                                    <AddCard />
-                                    <RemoveCard />
+
                                 </div>
                                 <div className="news-container card-modal">
                                     <div className="title-card">Title</div>
                                     <AddCard />
-                                    <RemoveCard />
+
                                 </div>
+
+
                             </div>
                         </div>
 

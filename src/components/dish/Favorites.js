@@ -58,7 +58,7 @@ export default function Favorites() {
     return (
         <div >
             <div className='modal'>
-                <Modal appElement={document.querySelector('#app')}
+                <Modal style={{zIndex:'100'}} appElement={document.querySelector('#app')}
                     isOpen={isOpen}
                     onRequestClose={toggleModal}
                     contentLabel="My dialog">
