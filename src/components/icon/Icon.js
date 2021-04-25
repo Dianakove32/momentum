@@ -74,7 +74,7 @@ export default function Icon() {
             marginRight: '-50%',
             width: '60%',
             transform: 'translate(-40%, -10%)',
-
+            zIndex: 100,
         },
 
     };
