@@ -34,16 +34,16 @@ const API_KEY = '8768da57bd891fa41359848c1665c9e4';
 class Home extends React.Component {
   constructor(props) {
     super(props)
-  this.state = {
-    widgetItem:[],
-    icon: undefined,
-    temp: undefined,
-    city: 'Enter the city to find out the weather',
-    country: undefined,
-    humidity: undefined,
-    sunset: undefined,
-    description: '...',
-  }
+    this.state = {
+      widgetItem: [],
+      icon: undefined,
+      temp: undefined,
+      city: 'Enter the city to find out the weather',
+      country: undefined,
+      humidity: undefined,
+      sunset: undefined,
+      description: '...',
+    }
     this.getCityLocation = this.getCityLocation.bind(this)
     this.getCityLocation()
 
@@ -66,7 +66,7 @@ class Home extends React.Component {
       }
       )
       .then(async (city) => {
-        const name =JSON.parse(localStorage.getItem('city'))
+        const name = JSON.parse(localStorage.getItem('city'))
 
         if (!name) {
           const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
@@ -173,7 +173,7 @@ class Home extends React.Component {
           </div>
 
           <div className="weather-container card"
-            style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain',  backgroundPosition:'center' }}>
+            style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain', backgroundPosition: 'center' }}>
             <div className="title-card">weather</div>
 
             <div className='weatherBlock'>
@@ -196,11 +196,45 @@ class Home extends React.Component {
           </div>
 
           <div className="footer card">
-            <div className="title-card"><span>settings</span></div>
-            <div className="footer-content">
-              <Footer  onClick={this.onClick}/>
 
+            <div className="title-card"><span>settings</span><p className="footer__dev-desc"> Created by Wild CodeSchool Students </p></div>
+            <div className="footer-content">
+            <div className='footer-setting'>
+              <Footer />
               <ChangeScene />
+            </div>
+
+              <div className="contacts">
+
+                <ul className="footer__contacts">
+                  <li className="footer__contacts-item">
+                    <span className="footer__contacts-name">Diana Kovaleva</span>
+                    <div className="footer__contacts-list">
+                      <a className="footer__contacts-github" href="https://github.com/Dianakove32" target="_blank" rel="noreferrer">GitHub</a>
+                      <span role="separator">|</span>
+                      <a className="footer__contacts-linkedin" href="https://www.linkedin.com/in/dziana-kavaleva-5347051aa/" target="_blank" rel="noreferrer">LinkedIn</a>
+                    </div>
+                  </li>
+                  <li className="footer__contacts-item">
+                    <span className="footer__contacts-name">Tatsiana Horbatsevich</span>
+                    <div className="footer__contacts-list">
+                      <a className="footer__contacts-github" href="https://github.com/gortatka" target="_blank" rel="noreferrer">GitHub</a>
+                      <span role="separator">|</span>
+                      <a className="footer__contacts-linkedin" href="https://www.linkedin.com/in/tatsiana-horbatsevich/" target="_blank" rel="noreferrer">LinkedIn</a>
+                    </div>
+                  </li>
+                  <li className="footer__contacts-item">
+                    <span className="footer__contacts-name">Natalia Lapitskaya</span>
+                    <div className="footer__contacts-list">
+                      <a className="footer__contacts-github" href="https://github.com/LapitskayaN" target="_blank" rel="noreferrer">GitHub</a>
+                      <span role="separator">|</span>
+                      <a className="footer__contacts-linkedin" href="https://www.linkedin.com/in/nataliya-lapitskaya-a61a96197/" target="_blank" rel="noreferrer">LinkedIn</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* <ChangeScene /> */}
             </div>
           </div>
         </div>
