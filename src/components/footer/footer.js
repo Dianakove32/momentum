@@ -97,7 +97,7 @@ export default function Footer({onClick}) {
                                     <AddCard />
                                     <RemoveCard />
                                 </div>
-                                <div id='15' onClick={onClick} className="clock-container card-modal" style={{background:'#d99ced'}}>
+                                <div id='15' onClick={onClick} className=" card-modal" style={{background:'#d99ced'}}>
                                     <div className="title-card">Title</div>
                                     <AddCard />
 
