@@ -25,6 +25,7 @@ import Footer from './components/footer/footer';
 import NewList from './components/addCard/NewList';
 import Card2 from './components/CardForAdd/Card2';
 import Card1 from './components/CardForAdd/Card1';
+import Reset from './components/Reset';
 
 
 
@@ -87,10 +88,6 @@ class Home extends React.Component {
         description: data.weather[0].description
       }))
   }
-
-
-
-
   gettingWeather = async (e) => {
     e.preventDefault();
     const city = e.target.elements.city.value;
@@ -193,6 +190,7 @@ class Home extends React.Component {
             <div className='footer-setting'>
               <Footer />
               <ChangeScene />
+
             </div>
 
               <div className="contacts">
