@@ -67,15 +67,14 @@ class Home extends React.Component {
       )
       .then(async (city) => {
         const name = JSON.parse(localStorage.getItem('city'))
-
         if (!name) {
           const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
           const res = await data.json()
           return res
         } else {
-
           const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
           const res = await data.json()
+
           return res
         }
       })
@@ -95,7 +94,6 @@ class Home extends React.Component {
   gettingWeather = async (e) => {
     e.preventDefault();
     const city = e.target.elements.city.value;
-    localStorage.setItem('city', JSON.stringify(city))
     if (city) {
       const api_url = await
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
@@ -103,21 +101,14 @@ class Home extends React.Component {
       if (data.message == "city not found") {
         alert('City not found. Please enter correct data')
       } else {
-
-
         this.setState({
           city: data.name,
           temp: Math.ceil(data.main.temp) + '°C',
-
           country: data.sys.country,
           humidity: data.main.humidity,
-
           description: data.weather[0].description
         })
-
       }
-
-
     }
   }
 
