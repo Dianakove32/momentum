@@ -10,7 +10,7 @@ export default function TodoCard() {
             className="todo-container card">
             <div className="title-card"><span>My todo list</span></div>
             <ToDo/>
-            <RemoveCard />
+
           </div>
         </div>
     )

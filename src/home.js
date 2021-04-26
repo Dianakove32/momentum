@@ -128,6 +128,7 @@ class Home extends React.Component {
         </div>
         <div className="footer ">
         <div className="wrapper1">
+
         <div className="wrapper-footer">
 <div className="title-card"><span>settings</span></div>
             <div className="footer-content">

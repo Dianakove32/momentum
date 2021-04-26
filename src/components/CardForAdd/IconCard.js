@@ -11,7 +11,7 @@ export default function IconCard() {
             className="icon-container card">
             <div className="title-card"><span>Social media</span></div>
               <Icon />
-            <RemoveCard />
+
           </div>
         </div>
     )

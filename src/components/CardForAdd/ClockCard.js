@@ -13,7 +13,7 @@ export default function ClockCard() {
         <div>
            <div id='h4' className="clock-container card">
             <Clock/>
-            <RemoveCard />
+
           </div>
 
         </div>
