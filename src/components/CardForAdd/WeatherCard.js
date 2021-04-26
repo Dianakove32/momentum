@@ -99,7 +99,7 @@ render(){
         <div   >
                    <div className="weather-container card"
             style={{ backgroundImage: `url(${imageModal})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain', backgroundPosition: 'center' }}>
-            <div className="title-card">weather</div>
+            <div className="title-card"><span>weather</span></div>
 
             <div className='weatherBlock'>
               <Form data={data} gettingWeather={gettingWeather} />

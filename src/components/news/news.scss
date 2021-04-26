@@ -73,6 +73,7 @@ h2 {
     border-radius: 10px;
     color: $text3;
     p{
+
         padding-top: 5px;
       text-align: justify;
     }
@@ -89,6 +90,9 @@ h2 {
     }
 }
 .CardOneNew-content{
+h3{
+    font-size: 16px;
+}
     @include mobail{
         font-size: 13px;
            height:  120px;

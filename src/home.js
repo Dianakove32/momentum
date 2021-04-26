@@ -119,28 +119,28 @@ class Home extends React.Component {
                 draggable={true}
                 id={el.id} order={el.order}>
                 {el.component}
+                {/* <RemoveCard id={el.id}/> */}
               </div>
             )
           })}
 
 
-
-
-
-
-          <div className="footer card">
-
-            <div className="title-card"><span>settings</span><p className="footer__dev-desc"> Created by Wild CodeSchool Students </p></div>
+        </div>
+        <div className="footer ">
+        <div className="wrapper1">
+        <div className="wrapper-footer">
+<div className="title-card"><span>settings</span></div>
             <div className="footer-content">
               <div className='footer-setting'>
                 <Footer />
                 <ChangeScene />
-
+                <Reset/>
               </div>
 
-              <div className="contacts">
+                <div className="contacts">
 
                 <ul className="footer__contacts">
+
                   <li className="footer__contacts-item">
                     <span className="footer__contacts-name">Diana Kovaleva</span>
                     <div className="footer__contacts-list">
@@ -167,11 +167,14 @@ class Home extends React.Component {
                   </li>
                 </ul>
               </div>
-
-              {/* <ChangeScene /> */}
-            </div>
-          </div>
         </div>
+
+
+        <p className="footer__dev-desc"> Created by Wild CodeSchool Students </p>
+              </div>
+            </div>
+
+          </div>
       </div>
     );
   }
