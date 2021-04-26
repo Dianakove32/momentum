@@ -96,7 +96,7 @@ textarea {
     flex-wrap: wrap;
     justify-content: space-between;
     @include middle {
-        width: 987px;
+        width: 1000px;
         padding: 7px;
     }
     @include tablet {
@@ -104,7 +104,7 @@ textarea {
         padding: 10px;
     }
     @include surface {
-        width: 560px;
+       width: 560px;
         padding: 10px;
     }
     @include mobail {
@@ -115,6 +115,7 @@ textarea {
 }
 
 .card {
+    cursor: grab;
     height: 300px;
     box-shadow: $boxshadow;
     width: 300px;
@@ -126,6 +127,10 @@ textarea {
         margin-top: 15px;
     }
     @include tablet {
+        margin-top: 20px;
+    }
+    @include surface {
+
         margin-top: 20px;
     }
 }
@@ -186,7 +191,7 @@ textarea {
         width: $width-long;
     }
     @include mobail {
-        width: $width-short;
+        width: $width-short-resp;
     }
 }
 
@@ -203,7 +208,7 @@ textarea {
         width: $width-long;
     }
     @include mobail {
-        width: $width-short;
+        width: $width-short-resp;
     }
 }
 
@@ -220,7 +225,7 @@ textarea {
         width: $width-long;
     }
     @include mobail {
-        width: $width-short;
+        width: $width-short-resp;
     }
 }
 
@@ -237,7 +242,7 @@ textarea {
         width: $width-long;
     }
     @include mobail {
-        width: $width-short;
+        width: $width-short-resp;
     }
 }
 
@@ -254,7 +259,7 @@ textarea {
         width: $width-long;
     }
     @include mobail {
-        width: $width-short;
+        width: $width-short-resp;
     }
 }
 
@@ -272,32 +277,43 @@ textarea {
         width: $width-long;
     }
     @include mobail {
-        width: $width-short;
+        width: $width-short-resp;
     }
 }
 
 .footer {
-    height: 130px;
-    background: $bg8;
-    width: 100%;
-    margin-bottom: 20px;
+
+   // height: 100px;
+    background: #beb5b5;
+   // width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
     .footer-content {
         display: flex;
-       justify-content: space-between;
+      // justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
-        padding-bottom: 30px;
-        @include mobail {
+
+        padding-bottom: 20px;
+
+        @include tablet {
             display: flex;
             flex-direction: column;
 
         }
+        @include mobail {
+            display: flex;
+            flex-direction: column;
+width: 320px;
+        }
+
     }
+
     @include tablet {
-        height: 250px;
+     width: 840px;
     }
     @include mobail {
-        height: 300px;
+        width:100% ;
+
     }
 }
 

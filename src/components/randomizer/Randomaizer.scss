@@ -66,6 +66,9 @@ blockquote {
  // font-family: 'Lato', sans-serif;
  font-family: 'Roboto', sans-serif;
   text-align: center;
+  @include tablet{
+    padding-top: 33px;
+  }
   }
   blockquote:before, blockquote:after {
   font-size: 45px;

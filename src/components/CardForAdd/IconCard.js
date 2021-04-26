@@ -9,7 +9,7 @@ export default function IconCard() {
               <div order='2' id='h2'
 
             className="icon-container card">
-            <div className="title-card">Social media</div>
+            <div className="title-card"><span>Social media</span></div>
               <Icon />
             <RemoveCard />
           </div>

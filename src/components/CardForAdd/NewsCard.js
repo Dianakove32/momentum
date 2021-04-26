@@ -8,7 +8,7 @@ export default function NewsCard() {
         <div>
                  <div draggable={true}
             id='h3' className="news-container card">
-            <div className="title-card"> NEWS <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
+            <div className="title-card"><span> NEWS </span> <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
               <CardOneNew />
 
             <RemoveCard />

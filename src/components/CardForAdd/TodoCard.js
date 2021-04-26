@@ -8,7 +8,7 @@ export default function TodoCard() {
                 <div order='1' id='h1'
 
             className="todo-container card">
-            <div className="title-card">My todo list</div>
+            <div className="title-card"><span>My todo list</span></div>
             <ToDo/>
             <RemoveCard />
           </div>

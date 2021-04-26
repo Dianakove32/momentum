@@ -46,17 +46,70 @@
 //         display: none;
 //     }
 // }
+.wrapper-footer{
+    // width: $big;
+    // margin: auto;
+    // padding-left: 10px;
+    // // display: flex;
+    // // flex-direction: column;
+    // // justify-content: center;
+    // @include middle {
+    //     width: $middle;
+    // }
+    max-width: $big;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    @include middle {
+        width: 987px;
+        padding: 7px;
+    }
+    @include tablet {
+        width: 840px;
+        padding: 10px;
+    }
+    @include surface {
+     //  width: 560px;
+        padding: 10px;
+    }
+    @include mobail {
+       width: 340px;
+        padding: 10px;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
 .footer-setting{
     display: flex;
     margin-right: 20px;
 }
 .contacts {
+
     display: flex;
     flex-direction: column;
-    margin-left: auto;
+    width: 627px;
+    margin-left: 290px;
+@include middle{
+   // width: 500px;
+     margin-left: 50px;
+}
+@include tablet{
+   // width: 500px;
+   margin-top: 20px;
+     margin-left: 0px;
+}
+@include mobail {
+     width: 320px;
+      padding: 10px;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+  }
 }
 .footer__contacts {
-    margin-left: auto;
+
 
     @include mobail {
         margin-top: 10px;
@@ -64,26 +117,27 @@
 }
 .footer__dev-desc {
     text-align: center;
-    @include tablet {
-    font-size: 14px;
-    }
-    @include mobail {
-    display: none;
-    }
+color: #6e6969;
+font-size: 12px;
+padding-bottom: 10px;
+
 }
 
 .footer__contacts {
     display: flex;
     flex-wrap: wrap;
-  //  margin-left: 0;
+    margin-left: auto;
  //   justify-content: space-between;
  //   margin: 0;
  //   padding: 0;
     list-style: none;
     color:$text3;
-    @media(max-width: 700px) {
-        flex-direction: column;
-        margin-left: 20%;
+    // @media(max-width: 700px) {
+    //     flex-direction: column;
+    //     margin-left: 20%;
+    // }
+    @include tablet {
+        flex-direction: row;
     }
 }
 
@@ -91,7 +145,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 30%;
+     width: 180px;
     a{
         color:$text3;
     }
@@ -100,10 +154,14 @@
         width: auto;
         margin-bottom: 15px;
     }
+    @include tablet {
+        width: 190px;
+        flex-direction: column;
+    }
 }
 
 .footer__contacts-name {
-    width: 100%;
+   // width: 100%;
     margin: 0 0 5px 0;
     font-size: 15px;
     line-height: 20px;

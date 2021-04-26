@@ -133,9 +133,9 @@ form {
 .btn-delete {
     color: rgb(235, 49, 49);
     background-color: $bg1;
-    font-size: 12px;
+    //font-size: 12px;
     border: none;
-    margin-bottom: 7px;
+     margin-right: 5px;
     font-weight: bold;
 }
 .category-containe {
@@ -149,7 +149,7 @@ form {
     background-color: $bgFilter;
     color: $text;
     border: none;
-    margin-top: 10px;
+   // margin-top: 10px;
     border-radius: 10px;
     padding: 5px;
     box-shadow: $boxshadowInput;

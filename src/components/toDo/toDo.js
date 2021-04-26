@@ -135,7 +135,9 @@ export default class ToDo extends React.Component {
                                                     this.deleteTodo(index);
                                                 }}
                                             >
-                                                X
+
+&#10006;
+
                                             </button>
                                             <p>  {todo.text}  </p>
                                             {/* <span className="category-containe">
