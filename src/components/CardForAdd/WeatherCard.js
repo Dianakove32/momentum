@@ -63,6 +63,7 @@ class WeatherCard extends React.Component {
   gettingWeather = async (e) => {
     e.preventDefault();
     const city = e.target.elements.city.value;
+    localStorage.setItem('city', JSON.stringify(city))
     if (city) {
       const api_url = await
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8768da57bd891fa41359848c1665c9e4&units=metric`)
