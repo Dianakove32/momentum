@@ -8,7 +8,7 @@ export default function QuoteCard() {
              <div className="quote-container card">
             <div className="title-card"><span>phrase of the day</span></div>
             <Randomizer />
-            <RemoveCard />
+
           </div>
         </div>
     )

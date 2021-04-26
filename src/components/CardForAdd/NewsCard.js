@@ -11,7 +11,7 @@ export default function NewsCard() {
             <div className="title-card"><span> NEWS </span> <div className="title-link"><NavLink to="/news">find more news</NavLink></div></div>
               <CardOneNew />
 
-            <RemoveCard />
+
           </div>
         </div>
     )
