@@ -1,5 +1,19 @@
 @import '../../mixins.scss';
-.icons {
+.icons-block {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .icon-item {
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+.icons-m {
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -33,4 +47,38 @@
 
 .modal {
     width: 400;
+
+}
+.h3-icon{
+    color:$text3;
+}
+.form-icon-add{
+    color: $text3;
+    font-size: 16px;
+    margin-top: 10px;
+    .form-icon-input {
+        margin-top: 5px;
+        padding: 5px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid $text3;
+    }
+    .form-icon-btn{
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid $text3;
+        background-color: #bfddf8;
+        padding: 3px 5px;
+    }
+}
+
+.own-icon{
+margin-left: 10px;
+font-size: 16px;
+border: none;
+opacity: 0.5;
+color: $text3;
+font-weight: bold;
+
 }

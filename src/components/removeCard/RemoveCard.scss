@@ -1,3 +1,4 @@
+@import '../../constant';
 .delite-none {
   opacity: 0;
 }
@@ -14,10 +15,17 @@ margin-top: 25px;
 }
 }
 .delite-widget {
-    position: absolute;
+  cursor:pointer;
+   position: absolute;
     bottom: 5px;
-    right: 5px;
-    color: red;
+      right: 0px;
+    color: $text3;
+    border:none;
+    border-radius: 10px;
+    width: 30px;
+    height: 20px;
+    opacity: 0.5;
+    font-size: 16px;
 }
 .iconClose{
     display: inline-block;
