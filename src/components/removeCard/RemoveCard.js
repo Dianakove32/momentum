@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { CloseWidgets } from '../../components/dish/style'
 import './RemoveCard.scss'
 import dataCardContent from '../CardForAdd/dataCardContent'
-export default function RemoveCard() {
+export default function RemoveCard({deleteItem}) {
 const [isState,isSetState]=useState(false)
 const [state, setState] = useState(dataCardContent)
     // const onClick = (id) => {
@@ -42,10 +42,10 @@ const delitWidget = (id) => {
 
 
     return (
-        <div className='delite-widget'>
-           <div onMouseOver={onMouseMove} onMouseOut={onMouseOut}  onClick={()=>delitWidget()} className={isState ? 'delite-block' : 'delite-none'}>
-          <span className='span-widget'>Delite widget </span> <span className='iconClose'>X</span>
-        </div>
+        <div onClick={deleteItem} className='delite-widget'>
+
+            &#10006;
+
         </div>
 
     )

@@ -6,38 +6,41 @@ import Card2 from "../CardForAdd/Card2";
 import RemoveCard from "../removeCard/RemoveCard";
 import './footer.scss';
 import ChangeScene from "../changeScene/changeScene"
+import Clock from "../clock/clock";
+import NewsCard from "../CardForAdd/NewsCard";
+import IconCard from "../CardForAdd/IconCard";
 
 
 const initialState = {
-    widgetItem: [],
+  widgetItem: [],
 
 }
 
 
 
-export default function Footer() {
-    const [isOpen, setIsOpen] = useState(false)
-    const [state, setState] = useState(initialState)
-    const onClick = (e) => {
-        const objWidget = Array.from(document.querySelectorAll('.card-modal'));
-        const item = objWidget.find(el => el.id.toString() === e.target.id)
-        let copyOfItems = [...state.widgetItem]
-        if (copyOfItems.includes(item)) {
-            alert('You have added this icon already')
-        } else {
-            copyOfItems.push(item)
-            setState({ widgetItem: copyOfItems })
-        }
+export default function Footer({ addWidget, deleteItem }) {
+  const [isOpen, setIsOpen] = useState(false)
+  const [state, setState] = useState(initialState)
+  const onClick = (e) => {
+    const objWidget = Array.from(document.querySelectorAll('.card-modal'));
+    const item = objWidget.find(el => el.id.toString() === e.target.id)
+    let copyOfItems = [...state.widgetItem]
+    if (copyOfItems.includes(item)) {
+      alert('You have added this icon already')
+    } else {
+      copyOfItems.push(item)
+      setState({ widgetItem: copyOfItems })
     }
+  }
 
-    const toggleModal = () => {
-        setIsOpen(!isOpen)
-    }
-    return (
-        <div>
+  const toggleModal = () => {
+    setIsOpen(!isOpen)
+  }
+  return (
+    <div>
 
-            <div className="icon-item"><div className="last" onClick={toggleModal} >+ </div></div>
-            {/* <ChangeScene />
+      <div className="icon-item"><div className="last" onClick={toggleModal} >+ </div></div>
+      {/* <ChangeScene />
             <div>
             <p className="footer__dev-desc">
             Created&nbsp;by
@@ -71,50 +74,28 @@ export default function Footer() {
             </li>
           </ul>
           </div> */}
-            <div className="popup">
-                <Modal appElement={document.querySelector('#app')}
-                    isOpen={isOpen}
-                    onRequestClose={toggleModal}>
-                    {/* style={customStyles} */}
-                    <div className="modal">
-                        <div className="wrapper">
-                            <div className="modal-header">
-                                <button className='btn-modal' onClick={toggleModal}>Close</button>
-                                <h3>Add a widget to your desktop</h3>
-                            </div>
+      <div className="popup">
+        <Modal appElement={document.querySelector('#app')}
+          isOpen={isOpen}
+          onRequestClose={toggleModal}>
+          {/* style={customStyles} */}
+          <div className="modal">
+            <div className="wrapper">
+              <div className="modal-header">
+                <button className='btn-modal' onClick={toggleModal}>Close</button>
+                <h3>Add a widget to your desktop</h3>
+              </div>
 
-                            <div className='widget-container'>
-                               <Card1   onClick={onClick}/>
-                               <Card2   onClick={onClick}/>
-
-                                <div id='13' onClick={onClick} className=" card-modal" style={{background:'#ed9cb6'}} >
-                                    <div className="title-card">Title</div>
-                                    <AddCard />
-
-                                </div>
-                                <div id='14' onClick={onClick} className=" card-modal" style={{background:'#9cedcf'}}>
-                                    <div className="title-card">Title</div>
-                                    <AddCard />
-                                    <RemoveCard />
-                                </div>
-                                <div id='15' onClick={onClick} className=" card-modal" style={{background:'#d99ced'}}>
-                                    <div className="title-card">Title</div>
-                                    <AddCard />
-
-                                </div>
-                                <div className="news-container card-modal">
-                                    <div className="title-card">Title</div>
-                                    <AddCard />
-
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                </Modal>
+              <div className='widget-container'>
+                <Card1 addWidget={addWidget} deleteItem={deleteItem} />
+                <Card2 addWidget={addWidget} deleteItem={deleteItem} />
+               <NewsCard/>
+               <IconCard/>
+              </div>
             </div>
-        </div>
-    )
+          </div>
+        </Modal>
+      </div>
+    </div>
+  )
 }

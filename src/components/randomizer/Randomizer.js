@@ -1,4 +1,5 @@
 import React from 'react';
+import SizeOfCard from '../SizeOfCard/SizeOfCard';
 import ButtonRandomizer from "./ButtonRandomizer"
 import "./Randomaizer.scss";
 
@@ -10,10 +11,12 @@ class Randomizer extends React.Component {
     this.state = {
       quoteData: [],
       quote: '',
-      author: ''
+      author: '',
+
     }
     this.randomQuote = this.randomQuote.bind(this);
     this.handleClick = this.handleClick.bind(this);
+
   }
 
   componentDidMount() {
@@ -46,9 +49,11 @@ class Randomizer extends React.Component {
     })
   }
 
+
+
   render() {
     return (
-      <div id='quote-box'>
+      <div  id='quote-box'>
         {/* <div className='text-container'>
         <span className='text-brac '>&#8223;</span>
           <span id='text'>
@@ -64,6 +69,7 @@ class Randomizer extends React.Component {
         </blockquote>
 
         <ButtonRandomizer handleClick={this.handleClick} />
+
       </div>
     )
   }
