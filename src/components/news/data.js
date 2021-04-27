@@ -1,7 +1,7 @@
-const news=[
+const dataNews=[
     {
         name:"Olaf Scholz: Leise, aber nicht leise genug",
-        image:"https://www.msn.com/de-de/finanzen/top-stories/olaf-scholz-leise-aber-nicht-leise-genug/ar-BB1fWhL1",
+        image:"https://www.bing.com/th?id=OVFT.-aNkOeJlHS8XQMmtHSTsfC&amp;pid=News",
         url:"https://www.msn.com/de-de/finanzen/top-stories/olaf-scholz-leise-aber-nicht-leise-genug/ar-BB1fWhL1"
     },
     {
@@ -30,4 +30,4 @@ const news=[
         url:"https://www.msn.com/de-de/nachrichten/politik/impfungen-in-arztpraxen-freigegeben-astrazeneca-f%C3%BCr-alle-in-berlin-aber-nicht-in-brandenburg/ar-BB1fVUx5"
             },
 ]
-export default news;
+export default dataNews;

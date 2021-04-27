@@ -12,48 +12,49 @@ h2 {
 }
 .newsList {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+  //  flex-direction: column;
     margin: auto;
 }
-.cardNew {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    width: 700px;
-    display: flex;
-   a {
-        text-decoration: none;
-        padding-bottom: 15px;
-        transition: 0.2s;
-        &:hover {
-            color: darken(blue, 50%);
-        }
-    }
-    margin-bottom: 10px;
-}
+// .cardNew {
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding: 10px;
+//     //width: 700px;
+//     display: flex;
+//    a {
+//         text-decoration: none;
+//         padding-bottom: 15px;
+//         transition: 0.2s;
+//         &:hover {
+//             color: darken(blue, 50%);
+//         }
+//     }
+//     margin-bottom: 10px;
+// }
 
-.cardNew-img {
-    margin-right: 10px;
-    width: 200px;
-    img {
-        width: 200px;
-        height: auto;
-        object-fit: cover;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        margin-bottom: 10px;
-        border-radius: 4px;
-    }
-}
+// .cardNew-img {
+//     margin-right: 10px;
+//     width: 200px;
+//     img {
+//         width: 200px;
+//         height: auto;
+//         object-fit: cover;
+//         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//         margin-bottom: 10px;
+//         border-radius: 4px;
+//     }
+// }
 
-.cardNew-content {
-    width: 500px;
-    padding: 10px;
-    color: rgb(88, 81, 81);
-    height: 200px;
-    background-color: rgb(250, 250, 248);
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+// .cardNew-content {
+//    // width: 500px;
+//     padding: 10px;
+//     color: rgb(88, 81, 81);
+//     height: 200px;
+//     background-color: rgb(250, 250, 248);
+//     border-radius: 4px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// }
 .nav {
     display: flex;
     width: 300px;
@@ -90,6 +91,8 @@ h2 {
     }
 }
 .CardOneNew-content{
+    height:  220px;
+    overflow-y: auto;
 h3{
     font-size: 16px;
 }
@@ -99,4 +102,22 @@ h3{
     overflow-y: auto;
     }
 
+}
+.CardOneNew-content-item{
+    margin-bottom: 15px;
+    padding-right: 10px;
+}
+.dataCardNews{
+    background-color: #fff;
+    margin-top: 20px;
+    width: 320px;
+    height: 340px;
+padding: 10px;
+    border-radius: 4px;
+    img{
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
 }

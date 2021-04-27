@@ -68,7 +68,7 @@ export default function DishList(props) {
         } else
             copyOfItems.push(item)
 
-    localStorage.setItem('recipy', JSON.stringify(copyOfItems))
+        localStorage.setItem('recipy', JSON.stringify(copyOfItems))
         setCookie(copyOfItems)
 
         context.setState({
