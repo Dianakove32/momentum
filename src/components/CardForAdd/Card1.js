@@ -3,7 +3,7 @@ import AddCard from '../addCard/AddCard'
 import RemoveCard from '../removeCard/RemoveCard'
 import dataExtraCard from '../footer/dataExtraCard'
 import SizeOfCard from '../SizeOfCard/SizeOfCard'
-
+import './CardForAdd.scss'
 export default function Card1(props ) {
     const [state,setState]= useState(false)
 
@@ -24,10 +24,10 @@ export default function Card1(props ) {
        // }
  //  }
     return (
-        <div onClick={props.addWidget}>
-            <div id='e1'  style={{ width:  state ? '820px' : '400px',background:'#a99ee3'  } }  className=" card-modal " >
+        <div id='e1' onClick={props.addWidget}>
+            <div id='e1' className='img-calendar' style={{ width:  state ? '820px' : '400px',background:'#a99ee3'  } }  className=" card-modal " >
                 <div className="title-card"><span>Calendar</span><SizeOfCard changeWidth={changeWidth}/> </div>
-
+<img id='e1' className='img-calendar' src='https://c.tadst.com/gfx/1200x630/12month-calendar.png?1'/>
                 {/* <AddCard /> */}
 
 
