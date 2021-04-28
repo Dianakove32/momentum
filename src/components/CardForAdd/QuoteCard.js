@@ -5,18 +5,20 @@ import SizeOfCard from '../SizeOfCard/SizeOfCard'
 import '../../constant.scss'
 
 export default function QuoteCard() {
-const [state,setState]= useState(true)
 
- const changeWidth=()=>{
-    setState(!state)
-  }
     return (
         <div>
-             <div style={{ width:  state ? '820px' : '400px'  } } className="quote-container card">
-            <div className="title-card"><span>phrase of the day</span>  <SizeOfCard changeWidth={changeWidth}/></div>
+             <div  className="quote-container card">
+            <div className="title-card"><span>phrase of the day</span>   </div>
             <Randomizer />
 
           </div>
         </div>
     )
 }
+//<SizeOfCard changeWidth={changeWidth}style={{ width:  state ? '820px' : '400px'  } }
+// const [state,setState]= useState(true)
+
+//  const changeWidth=()=>{
+//     setState(!state)
+//   }

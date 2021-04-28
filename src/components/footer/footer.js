@@ -9,7 +9,7 @@ import ChangeScene from "../changeScene/changeScene"
 import Clock from "../clock/clock";
 import NewsCard from "../CardForAdd/NewsCard";
 import IconCard from "../CardForAdd/IconCard";
-
+import withWidth from '@material-ui/core/withWidth';
 
 const initialState = {
   widgetItem: [],
@@ -99,3 +99,4 @@ export default function Footer({ addWidget, deleteItem }) {
     </div>
   )
 }
+//export default withWidth()(Footer)

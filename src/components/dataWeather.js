@@ -2,17 +2,17 @@ const data = [
     {
         descriptionData: 'clear',
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8e5GRi9lC8QxKIhgb_j-jdlJ3xf_jjVj_Fw&usqp=CAU",
-        text: 'You can relax'
+        text:  "Don't forget your sunglasses "
     },
     {
         descriptionData: 'rain',
         image: "https://i.pinimg.com/originals/9e/f3/b5/9ef3b5ee6c9610220183e9545bbd5202.png",
-        text: 'Take umdrella'
+        text: 'Take umbrella'
     },
     {
         descriptionData: 'clouds',
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0FtQeTu2HfNvPamrtpYHInn6Df2GTNNkDWA&usqp=CAU ",
-        text: 'Take umdrella'
+        text: 'Take umbrella'
     },
 
     {

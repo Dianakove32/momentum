@@ -15,7 +15,7 @@ export default function TodoCard() {
                 <div order='1' id='h1'
 
             className="todo-container card">
-            <div className="title-card"><span>My todo list</span><SizeOfCard changeWidth={changeWidth}/></div>
+            <div className="title-card"><span>My todo list</span> </div>
             <ToDo/>
 
           </div>

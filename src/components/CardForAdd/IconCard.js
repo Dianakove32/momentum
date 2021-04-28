@@ -5,20 +5,21 @@ import SizeOfCard from '../SizeOfCard/SizeOfCard'
 
 
 export default function IconCard() {
-  const [state,setState]= useState(false)
 
-  const changeWidth=()=>{
-     setState(!state)
-   }
     return (
         <div>
-              <div order='2' id='h2' style={{ width:  state ? '820px' : '400px'  } }
+              <div order='2' id='h2'
 
             className="icon-container card">
-            <div className="title-card"><span>Social media</span> <SizeOfCard changeWidth={changeWidth}/></div>
+            <div className="title-card"><span>Social media</span> </div>
               <Icon />
 
           </div>
         </div>
     )
 }
+//<SizeOfCard changeWidth={changeWidth}/> style={{ width:  state ? '820px' : '400px'  } } const [state,setState]= useState(false)
+
+  // const changeWidth=()=>{
+  //    setState(!state)
+  //  }

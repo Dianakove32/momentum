@@ -8,7 +8,7 @@ import Form from './components/weather/Form';
 import Weather from './components/weather/Weather';
 import ToDo from './components/toDo/toDo';
 import data from './components/dataWeather';
-
+import withWidth from '@material-ui/core/withWidth';
 import { NavLink } from "react-router-dom";
 import News from './components/news/news'
 
@@ -24,7 +24,7 @@ import NewList from './components/addCard/NewList';
 import Reset from './components/Reset';
 import dataCardContent from './components/CardForAdd/dataCardContent'
 import dataExtraCard from './components/footer/dataExtraCard'
-
+import logo from './assets/logo.png'
 
 const API_KEY = '8768da57bd891fa41359848c1665c9e4';
 class Home extends React.Component {
@@ -139,13 +139,14 @@ class Home extends React.Component {
         <div className="footer ">
           <div className="wrapper1">
             <div className="wrapper-footer">
-              <div className="title-card"><span>settings</span></div>
+              <div className="title-card"><p>settings</p>  <div><img  style={{width:'50px'}} src ={logo} /></div></div>
               <div className="footer-content">
                 <div className='footer-setting'>
                   <Footer addWidget={this.addWidget}  />
                   <ChangeScene />
                   <Reset />
                 </div>
+
                 <div className="contacts">
                  <ul className="footer__contacts">
                     <li className="footer__contacts-item">
@@ -174,6 +175,7 @@ class Home extends React.Component {
                     </li>
                   </ul>
                 </div>
+
               </div>
               <p className="footer__dev-desc"> Created by Wild CodeSchool Students </p>
             </div>
@@ -184,6 +186,6 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+ export default Home;
 
-
+//export default withWidth()(Home)

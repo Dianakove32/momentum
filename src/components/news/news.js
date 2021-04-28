@@ -17,7 +17,7 @@ const News = () => {
         <NavLink className='nav-item ' to="/dish"> Dish</NavLink>
       </div>
       <h2>NEWS</h2>
-      <div classname="newsList">
+      <div className="newsList">
         {dataNews.map((el, i) => <div className='dataCardNews' key={i}>
           <img src={el.image} />
           <h3>{el.name}</h3>

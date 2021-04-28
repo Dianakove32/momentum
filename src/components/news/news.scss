@@ -15,6 +15,7 @@ h2 {
     flex-wrap: wrap;
   //  flex-direction: column;
     margin: auto;
+justify-content: space-between;
 }
 // .cardNew {
 //     margin-left: auto;
@@ -98,7 +99,7 @@ h3{
 }
     @include mobail{
         font-size: 13px;
-           height:  120px;
+        //   height:  120px;
     overflow-y: auto;
     }
 

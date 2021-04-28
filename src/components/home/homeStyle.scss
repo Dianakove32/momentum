@@ -267,7 +267,7 @@ textarea {
 
 .quote-container {
     background: $bg7;
-   // width: $width-long;
+     width: $width-long;
     position: relative;
     @include middle {
         width: $width-long-resp;
